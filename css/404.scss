@@ -1,0 +1,81 @@
+@import '_variables';
+@import '_mixins';
+
+
+$orbS: 30vmin;
+$animationDuration: 6s;
+$orbAmount: 15;
+$blurRadius: (random($orbS)) * .2;
+
+#wrapper{
+    display: flex;align-items: center;justify-content: center;    
+    @include size(100vw, 100vh);
+    padding: 3rem;
+}
+
+.card{
+    position: relative;z-index: 1;
+    background-color: rgba(#fff, .5);
+    backdrop-filter: blur(3rem);
+    padding: 10rem;
+    border-radius: 5vw;
+    box-shadow: 0 0 6rem 0 rgba($text-color, .3);
+    text-align: center;
+    @include small{  
+        padding: 2rem;
+    }
+    a{
+        display: block;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 3rem auto 0;padding: 1rem 2rem;
+        background-color: rgba($primary-color, .9);
+        border-radius: 2rem;
+        color: #fff;
+        transition: .5s cubic-bezier(0.4, -0.75, 0.75, 1.75);
+        &:hover{
+            padding: 1rem 3rem;
+            background-color: $primary-color;
+        }
+    }
+}
+ 
+.background{    
+    overflow: hidden;
+    position: absolute;
+    @include size(100%);
+    span {
+        position: absolute;
+        @include size($orbS);
+        border-radius: 100%;        
+        animation:  orbAnimation $animationDuration linear infinite,
+                    orbColor $animationDuration linear infinite;
+        
+        @for $i from 1 through $orbAmount {
+            &:nth-child(#{$i}) {            
+                top: random(100) * 1%;
+                left: random(100) * 1%;
+                @include size((random($orbS)) * 1.5rem);   
+                background-color: nth($colors, random(length($colors) * .5));
+                filter: blur((random($orbS)) * .05rem);
+                animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+                animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+                transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+            }
+        }
+    }
+}
+ 
+@keyframes orbAnimation {    
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+// @keyframes orbColor {    
+//     0%  {background: nth($colors, random(length($colors) * .5));}
+//     20% {background: nth($colors, random(length($colors) * .5));}
+//     40% {background: nth($colors, random(length($colors) * .5));}
+//     60% {background: nth($colors, random(length($colors) * .5));}
+//     80% {background: nth($colors, random(length($colors) * .5));}
+//    100% {background: nth($colors, random(length($colors) * .5));}
+// }

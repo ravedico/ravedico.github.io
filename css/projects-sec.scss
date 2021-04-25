@@ -1,0 +1,354 @@
+@import '_variables';
+@import '_mixins';
+
+$projectNameSize: 9vw;
+$projectNameSizeMinMax: $projectNameSize,13rem,10rem;
+
+:root {
+    --phoneSize: 13vw;
+    --screenSize: 30vw;
+    --arrowS: 5rem;
+    @include small{
+        --phoneSize: 25vw;
+        --screenSize: 50vw;
+        --arrowS: 2rem;
+    }
+} 
+
+.projects_sec{
+    height: 80vh;min-height: 55rem;
+    color: #ffffff;
+    &:hover{
+        .nav-arrow{
+            opacity: .95;
+        }
+        .projects-nav{
+            bottom: 2rem;
+            transition: .5s cubic-bezier(0.5, -.75, 0.5, 1.25);
+        }
+        .project-link{         
+            bottom: 4rem;
+            transition: .5s cubic-bezier(0.5, -.75, 0.5, 1.25);
+        }
+    }
+    @include medium{
+        height: 50vh;
+        min-height: auto;
+    }
+    @include small{
+        height: auto;min-height: 50vh;
+        // height: minmax(50vh, 100%, auto);
+    }
+    .title{
+        position: absolute;
+        top: 5rem;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+        @include small{            
+            top: 3rem;
+        }
+    } 
+}
+
+.nav-arrow{
+    @include centerV;
+    @include size(var(--arrowS));
+    cursor: pointer;
+    transition:  1s cubic-bezier(0.5, -1.3, 0.4, 1);
+    user-select: none;
+    opacity: 0;
+    &:before,&:after{
+        content: '';
+        position: absolute;left: 50%;
+        transform-origin: 0 0;        
+        @include size(.5rem, 100%);
+        @include size(calc(var(--arrowS) / 10), 100%);
+        background-color: #fff;
+        border-radius: 0 0 var(--arrowS) var(--arrowS);
+        transition:  .5s cubic-bezier(0.5, -1, 0.4, 1);
+    }
+    @include small{
+        // display: none;
+        top: 0;transform: none;
+        @include size(30vw, 100%);
+        opacity: 0;
+        transition: none;
+        -webkit-tap-highlight-color: transparent;
+
+        &:before,&:after{
+            display: none;
+            bottom: 2rem;
+            @include size(calc(var(--arrowS) / 10));
+        }
+        
+    }
+}
+.prev-arrow{
+    left: var(--arrowS);
+    transform: translateY(-50%) rotate(-90deg);
+    &:before{
+        transform: translateX(-50%) rotate(45deg);
+    }
+    &:after{
+        transform: translateX(-50%) rotate(-45deg);
+    } 
+    &:hover{
+        left: 4rem;
+        opacity: 1;
+        &:before{
+            transform: translateX(-50%) rotate(15deg);
+        }
+        &:after{
+            transform: translateX(-50%) rotate(-15deg);
+        }
+    }
+    @include small{
+        left: 0;transform: none;
+        &:active{
+            left: 0;
+        }
+    }
+}
+
+.next-arrow{
+    right: var(--arrowS);
+    transform: translateY(-50%) rotate(90deg);
+    &:before{
+        transform: translateX(-50%) rotate(-45deg);
+    }
+    &:after{
+        transform: translateX(-50%) rotate(45deg);
+    }
+    &:hover{
+        right: 4rem;
+        &:before{
+            transform: translateX(-50%) rotate(-15deg);
+        }
+        &:after{
+            transform: translateX(-50%) rotate(15deg);
+        }
+    }
+    @include small{
+        right: 0;transform: none;
+        &:active{
+            right: 0;
+        }
+    }
+}
+
+.projects_wrap{
+    overflow: hidden;
+    position: absolute;top: 0;left: 0;
+    @include size(100%);
+    display: flex;align-items: center;justify-content: center;
+}
+
+.project{ 
+    display: none;
+    &.current{
+        display: block;
+    }
+    @include size(100%);
+    background-image: url(../images/noise.png);
+    @for $i from 1 to length($colors){        
+        &:nth-child(#{$i}){
+            background-color: nth($colors, + $i); 
+            .device{ 
+                background-image: url(../images/works/project#{$i}-main.jpg);
+            }
+        }
+    } 
+    &:first-child{
+        .prev-arrow{
+            display: none;
+        }
+    }
+    &:last-child{
+        .next-arrow{
+            display: none;
+        }
+    }
+    .content{
+        display: flex;align-items: center;justify-content: center;
+        @include size(100%);
+    }
+}
+
+.device{
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: -2rem 2rem 2rem 0 rgba(#000, .25), 0 0 1rem 0 rgba(#fff, .15);
+    transition: 1s ease;
+    &:after{
+        position: absolute;top: 0;left: 0;
+        @include size(100%);
+        content: '';
+        background-image: linear-gradient(45deg, rgba(#000, .0) 40%, rgba(#000, .25));
+        mix-blend-mode: multiply;
+    }
+}
+
+@mixin mockupPhone{
+    transform: perspective(500px) rotateZ(-5deg) rotateX(20deg) rotateY(20deg);
+    @include size(var(--phoneSize),calc(#{var(--phoneSize)} * 1.8));
+    border-radius: calc(#{var(--phoneSize)} / 15);
+}
+
+@mixin mockupScreen{
+    transform: perspective(500px) rotateZ(-5deg) rotateX(25deg) rotateY(35deg) translateY(2rem);
+    @include size(var(--screenSize),calc(#{var(--screenSize)} / 1.4));
+    border-radius: calc(#{var(--screenSize)} / 20);
+}
+
+.mockup-phone{
+    @include mockupPhone();
+    margin-right: -1vw;
+}
+
+.mockup-screen{ 
+    @include mockupScreen();
+    margin-right: -10vw;
+}
+
+.device-shadow{
+    z-index: 1;
+    background-color: #000;
+    // opacity: .1;
+    // filter: blur(5px);
+    .mockup-phone_wrap &{
+        @include mockupPhone();
+    }
+    .mockup-screen_wrap &{
+        @include mockupScreen();
+    }
+}
+
+////
+
+[class^="project-name"]{
+    position: relative;
+    z-index: 2;
+    height: calc(#{$projectNameSize} / 1.3);
+    height: 7vw;
+    font-size: clamp($projectNameSizeMinMax);
+    font-size: $projectNameSize;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: calc(#{$projectNameSize} / -20);
+    color: #ffffff;
+    user-select: none;
+    div{
+        position: relative;
+        z-index: 2;
+    }
+    span{
+        position: relative;
+        z-index: 1;
+        color: #000000;
+        opacity: .25;
+        filter: blur(8px);
+        @include small{
+            filter: blur(3px);
+        }
+    }
+    @include small{
+        height: 8vw;
+        font-size: 10vw;
+    }
+}
+
+.project-name-a{
+    top: 0;
+}
+.project-name-b{
+    top: initial !important;
+    bottom: 0;
+}
+
+.name_wrap{
+    transform: perspective(700px) rotateZ(-2deg) rotateX(12deg) rotateY(-4deg);
+    @include small{
+        margin-left: -10vw;
+    }
+}
+
+////
+
+.project-link{
+    @include centerH;
+    bottom: 1rem;
+    display: flex;align-items: center;justify-content: center;
+    margin-bottom: 2rem;
+    white-space: nowrap;    
+    transition: .5s cubic-bezier(0.5, -.75, 0.5, 1.25);
+    transition-delay: .5s;
+    @include small{
+        bottom: 4rem;
+    }
+    p{
+        position: absolute;
+        transition: .2s ease;
+        &:hover{            
+            transform: rotateZ(-5deg) rotateX(10deg) rotateY(10deg);
+            font-size: 110%;            
+            font-weight: 700;
+            text-shadow: 0 5px 20px rgba(#000, 0.25);
+        }
+    }
+}
+
+.projects-nav{
+    @include centerH;
+    bottom: -2rem;    
+    z-index: 1;
+    display: flex;align-items: center;justify-content: center;
+    transition: .5s cubic-bezier(0.5, -.75, 0.5, 1.25);
+    transition-delay: .5s;
+    @include small{
+        bottom: 2rem;
+    }
+    li{
+        position: relative;
+        @include size(3em, 1em);
+        margin-right: .5rem;
+        cursor: pointer;
+        &:last-child{
+            margin: 0;
+        }
+        &:before,&:after{
+            @include centerVH;
+            content: '';
+            border-radius: 2rem;    
+            transition: .2s ease;
+            transition: .3s cubic-bezier(0.75, 0.25, 0.5, 1.35);
+        }
+        &:before{
+            @include size(100%);
+            background-color: #f1f1f1;
+            box-shadow: 3px 3px 10px 0 rgba(#000, .2),
+            -3px -3px 10px 0 rgba(#fff, .25);
+        }
+        &:not(.current){
+            &:hover{
+                &:before{                    
+                    height: 2.4rem;
+                    box-shadow: 0 6px 16px 0 rgba(#000, .2);
+                }
+            }
+        }
+        &.current{
+            cursor: unset;
+            &:before{
+                opacity: .8;                
+                height: .8rem;
+                box-shadow: 0 6px 16px 0 rgba(#000, .2);
+            }
+        }
+    }
+} 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Yogev Raved | Product designer</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- META DATA -->
+    <meta name="description" content="UX Designer and Art Director">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/pages.css" rel="stylesheet" type="text/css">
+    <link href="css/components.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <script src="js/script.js"></script>
+</head>
+
+<body class="page work-page">
+
+    <div id="wrapper">
+        <section class="work_sec flex">           
+            <div class="text_pane">
+                <header>
+                    <div class="logo">
+                        <a href="index.html"></a>
+                    </div>
+                    <div class="work-nav">                      
+                        <div class="nav-next"><a href="project2.html">
+                            <span>Next</span>
+                            <span class="nav-arrow"></span>
+                        </a></div>
+                    </div>
+                </header>    
+                <div class="partial-text1"></div>
+                <div class="partial-text2"></div>
+                <div class="partial-text3"></div>
+                <div class="partial-text4"></div>
+                <div class="partial-text5"></div>
+                
+            </div>
+            <div class="work_pane">
+                <div class="partial-work1"></div>
+                <div class="partial-work2"></div>
+                <div class="partial-work3"></div>
+                <div class="partial-work4"></div>
+                <div class="partial-work5"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('.partial-text1').load('work1.html #work-text1');
+            $('.partial-work1').load('work1.html #work-screen1');
+            $('.partial-text2').load('work1.html #work-text2');
+            $('.partial-work2').load('work1.html #work-screen2');
+            $('.partial-text3').load('work1.html #work-text3');
+            $('.partial-work3').load('work1.html #work-screen3');
+            $('.partial-text4').load('work1.html #work-text4');
+            $('.partial-work4').load('work1.html #work-screen4');
+            $('.partial-text5').load('work1.html #work-text5');
+            $('.partial-work5').load('work1.html #work-screen5');
+
+            // let partialNum = 2;
+            // let partialText = document.getElementsByClassName("partial-text");
+            // let partialWork = document.getElementsByClassName("partial-work");
+            // let i = 1;
+            // let x = i;
+
+            // function multiplyNode(node, count, deep) {
+            //     for (let i = 0, copy; i < count - 1; i++) {
+            //         copy = node.cloneNode(deep);
+            //         node.parentNode.insertBefore(copy, node);
+            //     }
+            // }
+
+            // multiplyNode(document.querySelector('.partial-text'), partialNum, true);
+            // multiplyNode(document.querySelector('.partial-work'), partialNum, true);
+
+            // $(partialText).each(function(){
+            //     $(this).attr('id', 'partial-text-'+i);
+            //     i++;
+            // });
+            // $(partialWork).each(function(){
+            //     $(this).attr('id', 'partial-work-'+x);
+            //     x++;
+            // });
+
+            // for (let i = 0; i < partialText.length; i++) {
+            //     console.log(partialText.item(i));
+            //     console.log(partialWork.item(i));
+            //     $('.partial-text').load('work'+i+'.html #work-text'+i);
+            //     $('.partial-work').load('work'+i+'.html #work-screen'+i);
+            // }
+
+        });
+    </script>
+</body>
+</html>

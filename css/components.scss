@@ -1,0 +1,31 @@
+@import '_variables';
+@import '_mixins';
+
+.scroll_wrap{
+    @include centerH;
+    bottom: 3rem;z-index: 1;
+    @include size(3rem,4rem);
+}
+
+.scroll{
+    position: relative;
+    @include centerVH;
+    @include size(100%);
+    background-color: rgba(#fff,.5);
+    backdrop-filter: blur(5px);
+    border-radius: 3rem;
+    border: 1px solid $text-color;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.7, -2, 0.3, 2.7);
+    &:after{
+        content: '';
+        @include centerH;
+        top: 0.5rem;
+        @include size(3px, 1rem);
+        background-color: $text-color;
+        border-radius: 3px;
+    }
+    &:hover{
+        @include size(106%);
+    }
+} 
