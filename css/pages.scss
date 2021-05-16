@@ -8,31 +8,18 @@ $bg-color: hsl(0, 0%, 99%);
     --mobile-h: calc(var(--mobile-w) * 1.8);
     --desktop-w: calc(var(--mobile-h) * 2);
     --desktop-h: calc(var(--mobile-w) * 2.5);
-
-    // --mobile-w-s: 20vw;
-    // --mobile-h-s: calc(var(--mobile-w-s) * 1.8);
-    // --desktop-w-s: calc(var(--mobile-h-s) * 2);
-    // --desktop-h-s: calc(var(--mobile-w-s) * 2.5); 
     
     --aside-w: 40rem;
     @include large{
         --aside-w: 35rem;
     }
     @include medium{
-        --mobile-w: 22vw;
-        // --mobile-h: calc(var(--mobile-w) * 1.8);
-        // --desktop-w: calc(var(--mobile-h) * 2);
-        // --desktop-h: calc(var(--mobile-w) * 2.5);
-        
+        --mobile-w: 22vw;       
         --aside-w: 100%;
     }
 }
 
 .work-page{
-    // background-color: $bg-color;
-    &.galleryOn{
-        // cursor: none;
-    }
     header{
         // position: sticky;top: 0;left: 0;z-index: 1;
         display: flex;align-items: center;
@@ -42,7 +29,7 @@ $bg-color: hsl(0, 0%, 99%);
         box-shadow: 0 0 2rem 0 rgba(#000, .1);
         @include medium{
             position: relative;
-            position: fixed;z-index: 999;
+            position: fixed;z-index: 10;
             margin: 0;
             padding: 1rem;
             background-color: #fff;
@@ -64,10 +51,10 @@ $bg-color: hsl(0, 0%, 99%);
 .card{
     padding: 2rem;
     background-color: #fff;
-    border-radius: 4px;
-    box-shadow: inset 0 0 0 2px rgba(#000, .05),
-    5px 5px 1rem 0 rgba(#000, .04),
-    -5px -5px 2rem 0 #fff,
+    border-radius: .4rem;
+    box-shadow: inset 0 0 0 .2rem rgba(#000, .05),
+    .5rem .5rem 1rem 0 rgba(#000, .04),
+    -.5rem -.5rem 2rem 0 #fff,
     inset 2rem 2rem 4rem 0 rgba(#000, .06);
 }
 
@@ -79,7 +66,7 @@ $bg-color: hsl(0, 0%, 99%);
 
 .logo{
     @include size(9rem, 3rem);    
-    background-image: url(/images/ravedico-logo.svg);
+    background-image: url(/images/ravedico-logo2.svg);
     background-size: cover;
     cursor: pointer;
     transition: .2s ease;
@@ -90,12 +77,6 @@ $bg-color: hsl(0, 0%, 99%);
         display: flex;align-items: center;justify-content: center;
         @include size(100%);
     }
-    // svg{
-    //     @include size(80%);
-    //     * >{
-    //         fill:none;stroke:$primary-color;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;
-    //     }
-    // }
     path{
         fill: $primary-color;
     }
@@ -147,7 +128,7 @@ $bg-color: hsl(0, 0%, 99%);
     }
     span:not(.nav-arrow){
         @include medium{
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     }    
 }
@@ -177,9 +158,9 @@ $bg-color: hsl(0, 0%, 99%);
     &:before,&:after{
         content: '';
         position: absolute;
-        @include size(2px, 1.5rem);
+        @include size(.2rem, 1.2rem);
         background-color: $text-color;
-        border-radius: 2px;
+        border-radius: .2rem;
     }
     &:before{
         top: -0.25rem;
@@ -342,7 +323,7 @@ $bg-color: hsl(0, 0%, 99%);
     //     }
     // }
     .asset{
-        width: 800px;
+        width: 80rem;
         @include x-large{
             width: 100%;
         }
@@ -361,9 +342,11 @@ $bg-color: hsl(0, 0%, 99%);
     }
 }
 
-// .work-text{
-//     margin-bottom: 2rem;
-// }
+.desc-screen_wrap{
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 10rem;
+}
 
 .desc-text{
     text-align: left;
@@ -413,7 +396,7 @@ $bg-color: hsl(0, 0%, 99%);
         z-index: 2;
         @include size(var(--mobile-w), var(--mobile-h));      
         border-radius: calc(var(--desktop-w) / 60);
-        box-shadow: 0 0 0 2px lighten(#000, 80%), 0 0 2rem 0 rgba(#000, .1), 0 3rem 2rem -2rem rgba(#000, .2);
+        box-shadow: 0 0 0 .2rem lighten(#000, 80%), 0 0 2rem 0 rgba(#000, .1), 0 3rem 2rem -2rem rgba(#000, .2);
         &:last-child{
             margin: 0;
         }
@@ -426,7 +409,7 @@ $bg-color: hsl(0, 0%, 99%);
         z-index: 1;
         @include size(var(--desktop-w), var(--desktop-h));
         border-radius: calc(var(--desktop-w) / 40);
-        box-shadow: 0 0 0 2px lighten(#000, 80%), 0 0 2rem 0 rgba(#000, .1), 0 6rem 4rem -6rem rgba(#000, .4);
+        box-shadow: 0 0 0 .2rem lighten(#000, 80%), 0 0 2rem 0 rgba(#000, .1), 0 6rem 4rem -6rem rgba(#000, .4);
         @include medium{
             // @include size(var(--desktop-w-s), var(--desktop-h-s));
         }
@@ -441,7 +424,7 @@ $bg-color: hsl(0, 0%, 99%);
         
         &.mobile{
             @include size(calc(var(--mobile-w) * 1.5),calc(var(--mobile-h) * 1.5));
-            @include medium{
+            @include small{
                 @include size(80%);
                 // width: 90%;height: 90%;
             }
@@ -449,7 +432,14 @@ $bg-color: hsl(0, 0%, 99%);
         &.desktop{
             @include size(calc(var(--desktop-w) * 1.4),calc(var(--desktop-h) * 1.4));
             @include medium{
-                width: calc(100% - 2rem);height: auto;
+                @include size(calc(100% - 5rem));
+                width: calc(100% - 5rem);
+                height: auto;
+                max-height: calc(100% - 6rem);
+            }
+            @include small{                
+                // @include size(calc(100% - 2rem));
+
             }
         }
         .content{
@@ -512,7 +502,7 @@ $bg-color: hsl(0, 0%, 99%);
     position: fixed;top: 0;left: 0;z-index: 999;
     @include size(100%);
     background-color: rgba(#000, .8);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(.3rem);
 }
 
 .gallery{
@@ -524,13 +514,13 @@ $bg-color: hsl(0, 0%, 99%);
     @include size(2rem);
     background-color: rgba(#fff, .8);
     border-radius: 50%;
-    box-shadow: 0 0 20px 0 rgba(#000, .1);
+    box-shadow: 0 0 2rem 0 rgba(#000, .1);
     &::before,&::after{
         content: '';
         position: absolute;top: 50%;left: 50%;
         transform-origin: center;
-        @include size(2px, 90%);
-        border-radius: 2px;
+        @include size(.2rem, 90%);
+        border-radius: .2rem;
         background-color: lighten($text-color, 20%);
     }
 }
@@ -608,13 +598,16 @@ $bg-color: hsl(0, 0%, 99%);
 }
 
 .exp-text{
+    display: none;
     position: fixed;
     right: -100%;
-    bottom: 1rem;
+    bottom: 2rem;
+    right: 2rem;
+    bottom: -100%;
     z-index: 10;
-    // width: 100%;
     padding: 0.5rem 1rem;
     background-color: rgba(#fff, .5);
+    background-color: rgba($text-color, .8);
     backdrop-filter: blur(1rem);
     box-shadow: 0 0 1rem 0 rgba(#000, .1);
     border-radius: .4rem;
@@ -622,24 +615,27 @@ $bg-color: hsl(0, 0%, 99%);
     text-align: center;
     font-weight: 500;
     transition: .6s ease-in-out;
+    color: $text-color;
+    color: #fff;
     &:before{
         content: '';
         position: absolute;top: 0;left: 0;
         @include size(100%);
-        // border: 0 solid $primary-color;
-        box-shadow: 0 0 0 0 $primary-color;
+        box-shadow: 0 0 0 0 #fff;
         border-radius: .4rem;
         transition: .5s cubic-bezier(1, 0, 0, 5);
         transition-delay: 2s;
-        // opacity: 0;
     }
     &.show{
-        right: 1rem;
+        // right: 1rem;
+        bottom: 2rem;
         &::before{
-            // border-width: .2rem;
-            // opacity: 1;
-            box-shadow: 0 0 0 2px $primary-color;
+            box-shadow: 0 0 0 .2rem $primary-color;
+            box-shadow: 0 0 0 .2rem #fff;
 
         }
+    }
+    @include medium{
+        display: block;
     }
 }

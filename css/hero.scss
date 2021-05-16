@@ -33,6 +33,9 @@
             margin-bottom: 1.6rem;
         }        
     }
+    .title{
+        font-weight: 600;
+    }
     .contact{
         a{
             //font-weight: 500;
@@ -52,6 +55,7 @@
 .social-links{
     display: flex;
     align-items: center;
+    gap: 2.5rem;
     margin-top: 1.5rem;
     font-size: 1.5rem;
     @include small{
@@ -59,27 +63,15 @@
     }
     li{
         position: relative;
-        // @include size(1.4em);
-        width: 2rem;
-        margin-right: 2.5rem;
-        font-weight: 700;
         cursor: pointer;
         transition: .2s ease;
-        opacity: .8;       
-        &:last-child{
-            margin: 0;
-        }
+        // opacity: .8;       
+        font-weight: 300;
         &:hover{
-            opacity: 1;
+            color: $primary-color;
         }
-        &:not(.cv-link){
-            filter: saturate(0);     
-            &:hover{            
-                filter: saturate(1);
-            }        
-        }
-        img{
-            @include centerVH;
+        @include medium{
+            margin-right: 1.5rem;
         }
     }
     .cv-link{
@@ -110,8 +102,8 @@ $img-s: 14rem;
             @include size($img-s - .5rem);
             span{
                 @include size($img-s - .5rem);
-                background-color: rgba(#000, 0.2);
-                filter: blur(5px);
+                background-color: rgba(nth($colors, 5), 0.8);
+                filter: blur(8px);
             }
         }
         

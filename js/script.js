@@ -68,7 +68,7 @@ $(document).ready(function() {
       "Protection",
       "Helper App",
       "Dashboard",
-      "Streaming",
+      "streaming ",
       "Dashboard",
       "eStore",
     ],
@@ -150,6 +150,6 @@ $(document).ready(function() {
       })
   };
 
-  $('.thumbs_wrap').hScroll(50);// scroll speed
+  $('.thumbs_wrap').hScroll(80);// scroll speed
 
 });

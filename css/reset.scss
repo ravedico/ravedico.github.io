@@ -21,13 +21,8 @@ html {
 
 body{
     font-family: 'Poppins', sans-serif;
-    transition: background .5s ease-in-out;
     // font-size: 1.6rem;
     color: $text-color;
-    &.dark{
-        background-color: #000;
-        color: #fff;
-    }
     @include small{
         font-size: 1.4rem;
     }
@@ -43,13 +38,13 @@ h1,h2,h3,h4,h5,h6,p,li{
 
 h1 {
     font-size: 4.4rem;
-    @include small{
-        font-size: 4.4rem;
+    @include medium{
+        font-size: 3.2rem;
     }
 }
 h2 {
     font-size: 3.4rem;
-    @include small{
+    @include medium{
         font-size: 2.5rem;
     }
 }
@@ -58,7 +53,7 @@ h3 {
     @include medium{
         font-size: 2.4rem;
     }
-    @include small{
+    @include medium{
         font-size: 2.2rem;
     }
 }
@@ -70,13 +65,13 @@ h4 {
 }
 h5 {
     font-size: 1.8rem;
-    @include small{
-        font-size: 1.4rem;
+    @include medium{
+        // font-size: 1.4rem;
     }
 } 
 h6 {
     font-size: 1.6rem;
-    @include small{
+    @include medium{
         font-size: 1.6rem;
     }
 } 
@@ -87,7 +82,7 @@ p,li{
         font-size: 1.4rem;
     }
     @include large{
-        font-size: 1.2rem;
+        // font-size: 1.2rem;
     }
 }
 

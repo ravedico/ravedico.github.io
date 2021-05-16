@@ -18,14 +18,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  -webkit-transition: background .5s ease-in-out;
-  transition: background .5s ease-in-out;
   color: #365463;
-}
-
-body.dark {
-  background-color: #000;
-  color: #fff;
 }
 
 @media (max-width: 576px) {
@@ -47,9 +40,9 @@ h1 {
   font-size: 4.4rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   h1 {
-    font-size: 4.4rem;
+    font-size: 3.2rem;
   }
 }
 
@@ -57,7 +50,7 @@ h2 {
   font-size: 3.4rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   h2 {
     font-size: 2.5rem;
   }
@@ -73,7 +66,7 @@ h3 {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   h3 {
     font-size: 2.2rem;
   }
@@ -93,17 +86,11 @@ h5 {
   font-size: 1.8rem;
 }
 
-@media (max-width: 576px) {
-  h5 {
-    font-size: 1.4rem;
-  }
-}
-
 h6 {
   font-size: 1.6rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   h6 {
     font-size: 1.6rem;
   }
@@ -116,12 +103,6 @@ p, li {
 @media (max-width: 1400px) {
   p, li {
     font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  p, li {
-    font-size: 1.2rem;
   }
 }
 

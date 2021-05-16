@@ -49,14 +49,17 @@ $blurRadius: (random($orbS)) * .2;
         @include size($orbS);
         border-radius: 100%;        
         animation:  orbAnimation $animationDuration linear infinite,
-                    orbColor $animationDuration linear infinite;
+        orbColor $animationDuration linear infinite;
         
         @for $i from 1 through $orbAmount {
             &:nth-child(#{$i}) {            
                 top: random(100) * 1%;
                 left: random(100) * 1%;
                 @include size((random($orbS)) * 1.5rem);   
-                background-color: nth($colors, random(length($colors) * .5));
+                // background-color: nth($colors, random($colors));
+                background-color: nth($colors, random(length($colors)));   
+                // background-color: rgb(random(255), random(255), random(255));
+                opacity: random(10) / 10; 
                 filter: blur((random($orbS)) * .05rem);
                 animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
                 animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
@@ -68,7 +71,7 @@ $blurRadius: (random($orbS)) * .2;
  
 @keyframes orbAnimation {    
     100% {
-        transform: translate3d(0, 0, 1px) rotate(360deg);
+        transform: translate3d(0, 0, .1rem) rotate(360deg);
     }
 }
 // @keyframes orbColor {    
