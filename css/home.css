@@ -1,5 +1,6 @@
 .hero {
   height: 70vh;
+  min-height: 50rem;
   padding: 2rem;
 }
 
@@ -18,6 +19,10 @@
 
 .hero * {
   font-weight: 300;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 576px) {
@@ -54,6 +59,12 @@
 
 .hero .title {
   font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .hero .contact {
+    line-height: 1.5;
+  }
 }
 
 .hero .contact a {
@@ -1047,8 +1058,8 @@ section .container {
   overflow-x: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 2fr))[7];
-      grid-template-columns: repeat(7, minmax(25rem, 2fr));
+  -ms-grid-columns: (minmax(25rem, 2fr))[9];
+      grid-template-columns: repeat(9, minmax(25rem, 2fr));
   gap: 2rem;
   padding-bottom: 2rem;
 }
@@ -1073,12 +1084,9 @@ section .container {
 
 @media (max-width: 576px) {
   .thumbs_wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     padding: 0;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
   .thumbs_wrap::-webkit-scrollbar {
     all: unset;
@@ -1132,14 +1140,15 @@ section .container {
 
 @media (max-width: 576px) {
   .thumbs_wrap .thumb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
     height: auto;
-    padding: 1rem;
-  }
-  .thumbs_wrap .thumb:last-child {
-    grid-column: span 2;
+    padding: 2rem;
   }
 }
 
@@ -1148,22 +1157,7 @@ section .container {
   margin: auto;
 }
 
-@media (max-width: 576px) {
-  .thumbs_wrap .thumb figure {
-    width: 30vw;
-  }
-}
-
 .thumbs_wrap .thumb figure img {
-  height: 100%;
-}
-
-.thumbs_wrap .thumb a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
   height: 100%;
 }
 
@@ -1193,7 +1187,7 @@ section .container {
           backdrop-filter: blur(2px);
   font-size: 1.8rem;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
   color: #fff;
   -webkit-transition: .2s ease;
   transition: .2s ease;
@@ -1202,7 +1196,13 @@ section .container {
 
 @media (max-width: 576px) {
   .thumb-text {
+    position: relative;
     padding: 1.5rem;
+    padding: 0;
+    font-size: 1.4rem;
+    opacity: 1;
+    background-color: transparent;
+    color: #365463;
   }
 }
 
@@ -1214,7 +1214,16 @@ section .container {
   position: absolute;
   bottom: 2rem;
   font-size: 80%;
-  font-style: italic;
+}
+
+@media (max-width: 576px) {
+  .thumb-text .thumb-link {
+    position: relative;
+    bottom: 0;
+    margin-top: 0.5rem;
+    font-size: 100%;
+    color: #ff3333;
+  }
 }
 
 footer {

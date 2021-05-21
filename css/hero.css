@@ -1,5 +1,6 @@
 .hero {
   height: 70vh;
+  min-height: 50rem;
   padding: 2rem;
 }
 
@@ -18,6 +19,10 @@
 
 .hero * {
   font-weight: 300;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 576px) {
@@ -54,6 +59,12 @@
 
 .hero .title {
   font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .hero .contact {
+    line-height: 1.5;
+  }
 }
 
 .hero .contact a {

@@ -19,10 +19,10 @@
     &:hover {
         background: darken($primary-color, 10%);
     }
-}
+}   
 
-//// 
-
+////  
+ 
 ::selection { 
     background: $primary-color;
     color: #fff;
@@ -291,7 +291,7 @@ section{
     // flex-wrap: wrap;
     overflow-x: auto;
     display: grid;
-    grid-template-columns: repeat(7, minmax(25rem, 2fr));
+    grid-template-columns: repeat(9, minmax(25rem, 2fr));
     gap: 2rem;
     padding-bottom: 2rem;
     &::-webkit-scrollbar {  
@@ -311,10 +311,10 @@ section{
         }
     }
     @include small{        
-        display: flex;
-        flex-wrap: wrap;
+        // display: flex;
+        // flex-wrap: wrap;
         padding: 0;
-        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         &::-webkit-scrollbar {  
             all: unset;
         }
@@ -326,7 +326,7 @@ section{
             &:hover {
                 all: unset;
             }
-        }   
+        }     
     } 
     .thumb{
         overflow: hidden;
@@ -355,26 +355,23 @@ section{
             }
         }
         @include small{
+            flex-direction: column;
             flex: 1 0 auto;
             height: auto;
-            padding: 1rem;
+            padding: 2rem;
             &:last-child{
-                grid-column: span 2;
+                // grid-column: span 2;
             }             
         }
         figure{
             width: 100%;
             margin: auto;
             @include small{
-                width: 30vw;
+                // width: 30vw;
             }
             img{
                 height: 100%;
             }
-        }
-        a{
-            position: absolute;top: 0;left: 0;z-index: 10;
-            @include size(100%);
         }
     } 
 } 
@@ -388,12 +385,18 @@ section{
     background-color: rgba($primary-color, .85);
     backdrop-filter: blur(2px);
     font-size: 1.8rem;
-    text-align: center;line-height: 1.1;
+    text-align: center;line-height: 1.2;
     color: #fff;
     transition: .2s ease;
     opacity: 0;
     @include small{
+        position: relative;
         padding: 1.5rem;
+        padding: 0;
+        font-size: 1.4rem;
+        opacity: 1;
+        background-color: transparent;
+        color: $text-color;
     }
     .thumb-title{
         display: none;
@@ -401,7 +404,14 @@ section{
     .thumb-link{
         position: absolute;bottom: 2rem;
         font-size: 80%;
-        font-style: italic;
+        // font-style: italic;
+        @include small{
+            position: relative;
+            bottom: 0;
+            margin-top: 0.5rem;
+            font-size: 100%;
+            color: $primary-color;
+        }
     }
 }
 
