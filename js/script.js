@@ -57,18 +57,18 @@ $(document).ready(function() {
 
   var works = {
     nameA: [
-      "Master",
-      "Farmer's",
       "ClixScale",
       "VOD",
+      "Farmer's",
+      "Master",
       "IQ Game Test",
       "Megatech",
     ],
     nameB: [
-      "Protection",
-      "Helper App",
       "Dashboard",
-      "streaming ",
+      "streaming",
+      "Helper App",
+      "Protection",
       "Dashboard",
       "eStore",
     ],

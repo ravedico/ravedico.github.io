@@ -423,7 +423,7 @@
 }
 
 .project:nth-child(1) {
-  background-color: #ff3333;
+  background-color: #ec1850;
 }
 
 .project:nth-child(1) .device {
@@ -431,7 +431,7 @@
 }
 
 .project:nth-child(2) {
-  background-color: #26baae;
+  background-color: #3f2574;
 }
 
 .project:nth-child(2) .device {
@@ -439,7 +439,7 @@
 }
 
 .project:nth-child(3) {
-  background-color: #ec1850;
+  background-color: #26baae;
 }
 
 .project:nth-child(3) .device {
@@ -447,7 +447,7 @@
 }
 
 .project:nth-child(4) {
-  background-color: #3f2574;
+  background-color: #ff3333;
 }
 
 .project:nth-child(4) .device {

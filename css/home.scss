@@ -13,7 +13,7 @@
     background: lighten($text-color, 10%);
 }
 ::-webkit-scrollbar-thumb {
-    background: $primary-color;
+    background: $primary-color; 
     border-radius: 10px;
     transition: .2s ease;
     &:hover {
@@ -21,11 +21,11 @@
     }
 }   
 
-////  
+////   
  
 ::selection { 
     background: $primary-color;
-    color: #fff;
+    color: #fff; 
 }
 
 #wrapper{

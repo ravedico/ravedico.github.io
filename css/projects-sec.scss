@@ -149,7 +149,7 @@ $projectNameSizeMinMax: $projectNameSize,13rem,10rem;
     &.current{
         display: block;
     }
-    @include size(100%);
+    @include size(100%); 
     background-image: url(../images/noise.png);
     @for $i from 1 to length($colors){        
         &:nth-child(#{$i}){
@@ -351,4 +351,4 @@ $projectNameSizeMinMax: $projectNameSize,13rem,10rem;
             }
         }
     }
-} 
+}  

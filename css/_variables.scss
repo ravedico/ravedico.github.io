@@ -5,10 +5,10 @@ $bg-color: hsl(180, 10%, 90%);
 $text-color: hsl(200, 30%, 30%);
 
 $colors: 
-    $primary-color, //master protection
-    hsl(175, 66%, 44%), //farmer's helper
     hsl(344, 85%, 51%), //clixscale
     hsl(260, 51%, 30%), //vod
+    hsl(175, 66%, 44%), //farmer's helper
+    $primary-color, //master protection
     hsl(217, 94%, 59%), //iqtest
-    hsl(272, 67%, 40%), //estore
+    hsl(272, 67%, 40%), //estore 
     hsl(120, 89%, 41%);

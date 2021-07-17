@@ -7,7 +7,7 @@ $bg-color: hsl(0, 0%, 99%);
     --mobile-w: 13vw;
     --mobile-h: calc(var(--mobile-w) * 1.8);
     --desktop-w: calc(var(--mobile-h) * 2);
-    --desktop-h: calc(var(--mobile-w) * 2.5);
+    --desktop-h: calc(var(--mobile-w) * 2.45);
     
     --aside-w: 40rem;
     @include large{
@@ -330,9 +330,25 @@ $bg-color: hsl(0, 0%, 99%);
     }
 }
 
+.ux_image{
+    width: var(--desktop-w);
+    @include small{
+        width: 100%;
+    }
+}
+
 .work-text{
-    // text-align: center;
+    width: var(--desktop-w);
     margin-bottom: 2rem;
+    line-height: 1.5;
+    @include small{
+        width: 100%;
+    }
+    br{
+        content:'';
+        display: block;
+        margin-bottom: 1rem;
+    }
 }
 
 .work-title{
@@ -340,6 +356,10 @@ $bg-color: hsl(0, 0%, 99%);
     @include medium{
         margin-bottom: 2rem;
     }
+}
+
+.work-subtitle{
+    margin-bottom: 4rem;
 }
 
 .desc-screen_wrap{
@@ -402,7 +422,13 @@ $bg-color: hsl(0, 0%, 99%);
         }
         @include medium{
             bottom: 0;
-            // @include size(var(--mobile-w-s), var(--mobile-h-s));
+        }
+
+        + .scroll-btn{
+            bottom: 16rem;
+            @include small{
+                bottom: 1rem;
+            }
         }
     } 
     &.desktop{
@@ -411,7 +437,12 @@ $bg-color: hsl(0, 0%, 99%);
         border-radius: calc(var(--desktop-w) / 40);
         box-shadow: 0 0 0 .2rem lighten(#000, 80%), 0 0 2rem 0 rgba(#000, .1), 0 6rem 4rem -6rem rgba(#000, .4);
         @include medium{
-            // @include size(var(--desktop-w-s), var(--desktop-h-s));
+        }
+        + .scroll-btn{
+            bottom: 8rem;
+            @include small{
+                bottom: 1rem;
+            }
         }
     }
     .gallery &{
@@ -419,7 +450,6 @@ $bg-color: hsl(0, 0%, 99%);
         position: fixed;
         z-index: 1000;
         margin: auto;
-        // border-radius: 0;
         box-shadow: 0 6rem 4rem -6rem rgba(#000, .4);
         
         &.mobile{
@@ -637,5 +667,64 @@ $bg-color: hsl(0, 0%, 99%);
     }
     @include medium{
         display: block;
+    }
+}
+
+/* ======================= 
+        scroll button
+======================= */
+.scroll-btn{
+    z-index: 1000;
+    @include size(3rem, 5rem);
+    box-shadow: 0 0 0 .5rem $text-color, 0 0 .5rem .7rem rgba(#fff, .2);
+    background-color: rgba(#fff, .05);
+    backdrop-filter: blur(1rem);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: .3s cubic-bezier(0.3, -0.5, 0.8, 2.4), opacity 1s ease;
+    position: absolute; 
+    @include small{
+        display: none !important;
+    }
+    &:after{
+        content: '';
+        @include centerH;
+        top: 10px;
+        @include size(20%, 25%);
+        border-radius: 1rem; 
+        background-color: $text-color;
+        animation: scroll 1.5s infinite;
+        @include small{
+            // @include size(3rem);
+            // border-radius: 50%;
+            // box-shadow: 0 0 0 .2rem #fff;
+            // background-color: rgba($text-color,.8);
+            // animation: scroll 1.5s infinite;
+            content: none;
+            display: none;
+        }
+    }
+    &:hover{
+        @include size(3.3rem, 5.5rem);
+    }
+    + .scroll-btn{
+        display: none;
+    }
+}
+
+@keyframes scroll {
+    0%{
+        top: 1rem;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100% {
+        top: 60%;
+        opacity: 0;
     }
 }

@@ -7,11 +7,16 @@ $(document).ready(function() {
         $(container).fadeIn(100);
         $('.gallery .screen').remove();
         $(this).clone().prependTo('.gallery');
+        if ($(window).width() > 768) {
+            $('.gallery').append('<div class="scroll-btn"></div>');
+        }
+        $('.scroll-btn').show();
     });
     $('#overlay, .gallery').click(function(){
         $('#overlay').fadeOut(100);
         $('.gallery .screen').remove();
         $('.work-page').removeClass('galleryOn');
+        $('.scroll-btn').remove();
     });
     
     ////
