@@ -464,6 +464,31 @@
   margin-right: 0.5rem;
 }
 
+.figma_wrap {
+  overflow: hidden;
+  position: relative;
+  width: 1008px;
+  height: 680px;
+  -webkit-box-shadow: 0 0 0 0.2rem #cccccc, 0 0 2rem 0 rgba(0, 0, 0, 0.1), 0 3rem 2rem -2rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 0.2rem #cccccc, 0 0 2rem 0 rgba(0, 0, 0, 0.1), 0 3rem 2rem -2rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.figma_wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.work-text-link {
+  margin-top: 2rem;
+  color: #ff3333;
+}
+
 .screens_wrap {
   position: relative;
   display: -webkit-box;
