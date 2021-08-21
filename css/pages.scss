@@ -391,10 +391,24 @@ $bg-color: hsl(0, 0%, 99%);
     height: 680px;
     box-shadow: 0 0 0 .2rem lighten(#000, 80%), 0 0 2rem 0 rgba(#000, .1), 0 3rem 2rem -2rem rgba(#000, .2);
     border-radius: 10px;
+    @include x-large{
+        width: 800px;
+        height: 540px;        
+    }
+    @include small{
+        width: 100%;
+        height: 240px;
+    }
     iframe{
         position: absolute;top: 0;left: 0;
         transform-origin: top left;
         transform: scale(.7);
+        @include x-large{
+            transform: scale(.55);
+        }
+        @include small{
+            transform: scale(.24);
+        }
     }
 }
 
