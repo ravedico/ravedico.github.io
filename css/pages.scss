@@ -707,6 +707,11 @@ $bg-color: hsl(0, 0%, 99%);
         scroll button
 ======================= */
 .scroll-btn{
+    ////
+    display: none !important;
+    ////
+
+    position: absolute; 
     z-index: 1000;
     @include size(3rem, 5rem);
     box-shadow: 0 0 0 .5rem $text-color, 0 0 .5rem .7rem rgba(#fff, .2);
@@ -715,7 +720,6 @@ $bg-color: hsl(0, 0%, 99%);
     border-radius: 2rem;
     cursor: pointer;
     transition: .3s cubic-bezier(0.3, -0.5, 0.8, 2.4), opacity 1s ease;
-    position: absolute; 
     @include small{
         display: none !important;
     }

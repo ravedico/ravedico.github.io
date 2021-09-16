@@ -944,6 +944,8 @@
         scroll button
 ======================= */
 .scroll-btn {
+  display: none !important;
+  position: absolute;
   z-index: 1000;
   width: 3rem;
   height: 5rem;
@@ -956,7 +958,6 @@
   cursor: pointer;
   -webkit-transition: 0.3s cubic-bezier(0.3, -0.5, 0.8, 2.4), opacity 1s ease;
   transition: 0.3s cubic-bezier(0.3, -0.5, 0.8, 2.4), opacity 1s ease;
-  position: absolute;
 }
 
 @media (max-width: 576px) {
