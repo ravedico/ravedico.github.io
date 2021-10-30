@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: 'Poppins', sans-serif;
   color: #365463;
 }
@@ -97,7 +98,8 @@ h6 {
 }
 
 p, li {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 1400px) {
