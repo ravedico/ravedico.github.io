@@ -352,6 +352,13 @@ $img-s: 14rem;
             &:hover{
                 color: $primary-color;
             }
+            @include small{
+                display: block;
+            }
+        }
+        span{
+            @include small{
+display: none;            }
         }
     }
     .contact-text{

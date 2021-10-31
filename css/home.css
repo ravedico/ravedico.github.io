@@ -424,6 +424,18 @@ section .container {
   color: #ff3333;
 }
 
+@media (max-width: 576px) {
+  .sec_contact p a {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec_contact p span {
+    display: none;
+  }
+}
+
 .sec_contact .contact-text {
   font-weight: 700;
 }
