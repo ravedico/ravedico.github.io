@@ -6,8 +6,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,10 +17,9 @@ html {
 
 body {
   position: relative;
-  font-family: 'Poppins', sans-serif;
-  color: #365463;
+  font-family: "Poppins", sans-serif;
+  color: hsl(200, 30%, 30%);
 }
-
 @media (max-width: 576px) {
   body {
     font-size: 1.4rem;
@@ -40,7 +38,6 @@ h1, h2, h3, h4, h5, h6, p, li {
 h1 {
   font-size: 4.4rem;
 }
-
 @media (max-width: 768px) {
   h1 {
     font-size: 3.2rem;
@@ -50,7 +47,6 @@ h1 {
 h2 {
   font-size: 3.4rem;
 }
-
 @media (max-width: 768px) {
   h2 {
     font-size: 2.5rem;
@@ -60,13 +56,11 @@ h2 {
 h3 {
   font-size: 2.8rem;
 }
-
 @media (max-width: 768px) {
   h3 {
     font-size: 2.4rem;
   }
 }
-
 @media (max-width: 768px) {
   h3 {
     font-size: 2.2rem;
@@ -76,7 +70,6 @@ h3 {
 h4 {
   font-size: 2.4rem;
 }
-
 @media (max-width: 768px) {
   h4 {
     font-size: 2rem;
@@ -86,11 +79,9 @@ h4 {
 h5 {
   font-size: 1.8rem;
 }
-
 h6 {
   font-size: 1.6rem;
 }
-
 @media (max-width: 768px) {
   h6 {
     font-size: 1.6rem;
@@ -101,13 +92,11 @@ p, li {
   font-size: 1.4rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1400px) {
   p, li {
     font-size: 1.4rem;
   }
 }
-
 li {
   list-style-type: none;
 }
@@ -122,17 +111,11 @@ img {
 }
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 @media (max-width: 768px) {
   .flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -144,9 +127,7 @@ img {
   border: 0 !important;
   outline: 0 !important;
 }
-
 .slick-slider:focus, .slick-slider:active, .slider_wrap:focus, .slider_wrap:active, .slick-list:focus, .slick-list:active, .slick-track:focus, .slick-track:active, .slider_item:focus, .slider_item:active {
   border: 0 !important;
   outline: 0 !important;
-}
-/*# sourceMappingURL=reset.css.map */
+}/*# sourceMappingURL=reset.css.map */

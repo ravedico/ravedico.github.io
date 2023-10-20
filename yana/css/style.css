@@ -1,6 +1,37 @@
+.hide-desktop {
+  display: none;
+}
+@media (max-width: 576px) {
+  .hide-desktop {
+    display: block;
+  }
+}
+
 @media (max-width: 576px) {
   header {
     justify-content: space-between;
+  }
+}
+header.dark {
+  background-color: #121c21;
+  color: #fff;
+}
+header .logo {
+  background: linear-gradient(90deg, #fff, hsl(46, 100%, 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .menu-item {
+  font-weight: 600;
+}
+header .menu-item:hover {
+  background: linear-gradient(90deg, #fff, hsl(46, 100%, 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 576px) {
+  header .nav-icon {
+    display: none;
   }
 }
 
@@ -45,8 +76,13 @@ section .container {
 
 .hero {
   position: relative;
-  top: 5rem;
+  margin-top: 5rem;
   height: 90vh;
+}
+@media (max-width: 576px) {
+  .hero {
+    height: auto;
+  }
 }
 .hero h1 {
   margin-bottom: 1rem;
@@ -68,6 +104,11 @@ section .container {
   height: 100%;
   padding: 5rem;
 }
+@media (max-width: 576px) {
+  .hero .video_wrap {
+    padding: 0;
+  }
+}
 .hero .video_wrap iframe {
   width: 100%;
   height: 100%;
@@ -84,7 +125,7 @@ section .container {
   transition: 0.2s ease;
 }
 .hero .contact a:hover {
-  color: hsl(0, 100%, 60%);
+  color: hsl(54, 100%, 60%);
 }
 @media (max-width: 576px) {
   .hero .contact span {
@@ -111,7 +152,7 @@ section .container {
   cursor: pointer;
 }
 .hero-menu li:hover {
-  color: hsl(0, 100%, 60%);
+  color: hsl(54, 100%, 60%);
 }
 @media (max-width: 576px) {
   .hero-menu li {
@@ -145,122 +186,58 @@ section .container {
   position: relative;
   margin-bottom: 1rem;
   line-height: 1.5;
+  font-weight: 200;
 }
 .about_sec p span {
-  font-weight: 600;
-  color: #2d4653;
+  font-weight: 900;
+  background: linear-gradient(90deg, #fff, hsl(46, 100%, 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .sec_contact {
-  min-height: 100vh;
+  padding: 5rem 0;
 }
 @media (max-width: 576px) {
   .sec_contact {
     min-height: auto;
-    padding: 3rem 0;
+    padding: 3rem;
   }
 }
 .sec_contact .text {
   margin-bottom: 2rem;
   text-align: center;
 }
-.sec_contact p {
-  line-height: 2;
+@media (max-width: 576px) {
+  .sec_contact .text {
+    margin: 0;
+  }
+}
+@media (max-width: 576px) {
+  .sec_contact p {
+    margin-bottom: 2rem;
+  }
 }
 .sec_contact p a:hover {
-  color: hsl(0, 100%, 60%);
+  background: linear-gradient(90deg, #fff, hsl(46, 100%, 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 576px) {
+  .sec_contact p a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
 }
 .sec_contact .contact-text {
   font-weight: 700;
 }
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.sec_contact .contact-text span {
+  display: initial;
+  margin: 0 0.5rem;
 }
-.centered:first-child {
-  z-index: 3;
-}
-.centered:last-child {
-  z-index: 1;
-}
-.centered:last-child:before {
-  content: "";
-  left: 50%;
-  transform: rotateY(30deg) rotateX(10deg) skew(10deg) translateX(-50%);
-}
-.centered:last-child span {
-  width: 34rem;
-  aspect-ratio: 16/9;
-  background-color: rgba(0, 0, 0, 0.2);
-  filter: blur(8px);
-}
-
-.bc_wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
-.bc_wrap:hover .bc {
-  transform: translateX(-50%);
-}
-
-.bc {
-  position: relative;
-  transform: rotateY(30deg) rotateX(10deg) skew(10deg) translateX(-50%);
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 34rem;
-  padding: 1rem;
-  aspect-ratio: 16/9;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 0.4rem;
-  background-color: #fff;
-  box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.3);
-  text-align: center;
-  transition: 0.4s cubic-bezier(0.4, -0.2, 0.4, 1.6);
-}
-.bc .bc-image {
-  aspect-ratio: 1/1;
-  height: 100%;
-  background-color: #ccc;
-}
-.bc .bc-name_wrap {
-  margin-bottom: 1rem;
-}
-.bc .bc-contact {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-.bc .bc-contact p {
-  white-space: nowrap;
-}
-.bc .bc-contact p:hover {
-  color: hsl(0, 100%, 60%);
-}
-.bc .bc-contact span {
-  position: relative;
-  top: 0.2rem;
-  font-weight: 700;
-}
-
-footer {
-  padding: 4rem 2rem;
-}
-footer p {
-  text-align: center;
-}
-footer p span {
-  text-decoration: underline;
-  cursor: pointer;
+@media (max-width: 576px) {
+  .sec_contact .contact-text span {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
