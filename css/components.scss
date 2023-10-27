@@ -3,20 +3,20 @@
 
 //// 
 
-::-webkit-scrollbar {  
-    width: .6rem;
-}
-::-webkit-scrollbar-track {
-    background: lighten($text-color, 10%);
-}
-::-webkit-scrollbar-thumb {
-    background: $primary-color; 
-    border-radius: 10px;
-    transition: .2s ease;
-    &:hover {
-        background: darken($primary-color, 10%);
-    }
-}   
+// ::-webkit-scrollbar {  
+//     width: .6rem;
+// }
+// ::-webkit-scrollbar-track {
+//     background: lighten($text-color, 10%);
+// }
+// ::-webkit-scrollbar-thumb {
+//     background: $primary-color; 
+//     border-radius: 10px;
+//     transition: .2s ease;
+//     &:hover {
+//         background: darken($primary-color, 10%);
+//     }
+// }   
 
 ////    
 

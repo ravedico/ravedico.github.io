@@ -12,8 +12,9 @@
     <meta name="author" content="Yana Obolski">
     <meta charset="UTF-8">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <!-- CSS -->
     <link href="../css/reset.css" rel="stylesheet" type="text/css">
     <link href="../css/components.css" rel="stylesheet" type="text/css">
@@ -34,8 +35,9 @@
 
 <body class="home dark">
     <header class="dark">
-        <div class="scroll-top logo">
-            Yana Obolski
+        <div class="scroll-top logo">            
+            <!-- Yana Obolski -->
+            <img src="yana-logo.PNG" alt="Yana Obolski">
         </div>
         <ul class="nav-menu">
             <div class="back-icon"></div>
@@ -53,14 +55,22 @@
             </li>
         </ul>
         <p class="hide-desktop">
-            <a href="Yana_CV.pdf" target="_blank">CV</a>
+            <a href="#contact">Contact</a>
         </p>
     </header>
     <div id="wrapper">
         <section id="work" class="hero">
             <div class="video_wrap">
                 <a class="video-link" href="https://vimeo.com/manage/videos/876832793" target="_blank"></a>
-                <iframe src="https://player.vimeo.com/video/876832793?background=1" width="" height="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>    
+                <iframe class="hide-mobile" src="https://player.vimeo.com/video/876832793?background=1" width="" height="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe class="hide-desktop" src="https://player.vimeo.com/video/878580728?background=1" width="" height="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>      
+            </div>
+        </section>
+        <section class="big-text_sec">
+            <div class="big-text">
+                <span>Let's create </span><br>
+                <span class="color">beautiful things</span><br>
+                <span>together<span class="mark">!</span></span>        
             </div>
         </section>
 
@@ -68,7 +78,7 @@
             <div class="container">
                 <div class="text">
                     <h5 class="title">My story</h5>
-                    <p>
+                    <!-- <p>
                         I’m a Digital Artist with knowledge, experience, and passion, for
 the world of Motion Design, 3d Modelling, Compositing, Video
 Editing, post-production, styling and music.<br>
@@ -78,7 +88,12 @@ development.<br>
 I also have photography and production experience.
 Possess the ability to work well with others and is able to meet
 tight deadlines.
-                    </p>
+                    </p> -->
+                    <p>I’m a multidisciplinary creative and digital artist with a global mindset. I have vast experience across motion design, 3d modelling, compositing, video editing, post production, styling and music. <br>
+                        My passion lies in creating art of many forms. Throughout my diverse career, I have worked with companies in various industries including video art studios, gaming companies and fashion studios. The work I have created spans across commercials, video clips and concept development - with photography and production as key skills throughout my career path so far. <br>
+                        As someone that has worked across different markets with many distinct companies, I am very much a team player with excellent time management skills and an overall exuberant energy. <br>
+                        I appreciate you taking the time to check out my website and I look forward to hearing from you soon.
+                        </p>
                 </div>
                 <div class="text">
                     <h5 class="title">Skillset</h5>
@@ -98,6 +113,7 @@ tight deadlines.
                         <a href="tel:+4917648084029">+49-17648084029</a> <span>|</span> <a href="mailto:yanaobolski@gmail.com">yanaobolski@gmail.com</a>
                         <span>|</span>
                         <a href="https://www.linkedin.com/in/yana-obolski-100477230/" target="_blank">linkedin</a>
+                        <a href="Yana_CV.pdf" target="_blank"class="hide-desktop">CV</a>
                     </p>
                 </div>
             </div>
