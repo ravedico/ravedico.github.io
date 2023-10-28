@@ -77,7 +77,7 @@ body {
   transition: background 0.25s ease-in-out;
 }
 body.dark {
-  background-color: #121c21;
+  background-color: #000;
   color: #fff;
 }
 
