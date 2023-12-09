@@ -21,6 +21,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/pages.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1S9ZDW1TBJ"></script>
@@ -34,15 +35,21 @@
 </head>
 
 <body class="home dark">
+    <div id="overlay">
+        <div class="gallery"></div>
+    </div>
     <header class="dark">
         <div class="scroll-top logo">            
             <!-- Yana Obolski -->
-            <img src="yana-logo.PNG" alt="Yana Obolski">
+            <img src="images/yana-logo.PNG" alt="Yana Obolski">
         </div>
         <ul class="nav-menu">
             <div class="back-icon"></div>
             <li class="menu-item">
-                <a href="#work">Showreel</a>
+                <a href="#showreel">Showreel</a>
+            </li>
+            <li class="menu-item">
+                <a href="#work">Selected works</a>
             </li>
             <li class="menu-item">
                 <a href="#about">Story</a>
@@ -51,7 +58,7 @@
                 <a href="#contact">Contact</a>
             </li>
             <li class="menu-item">
-                <a href="Yana_CV.pdf" target="_blank">CV</a>
+                <a href="images/Yana_CV.pdf" target="_blank">CV</a>
             </li>
         </ul>
         <p class="hide-desktop">
@@ -59,11 +66,42 @@
         </p>
     </header>
     <div id="wrapper">
-        <section id="work" class="hero">
+        <section id="showreel" class="hero">
             <div class="video_wrap">
                 <a class="video-link" href="https://vimeo.com/manage/videos/876832793" target="_blank"></a>
                 <iframe class="hide-mobile" src="https://player.vimeo.com/video/876832793?background=1" width="" height="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 <iframe class="hide-desktop" src="https://player.vimeo.com/video/878580728?background=1" width="" height="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>      
+            </div>
+        </section>
+        <section id="work" class="work">
+            <h5 class="title">Selected works</h5>
+            <div class="content">
+                <div class="work_wrap">
+                    <figure class="screen">
+                        <h5 class="work-link">Enlarge image</h5>
+                        <img src="images/work1.jpg" alt="">
+                    </figure>
+                    <div class="text">
+                        <h5 class="subtitle">Anna Lann’s EP cover</h5>
+                        <p><b>3d Artist</b> - 3d work made for the album that was released on BoysNoiseRecords. I worked closely with the art director  and brought the ideas to life with Blender and Houdini. 
+                        </p>
+                    </div>
+                </div>
+                <div class="work_wrap">
+                    <figure class="screen">
+                        <h5 class="work-link">Enlarge image</h5>
+                        <img src="images/work2.jpg" alt="">
+                    </figure>
+                    <div class="text">
+                        <h5 class="subtitle">aquarium on trance</h5>
+                        <p><b>3D artist and production supervisor </b> - 
+                            This work is featured in prestige <a href="https://www.pap-magazine.com/aquarium-on-trance" target="_blank">pap-magazine</a>.
+                            Great work with an incredibly talented crew. 
+                            As the production supervisor I was responsible for the pre production process, hiring a 3d artist to work with me on my vision,making sure to meet tight deadlines on time for the publish and taking active part with the product as a 3d artist and finishing with post production and composing it all.<br>
+                            3D scanned the models and added textures and 3d rendering in Blender.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="big-text_sec">
@@ -97,10 +135,7 @@ tight deadlines.
                 </div>
                 <div class="text">
                     <h5 class="title">Skillset</h5>
-                    <p><span>Video:</span> Premiere Pro, Devinci Resolve.</p>
-                    <p><span>3D and animation:</span> Blender, Houdini.</p>
-                    <p><span>Compositing:</span> After Effects, Nuke.</p>
-                    <p><span>Image editing:</span> Photoshop, photography.</p>
+                    <p><span>Video:</span> Premiere Pro, Devinci Resolve. <span>3D and animation:</span> Blender, Houdini. <span>Compositing:</span> After Effects, Nuke. <span>Image editing:</span> Photoshop, photography.</p>
                 </div>
             </div>
         </section>

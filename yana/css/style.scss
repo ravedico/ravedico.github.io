@@ -10,7 +10,7 @@ $theme-color: hsl(280, 100%, 50%);
     -webkit-text-fill-color: transparent;
 }
 
-::-webkit-scrollbar {  
+::-webkit-scrollbar {   
     width: auto;
 }
 ::-webkit-scrollbar-track {
@@ -30,8 +30,9 @@ body{
 }
 
 p, li {
-    font-size: 2.2rem;
-  }
+    font-size: 1.6rem;
+
+}
 
 
 .hide-desktop{
@@ -46,6 +47,63 @@ p, li {
         display: none;
     }
 }
+
+////
+#overlay{
+    display: none;
+    position: fixed;
+    top: 0;left: 0;z-index: 999;
+    @include size(100%);
+    background-color: rgba(#000, .8);
+    backdrop-filter: blur(.3rem);
+    overflow: auto;
+    flex-direction:column; 
+}
+
+.gallery{
+    // display: flex;align-items: center;justify-content: center;
+    @include centerH;top: 4rem;
+    z-index: 1000;
+    width: 80vw;        
+    flex-grow:1;
+    padding-bottom: 4rem;
+    .screen{
+        overflow-y: auto;
+        aspect-ratio: auto;
+        &:before{
+            display: none;content: none;            
+        }
+        @include small{
+            height: auto;
+            aspect-ratio: initial;
+        }
+        .work-link{
+            display: none;
+        }
+    }
+}
+
+.galleryOn{
+    overflow: hidden;
+    height: 100vh;
+}
+
+.close{
+    position: absolute;top: -3rem;right: -3rem;
+    @include size(2rem);
+    background-color: rgba(#fff, .8);
+    border-radius: 50%;
+    box-shadow: 0 0 2rem 0 rgba(#000, .1);
+    &::before,&::after{
+        content: '';
+        position: absolute;top: 50%;left: 50%;
+        transform-origin: center;
+        @include size(.2rem, 90%);
+        border-radius: .2rem;
+        background-color: lighten($text-color, 20%);
+    }
+}
+//// 
 
 header{
     padding: .5rem 3rem;
@@ -117,6 +175,8 @@ section{
 .title{
     margin-bottom: 3rem;
     font-weight: 500;
+    margin-bottom: 2rem;
+    font-size: 3rem;
 }
 
 //// 
@@ -124,7 +184,7 @@ section{
 .hero{
     position: relative;
     margin-top: 5rem;
-    height: 90vh;
+    height: 100vh;
     @include small{
         margin-top: 7rem;
     }
@@ -160,7 +220,7 @@ section{
     .video-link{
         @include centerVH; 
         width: 80%;height: 80%;
-        background-image: url(../play.png);
+        background-image: url(../images/play.png);
         background-repeat: no-repeat;
         background-size: 80px;
         background-position: center;
@@ -218,6 +278,57 @@ section{
     } 
 }
 
+.work{
+    .content{
+        max-width: 90vw;
+        padding: 5rem;
+        @include small{
+            padding: 0;
+        }
+    }
+    .subtitle{
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        @include small{
+            margin-top: 1rem;
+            font-size: 2rem;
+        }
+    }
+    .screen{
+        height: fit-content;
+        aspect-ratio: auto;
+    }
+    figure{
+        width: 50%;
+        min-width: 240px;
+        max-width: 30vw;
+        @include small{
+            width: 100%;max-width: 100%;min-width: 100%;
+        }
+    }
+    .text{
+        flex:1;
+    }
+    p{
+        a{
+            color: $primary-color;
+            text-decoration: underline;
+        }
+        b{
+            color: $theme-color;
+        }
+    }
+}
+
+.work_wrap{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    @include small{
+        display: block;
+    }
+}
+
 .big-text_sec{
     height: 100vh;
     @include small{
@@ -261,10 +372,7 @@ section{
     .text{
         margin-bottom: 5rem;
     }
-    .title{
-        margin-bottom: 2rem;
-        font-size: 3rem;
-    }
+
     p{
         position: relative;
         margin-bottom: 1rem;
