@@ -2,7 +2,7 @@ const EnglishPractice = () => {
   const [currentSection, setCurrentSection] = React.useState('present-simple');
   const [showAnswer, setShowAnswer] = React.useState(false);
   const [userAnswer, setUserAnswer] = React.useState('');
-
+//
   const grammarSections = {
     'present-simple': {
       title: 'Present Simple',
