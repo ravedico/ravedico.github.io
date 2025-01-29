@@ -1,12 +1,6 @@
 @import '_variables';
 @import '_mixins';
 
-#wrapper{
-    scroll-snap-type: y mandatory; 
-    @include small{
-        height: 90vh; 
-    }
-}
 
 .top-btn{
     position: fixed;right: 2rem;bottom: 2rem;z-index: 2;
@@ -135,32 +129,41 @@ section{
 ////
 
 .hero{
-    height: 70vh;
-    min-height: 50rem;
+    // height: 70vh;
+    // min-height: 50rem;
     padding: 2rem;
     @include medium{
         height: auto;
         min-height: auto;
     }
     @include small{
-        height: 80vh;
+        // height: 80vh;
     }
     h1{
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
         font-weight: 300;
+        line-height: 1;
+        @include small{
+            font-weight: 500;
+        }
     }
     h2{
         font-weight: 300;
         @include small{
             margin-bottom: 0.5rem;
+            font-weight: 500;
         }
     }
     h5{
         font-weight: 300;
+        @include small{
+            // font-size: 1.4rem; 
+            font-weight: 400;
+        }
     }
     .container{
         display: flex;
-        justify-content: center;
+        justify-content: center;align-items: center;
         @include small{
             flex-direction: column;
             align-items: center;
@@ -168,12 +171,13 @@ section{
         }
     }
     .text{
-        > *{
-            margin-bottom: 1.6rem;
-        }        
+        margin: 4rem 0;
+        @include medium{
+            flex: 1;
+        }    
     }
     .title{
-        // font-weight: 600;
+        margin: 0;
     }
     .contact{
         @include small{
@@ -197,20 +201,39 @@ section{
 .hero-menu{
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    // gap: 1.5rem;
     margin-top: 1.5rem;
     font-size: 1.5rem;
     @include small{
         margin-top: 3rem;
-        justify-content: center;        
+        justify-content: center;
+        justify-content: space-evenly;
+        justify-content:space-between;
     }
     li{
         font-size: 1.8rem;
         font-weight: 300;
-        cursor: pointer; 
-        &:hover{
-            color: $primary-color;
+        cursor: pointer;
+        a{
+            padding: .5rem 1rem;
+            font-weight: 500;
+            color: $theme-color;
+            text-decoration: none;
+            background-color: rgba($theme-color, 0);
+            border-radius: .2rem;
+            transition: .2s ease;
+            &:hover{
+                background-color: rgba($theme-color, .2);
+                // color: $primary-color;
+                // color: #fff;
+                text-decoration: none;
+                &:focus{
+                    outline: 0;
+                    border: 0;
+                }
+            }
         }
+
         @include small{            
             font-weight: 600;
         }
@@ -218,12 +241,12 @@ section{
 }
 
 
-$img-s: 14rem;
+$img-s: 21rem;
 
 .hero-scenes_wrap{
     position: relative;
     @include size($img-s);
-    margin-right: 3rem;
+    margin-right: 5rem;
     @include small{
         margin: 0 auto 3rem;
     }
@@ -264,35 +287,104 @@ $img-s: 14rem;
     }
 }
 
+// .h_wrap{
+//     line-height: 1;
+// }
+
 .work_sec{    
     padding: 7rem 5rem 5rem;
+    @include small{
+        padding: 4rem 2rem;
+    }
 }
 
-.work_wrap{
-    margin: 0 auto 10rem;
-    padding-bottom: 10rem;
-    border-bottom: 2px solid rgba($text-color, .2);
+.sec_title{
+    margin-bottom: 10rem;
     text-align: center;
-    &:last-of-type{
-        padding-bottom: 0;
-        border: 0;
+    @include small{
+        margin-bottom: 4rem;
+    }
+}
+
+// .work_wrap{
+//     margin: 0 auto 10rem;
+//     padding-bottom: 10rem;
+//     border-bottom: 2px solid rgba($text-color, .2);
+//     text-align: center;
+//     &:last-of-type{
+//         padding-bottom: 0;
+//         border: 0;
+//     }
+//     .work-name{
+//         margin-bottom: 4rem;
+//         font-weight: 500;
+//     }
+//     .project-main{
+//         position: relative;
+//     }
+//     .work-image{
+//         max-width: 100rem;
+//         min-width: 40rem;
+//         // aspect-ratio: 16 / 9;
+//         margin: auto;
+//         @include small{
+//             max-width: 100%;
+//             min-width: 100%;
+//         }
+//     }
+// }
+
+.work_wrap_h{
+    display: flex;
+    gap: 6rem;
+    width: 80%;
+    max-width: 120rem;
+    margin: 0 auto 20rem;
+    @include medium{
+        width: 100%;
+        gap: 3rem;
+    }
+    @include small{
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 10rem;
     }
     .work-name{
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         font-weight: 500;
-    }
-    .project-main{
-        position: relative;
-    }
-    .screen{
-        max-width: 30vw;
-        min-width: 40rem;
-        // aspect-ratio: 16 / 9;
-        margin: auto;
+        margin: 0;
+        line-height: 1.2;
         @include small{
-            max-width: 100%;
-            min-width: 100%;
+            margin-bottom: 2rem;
         }
+    }
+    .sub-title{
+        margin-bottom: 1rem;
+        font-weight: 400;
+        @include small{
+            font-size: 1.5rem;
+        }
+    }
+    .work-image{
+        flex: 1;
+        height: fit-content;
+        // max-width: 50rem;
+        // min-width: 40rem;
+        // @include small{
+        //     max-width: 100%;
+        //     min-width: 100%;
+        // }
+    }
+    .text{
+        flex: 1;
+        p{
+            @include small{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    button{
+        margin-top: 2rem;
     }
 }
 
@@ -337,7 +429,7 @@ $img-s: 14rem;
 ////
 
 .sec_contact{
-    min-height: 100vh;
+    // min-height: 100vh;
     @include small{
         min-height: auto;
         padding: 3rem 0;
@@ -457,6 +549,25 @@ footer{
         }
     } 
 }  
+
+.home.under{
+    max-height: 100vh;
+    overflow: hidden;
+    &::before{
+        content: 'Under construction';
+        position: fixed;top: 0;left: 0;
+        width: 100%;height: 100%;
+        background: rgba(#000, .85);
+        z-index: 999999;
+        display: flex;align-items: center;justify-content: center;
+        font-size: 6vw;
+        color: #e4d800;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 900;
+    }
+}
+
 
 // * { background-color: rgba(255,0,0,.2); }
 // * * { background-color: rgba(0,255,0,.2); }
