@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Input</title>
+<style>
+    body {
+        background-color: black;
+        color: lime;
+        font-size: 42px; /* Increased font size */
+        font-family: 'Courier New', Courier, monospace; /* Old DOS-style font */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+        direction: rtl; /* Set text direction to right-to-left */
+    }
+    .title{
+        margin-bottom: 20px;
+        font-weight: bold;text-align: center;
+    }
+    #passwordInputs {
+        display: flex;
+        align-items: center;
+    }
+    input {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        margin: 10px;
+        border: 2px solid lime; /* Default border color */
+        border-radius: 5px;
+        background-color: black;
+        color: lime;
+        font-size: 42px; /* Increased font size */
+        font-family: 'Courier New', Courier, monospace; /* Old DOS-style font */
+        font-weight: bold; /* Bolder font weight */
+    }
+    #message {
+        font-size: 48px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    #icon {
+        font-size: 48px;
+        margin-top: 20px;
+    }
+    #resetButton {
+        font-size: 42px;
+        position: absolute;
+        bottom: 20px; /* Adjust bottom spacing */
+        right: 20px; /* Adjust right spacing */
+        cursor: pointer;
+    }
+    .secret{
+        color: black;
+        font-size: 3px;
+    }
+</style>
+</head>
+<body>
+
+<div class="title">אם תרצי בי לצפות, <br>
+    תצטרכי קודם להכניס את הקוד</div>
+<div id="passwordInputs">
+    <input type="text" maxlength="1" id="digit1">
+    <input type="text" maxlength="1" id="digit2">
+    <input type="text" maxlength="1" id="digit3">
+    <input type="text" maxlength="1" id="digit4">
+    <input type="text" maxlength="1" id="digit5">
+    <input type="text" maxlength="1" id="digit6">
+</div>
+<div id="message"></div>
+<div id="icon">🤔</div>
+<div id="resetButton" onclick="resetInputs()">⟳</div>
+<div class="secret">079896</div>
+
+<script>
+    // Set focus on the first input when the page is loaded
+    window.onload = function() {
+        document.getElementById('digit1').focus();
+    };
+
+    // Add event listeners to reset input styles when input value changes
+    document.querySelectorAll('input').forEach(function(input) {
+        input.addEventListener('keyup', function(event) {
+            validateInput(parseInt(input.id.slice(-1)));
+        });
+    });
+
+    function validateInput(index) {
+        var input = document.getElementById('digit' + index);
+        var inputValue = input.value;
+
+        var password = "079896"; // Change password here
+
+        var allInputs = document.querySelectorAll('input');
+        var correctInputs = 0;
+        var incorrectInputs = 0;
+
+        // Validate inputs
+        allInputs.forEach(function(input, i) {
+            if (input.value === password[i]) {
+                input.style.borderColor = 'lime'; // Correct input
+                input.style.backgroundColor = 'black'; // Reset background color
+                input.style.color = 'lime'; // Reset text color
+                correctInputs++;
+            } else if (input.value !== '') {
+                input.style.borderColor = 'red'; // Incorrect input
+                input.style.backgroundColor = 'darkred'; // Change background color to dark red for incorrect inputs
+                input.style.color = 'white'; // Change text color to white for incorrect inputs
+                incorrectInputs++;
+            } else {
+                input.style.borderColor = 'lime'; // Reset border color
+                input.style.backgroundColor = 'black'; // Reset background color
+                input.style.color = 'lime'; // Reset text color
+            }
+        });
+
+        // Update icon and message based on input validation
+        if (correctInputs === password.length && incorrectInputs === 0) {
+            document.getElementById('icon').textContent = '😊'; // Show smiley face
+            document.getElementById('message').textContent = 'יששששש אפשר לראות סרט!!!'; // Show message
+        } else if (correctInputs > 0 && incorrectInputs === 0) {
+            document.getElementById('icon').textContent = '😊'; // Show smiley face
+            document.getElementById('message').textContent = ''; // Clear message
+        } else {
+            document.getElementById('icon').textContent = '😠'; // Show angry face
+            document.getElementById('message').textContent = ''; // Clear message
+        }
+    }
+
+    function resetInputs() {
+        var inputs = document.querySelectorAll('input');
+        inputs.forEach(function(input) {
+            input.value = '';
+            input.style.borderColor = 'lime';
+            input.style.backgroundColor = 'black';
+            input.style.color = 'lime';
+        });
+        document.getElementById('message').textContent = '';
+        document.getElementById('icon').textContent = '🤔'; // Show thinking emoji
+        document.getElementById('digit1').focus(); // Set focus on the first input after reset
+    }
+</script>
+
+</body>
+</html>

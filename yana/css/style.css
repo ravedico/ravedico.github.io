@@ -64,21 +64,21 @@ p, li {
   flex-grow: 1;
   padding-bottom: 4rem;
 }
-.gallery .screen {
+.gallery .work-image {
   overflow-y: auto;
   aspect-ratio: auto;
 }
-.gallery .screen:before {
+.gallery .work-image:before {
   display: none;
   content: none;
 }
 @media (max-width: 576px) {
-  .gallery .screen {
+  .gallery .work-image {
     height: auto;
     aspect-ratio: initial;
   }
 }
-.gallery .screen .work-link {
+.gallery .work-image .work-link {
   display: none;
 }
 
@@ -310,7 +310,7 @@ section .container {
     font-size: 2rem;
   }
 }
-.work .screen {
+.work .work-image {
   height: -moz-fit-content;
   height: fit-content;
   aspect-ratio: auto;

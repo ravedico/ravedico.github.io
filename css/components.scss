@@ -78,7 +78,7 @@ header{
     &.header-scroll{
         top: 0;
         transition: 2s ease-out;
-        transition-delay: 0;
+        transition-delay: .5s;
     }
     @include small{
         padding: 1.5rem;
@@ -90,32 +90,32 @@ header{
     }
     .nav-icon{
         display: none;
-        @include small{
-            display: block;
-            position: relative;
-            @include size(3rem, 2rem);
-            &:before{
-                content: '';
-                @include centerV;right: 1rem;
-                @include size(.4rem);
-                background-color: $text-color;
-                border-radius: 50%;
-                box-shadow: 0 .6rem 0 0 $text-color, 0 -.6rem 0 0 $text-color;
-            }
-        }
+        // @include small{
+        //     display: block;
+        //     position: relative;
+        //     @include size(3rem, 2rem);
+        //     &:before{
+        //         content: '';
+        //         @include centerV;right: 1rem;
+        //         @include size(.4rem);
+        //         background-color: $text-color;
+        //         border-radius: 50%;
+        //         box-shadow: 0 .6rem 0 0 $text-color, 0 -.6rem 0 0 $text-color;
+        //     }
+        // }
     }
     .nav-menu{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 5rem;        
+        gap: 3rem;        
         font-size: 1.5rem;
         @include small{                        
             position: absolute;top: 1.5rem;right: -100%;
             z-index: 1;
             flex-direction: column;
             align-items: flex-start;
-            gap: 3rem;
+            // gap: 3rem;
             width: 16rem;
             margin: 0;
             padding: 3rem;
@@ -130,10 +130,23 @@ header{
     }
     .menu-item{
         font-size: 1.8rem;
-        font-weight: 300;
-        cursor: pointer; 
-        &:hover{
-            color: $primary-color;
+        font-weight: 400;
+        cursor: pointer;
+        a{
+            color: $theme-color;
+            text-decoration: none;
+            &:hover{
+                color: $primary-color;
+                text-decoration: none;
+                &:focus{
+                    outline: 0;
+                    border: 0;
+                }
+            }
+        }
+        &:focus{
+            outline: 0;
+            border: 0;
         }
         @include small{
             font-size: 1.4rem;
@@ -142,11 +155,18 @@ header{
     }
     .logo{
         margin-right: 4rem;
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         font-weight: 500;
         text-transform: uppercase;
         white-space: nowrap;
         color: $primary-color;
+        letter-spacing: -0.03rem;
+        &:hover{
+            color: $theme-color;
+            a{
+                text-decoration: none;
+            }
+        }
     }
 }
 
@@ -177,38 +197,39 @@ header{
     &:hover{
         @include size(106%);
     }
-} 
+}
 
-.screen{
+.work-image{
     overflow: hidden;
-    aspect-ratio: 15 / 9.5;
+    // aspect-ratio: 2/1.1;
     position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 2rem 0 rgba(#000, .1);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 2rem 0 rgba(#000, .15);
     transition: .2s ease;
     &:hover{
-        border-radius: 1rem;
-        .work-link{
-            opacity: 1;
-        }
-        &:before{
-            opacity: 1;
-        }
+        box-shadow: 0 1rem 2rem .5rem rgba(#000, .15);
+        transform: scale(1.005);
+        // .work-link{
+        //     opacity: 1;
+        // }
+        // &:before{
+        //     opacity: 1;
+        // }
     }
-    &:before{
-        content: '';
-        position: absolute;top: 0;left: 0;
-        @include size(100%);
-        background-color: rgba($primary-color, .9);
-        backdrop-filter: blur(2px);
-        mix-blend-mode: multiply;
-        opacity: 0;
-        transition: .2s ease;
-    }
-    a{
-        position: absolute;top: 0;left: 0;z-index: 1;
-        @include size(100%);
-    }
+    // &:before{
+    //     content: '';
+    //     position: absolute;top: 0;left: 0;
+    //     @include size(100%);
+    //     background-color: rgba($primary-color, .9);
+    //     backdrop-filter: blur(2px);
+    //     mix-blend-mode: multiply;
+    //     opacity: 0;
+    //     transition: .2s ease;
+    // }
+    // a{
+    //     position: absolute;top: 0;left: 0;z-index: 1;
+    //     @include size(100%);
+    // }
     .work-link{
         @include centerVH;
         text-align: center;

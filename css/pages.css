@@ -25,37 +25,37 @@
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  -webkit-backdrop-filter: blur(0.3rem);
-          backdrop-filter: blur(0.3rem);
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
   overflow: auto;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 4rem;
   z-index: 1000;
-  width: 80vw;
+  width: 90%;
+  max-height: 90%;
+  max-width: 128rem;
   flex-grow: 1;
-  padding-bottom: 4rem;
 }
-.gallery .screen {
+.gallery .work-image {
+  aspect-ratio: auto;
   overflow-y: auto;
 }
-.gallery .screen:before {
+.gallery .work-image:before {
   display: none;
   content: none;
 }
 @media (max-width: 576px) {
-  .gallery .screen {
+  .gallery .work-image {
     height: auto;
     aspect-ratio: initial;
   }
 }
-.gallery .screen .work-link {
+.gallery .work-image .work-link {
   display: none;
 }
 
@@ -87,28 +87,46 @@
 }
 
 .work-page .home-link {
-  font-weight: 500;
+  font-weight: 600;
 }
 .work-page .container {
   max-width: 80rem;
   margin: 10rem auto 5rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 1024px) {
   .work-page .container {
-    padding: 0 2rem;
+    padding: 0 4rem;
   }
 }
 
 .page-title {
   margin-bottom: 5rem;
 }
+@media (max-width: 576px) {
+  .page-title {
+    margin-bottom: 3rem;
+  }
+}
+.page-title h3 span {
+  font-weight: 400;
+}
+@media (max-width: 576px) {
+  .page-title h3 {
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+}
 .page-title h5 {
+  margin-top: 1rem;
   font-weight: 300;
+}
+@media (max-width: 576px) {
+  .page-title h5 {
+    font-weight: 400;
+  }
 }
 
 .content .para_wrap {
-  display: flex;
-  gap: 3rem;
   margin-bottom: 5rem;
 }
 .content .para_wrap:last-child {
@@ -121,9 +139,9 @@
   }
 }
 .content .title {
-  width: 14rem;
-  flex-shrink: 0;
-  white-space: nowrap;
+  padding-top: 2rem;
+  border-top: 1px solid #ccc;
+  margin-bottom: 1rem;
 }
 @media (max-width: 576px) {
   .content .title {
@@ -137,13 +155,26 @@
   margin-top: 3rem;
 }
 
+.text {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.text h5 {
+  margin: 1rem 0;
+}
+.text p a {
+  color: blue;
+}
+.text p b {
+  font-weight: 600;
+}
+.text ul {
+  margin-top: 1rem;
+}
 .text li {
   margin-bottom: 1rem;
-  padding-left: 1rem;
-  text-indent: -1rem;
-}
-.text li:before {
-  content: ">";
+  margin-left: 2rem;
+  list-style-type: unset;
 }
 .text li a {
   text-decoration: underline;
@@ -151,6 +182,30 @@
 .text li a:hover {
   color: hsl(0, 100%, 60%);
   text-decoration: none;
+}
+
+blockquote {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.4rem;
+  background-color: #daf1ee;
+  font-size: 1.4rem;
+  border-left: 0.4rem solid #ccc;
+  box-shadow: inset 0.4rem 0 0 0 #ffffff;
+  padding-left: 2rem;
+}
+
+.branding p {
+  margin-bottom: 2rem;
+}
+.branding figure {
+  padding: 3rem 4rem;
+  width: 25rem;
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0 3rem rgba(0, 0, 0, 0.1);
+}
+
+.ecommerce-page .text p {
+  margin: 2rem 0 4rem;
 }
 
 @media (max-width: 576px) {
@@ -272,34 +327,82 @@
   margin-bottom: 10rem;
 }
 
-.screen_wrap {
-  margin-bottom: 10rem;
+.case_image {
+  padding: 2rem 0;
+  display: flex;
+  gap: 2rem;
 }
-.screen_wrap .screen {
-  width: 50rem;
-  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0 3rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+.case_image .captions {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.work-image_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
 }
 @media (max-width: 576px) {
-  .screen_wrap .screen {
+  .work-image_wrap {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.work-image_wrap .work-image {
+  box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0 3rem rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 576px) {
+  .work-image_wrap .work-image {
     width: 100%;
   }
 }
-.screen_wrap .screen.no-overflow {
+.work-image_wrap .work-image.no-overflow {
   aspect-ratio: 16/10;
+}
+
+.work-images {
+  margin: 6rem auto 8rem;
+}
+@media (max-width: 1024px) {
+  .work-images {
+    max-width: 60rem;
+  }
+}
+.work-images p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+.work-images .captions {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+.image-text_wrap {
+  flex: 0 30%;
+  text-align: center;
+}
+.image-text_wrap p {
+  margin-top: 1rem;
+}
+
+.work-image {
+  cursor: pointer;
 }
 
 .ux-image {
   margin-top: 2rem;
 }
 
-.screen-title {
+.work-image-title {
   margin-bottom: 2rem;
 }
-.screen-title h5 {
+.work-image-title h5 {
   margin-bottom: 2rem;
 }
-.screen-title .sub-title {
+.work-image-title .sub-title {
   margin: 2rem 0 1rem;
 }
 

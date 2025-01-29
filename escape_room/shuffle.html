@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hebrew Alphabet with Numbers</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #alphabet {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<div id="alphabet"></div>
+
+<script>
+// Hebrew alphabet with corresponding numbers
+var hebrewAlphabet = {
+    'א': 0, 'ב': 1, 'ג': 2, 'ד': 3, 'ה': 4,
+    'ו': 5, 'ז': 6, 'ח': 7, 'ט': 8, 'י': 9,
+    'כ': 0, 'ל': 1, 'מ': 2, 'נ': 3, 'ס': 4,
+    'ע': 5, 'פ': 6, 'צ': 7, 'ק': 8, 'ר': 9,
+    'ש': 0, 'ת': 1
+};
+
+// Shuffle function to randomize order
+function shuffleObject(obj) {
+    var keys = Object.keys(obj);
+    var values = Object.values(obj);
+    var shuffledKeys = [];
+    var shuffledValues = [];
+    keys.sort(function() { return Math.random() - 0.5 });
+    keys.forEach(function(key) {
+        shuffledKeys.push(key);
+        shuffledValues.push(values[keys.indexOf(key)]);
+    });
+    return {keys: shuffledKeys, values: shuffledValues};
+}
+
+// Create shuffled versions of the Hebrew alphabet
+var shuffledAlphabet = shuffleObject(hebrewAlphabet);
+
+// Display the shuffled alphabet with corresponding numbers
+var alphabetDiv = document.getElementById('alphabet');
+for (var i = 0; i < shuffledAlphabet.keys.length; i++) {
+    alphabetDiv.innerHTML += shuffledAlphabet.keys[i] + ': ' + shuffledAlphabet.values[i] + '<br>';
+}
+</script>
+</body>
+</html>

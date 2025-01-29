@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
     let container = $('.gallery');
-    $('.screen').click(function(){
+    $('.work-image').click(function(){
         $('#overlay').css('display', 'flex');
         $('.work-page').addClass('galleryOn');
         $(container).fadeIn(100);
@@ -11,7 +11,7 @@ $(document).ready(function() {
         $('#overlay').css('display', 'none');
         $(container).fadeOut(100);
         $('.work-page').removeClass('galleryOn');
-        $('.gallery .screen').remove();
+        $('.gallery .work-image').remove();
     });
     
     ////

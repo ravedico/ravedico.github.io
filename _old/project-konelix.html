@@ -3,16 +3,16 @@
 
 <head>
 
-    <title>Yogev Raved | Product designer</title>
+    <title>Yogev Raved | UX & Product Designer</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- META DATA -->
-    <meta name="description" content="UX Designer and Art Director">
+    <meta name="description" content="UX|UI Designer">
     <meta name="viewport" content="width=device-width, max-width=device-width, initial-scale=1.0, user-scalable=1">
     <meta name="author" content="Yogev Raved">
     <meta charset="UTF-8">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link href="css/reset.css" rel="stylesheet" type="text/css">
@@ -20,7 +20,6 @@
     <link href="css/components.css" rel="stylesheet" type="text/css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
-    <script src="js/pages.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1S9ZDW1TBJ"></script>
     <script>
@@ -33,75 +32,164 @@
 </head>
 
 <body class="page work-page">
-    <div id="overlay"></div>
-    <div class="gallery"></div>
-    
+    <div id="scrollLine"></div>
     <div id="wrapper">
-        <section class="work_sec flex">           
-            <div class="text_pane">
-                <header>
-                    <div class="logo">
-                        <a href="/"></a>
+        <header>
+            <div class="logo home-link">
+                <a href="index.html">
+                    Yogev Raved
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <div class="back-icon"></div>
+                <li class="menu-item">
+                    <a href="index.html#work">Work</a>
+                </li>
+                <li class="menu-item">
+                    <a href="index.html#about">About me</a>
+                </li>
+                <li class="menu-item">
+                    <a href="index.html#contact">Contact</a>
+                </li>
+            </ul>
+            <div class="nav_wrap">
+                <div class="nav-icon"></div>
+                <div class="work-nav">
+                    <div class="nav-prev">
+                        <a href="project-clixscale.html"></a>
+                        <span class="nav-arrow"></span>
+                        <span>Prev</span>
                     </div>
-                    <div class="work-nav">
-                        <div class="nav-prev">
-                            <a href="project-flixsport.html"></a>
-                            <span class="nav-arrow"></span>
-                            <span>Prev</span>
-                        </div>
-                        <div class="nav-next">
-                            <a href="project-masterprotection.html"></a>
-                            <span>Next</span>
-                            <span class="nav-arrow"></span>
-                        </div>
-                    </div>
-                </header>    
-                <div class="container">
-                    <div class="ltr">
-                        <div class="title">
-                            <h3>Konelix - marketing company</h3>
-                            <h5>Branding & website design</h5>
-                        </div>
-                        <div class="text">
-                            <h5>The project</h5>
-                            <p>Konelix a marketing company spacialized in the field of eCommerce and online stores.</p>
-                            <h5>My role</h5>
-                            <ul>
-                                <li>Designed the brand and created the graphic language.</li>
-                                <li>
-                                    Designing and building the website home page.
-                                </li>       
-                                <li>
-                                    <a href="https://konelix.com/" target="_blank">Visit website</a>
-                                </li>                         
-                            </ul>
-                        </div>
+                    <div class="nav-next">
+                        <a href="project-masterprotection.html"></a>
+                        <span>Next</span>
+                        <span class="nav-arrow"></span>
                     </div>
                 </div>
             </div>
-            <div class="work_pane">
-                <div class="container">
-                    <div class="work_wrap">
-                        <h5 class="work-title">Homepage</h5>
-                        <div class="screens_wrap">                        
-                            <div class="screen mobile">
-                                <div class="content">
-                                    <img src="images/works/ko-mobile1.jpg">
-                                </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="work-text">
+                    <div class="page-title">
+                        <h3>Konelix</h3>
+                        <h5>eCommerce CMS and website</h5>
+                    </div>
+                    <div class="content">
+                        <div class="para_wrap">
+                            <h5 class="title">The project</h5>
+                            <div class="text">
+                                <p>
+                                    Konelix is an eCommerce management Saas platform. The project was born from a need to simplify the use of stores and supply management systems that use the services of platforms such as Shopify and Magento.<br>
+                                    The users of this system are online store managers and operators. With this system they can easily manage the store's products and their customers.
+                                </p>
                             </div>
-                            <div class="screen desktop">
-                                <div class="content">
-                                    <img src="images/works/ko-desktop1.jpg">
-                                </div>
+                        </div>
+                        <div class="para_wrap">
+                            <h5 class="title">My role</h5>
+                            <div class="text">
+                                <p>
+                                    Working as the only designer on the team, I was in charge of the UX, prototyping, branding and UI. Working with VP ecommerce and with R&D team members, I researched the usability of the platform and gathered users' needs to help on decisions on the entire UX.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="para_wrap">
+                            <h5 class="title">Work process</h5>
+                            <div class="text">
+                                <p>The project started with a product meeting with PMs and R&D members where we determined the goals of the product and wrote the first PRD.</p>
+
+                                <h6 class="sub-title">Research</h6>
+                                <ul>
+                                    <li>
+                                        Received and searched examples of eCommerce CMS systems that are in the market.
+                                    </li>
+                                    <li>
+                                        Created personas and made assumptions for the potential users.
+                                    </li>
+                                    <li>
+                                        Analyzed results.
+                                    </li>
+                                    <li>
+                                        Created user flow diagrams.
+                                    </li>
+                                </ul>
+
+                                <h6 class="sub-title">Wireframing</h6>
+                                <p>Working on Figma to wireframe the first low fidelity sketches of the main screens.</p>
+                                <h6 class="sub-title">Testing</h6>
+                                <p>Using mockup tools, I made usability testing of the screens and received users feedback.</p>
+                                <h6 class="sub-title">UI Prototyping</h6>
+                                <ul>
+                                    <li>
+                                        Added UI of the brand's graphic language.
+                                    </li>
+                                    <li>
+                                        Worked on micro animations and micro interactions.
+                                    </li>
+                                    <li>
+                                        Worked alongside with R&D on the UI frontend development. 
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    
-                
+                </div>
+                <div class="work-screens">
+                    <div class="work-image_wrap">
+                        <div class="work-image-title">
+                            <h5>
+                                eCommerce management dashboard - 11 screens (3 presented)
+                            </h5>
+                            <p>The screens where the users (eCommerce managers) view and monitor online campaigns activity, create campaigns and review performance.</p>
+                        </div>
+                        <figure class="work-image">
+                            <a href="https://www.figma.com/proto/3lEQxcfTHsVCnizNSqjnIp/Konelix?page-id=161%3A384&node-id=161%3A385&viewport=364%2C48%2C0.28&scaling=scale-down-width&starting-point-node-id=161%3A385" target="_blank"></a>
+                                <h5 class="work-link">View full interactive project</h5>
+                                <img src="images/works/ko-desktop-dash1.jpg">
+                        </figure>
+                    </div>
+                </div>
+                <div class="work-image_wrap">
+                    <div class="work-image-title">
+                        <h5>
+                            Konelix branding and homepage
+                        </h5>
+                        <p>I worked on the company's branding and graphic language.<br>
+                            Created the logo and chose the main theme colors, fonts and style guide.
+                        </p>
+                    </div>
+                    <p class="brand-title">konelix logo</p>              
+                    <div class="brands_wrap">
+                        <figure class="brand-logo">
+                            <img src="images/works/konelix-logo.svg">
+                        </figure>
+                    </div>
+                    <p class="brand-title">konelix homepage</p>              
+                    <figure class="work-image">
+                        <a href="https://www.konelix.com" target="_blank"></a>
+                            <h5 class="work-link">View screenshot</h5>
+                            <img src="images/works/ko-desktop1.jpg">
+                    </figure>
                 </div>
             </div>
         </section>
     </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollLine").style.width = scrolled + "%";
+        }
+        $('.nav-icon').click(function(){
+            $('.nav-menu').addClass('on');
+        });
+        $('.nav-menu').click(function(){
+            $(this).removeClass('on');
+        });
+    </script>
 </body>
 
 </html>

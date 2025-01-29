@@ -67,7 +67,7 @@ p, li {
     width: 80vw;        
     flex-grow:1;
     padding-bottom: 4rem;
-    .screen{
+    .work-image{
         overflow-y: auto;
         aspect-ratio: auto;
         &:before{
@@ -294,7 +294,7 @@ section{
             font-size: 2rem;
         }
     }
-    .screen{
+    .work-image{
         height: fit-content;
         aspect-ratio: auto;
     }
