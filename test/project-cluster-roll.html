@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Yogev Raved | UX & Product Designer</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- META DATA -->
+    <meta name="description" content="UX Designer">
+    <meta name="viewport" content="width=device-width, max-width=device-width, initial-scale=1.0, user-scalable=1">
+    <meta name="author" content="Yogev Raved">
+    <meta charset="UTF-8">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/pages.css" rel="stylesheet" type="text/css">
+    <link href="css/components.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script src="js/pages.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1S9ZDW1TBJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1S9ZDW1TBJ');
+    </script>
+</head>
+
+<body class="page work-page">
+    <div id="overlay">
+        <div class="gallery"></div>
+    </div>
+    <div id="scrollLine"></div>
+    <div id="wrapper">
+        <header>
+            <div class="logo home-link">
+                <a href="index.html">
+                    Yogev Raved
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <div class="back-icon"></div>
+                <li class="menu-item">
+                    <a href="index.html#work">Work</a>
+                </li>
+                <li class="menu-item">
+                    <a href="index.html#about">About me</a>
+                </li>
+                <li class="menu-item">
+                    <a href="index.html#contact">Contact</a>
+                </li>
+            </ul>
+            <div class="nav_wrap">
+                <div class="nav-icon"></div>
+                <div class="work-nav">
+                    <div class="nav-prev">
+                        <a href="project-config-templates.html"></a>
+                        <span class="nav-arrow"></span>
+                        <span>Prev</span>
+                    </div>
+                    <div class="nav-next">
+                        <a href="project-pathomatic.html"></a>
+                        <span>Next</span>
+                        <span class="nav-arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="page-title">
+                    <h3><span>Case study:</span> Kubernetes cluster roll</h3>
+                    <h5>Helping DevOps engineers with cloud infrastructure automation and optimization
+                    </h5>
+                </div>
+                <div class="main-image">
+
+                </div>
+                <div class="content">
+                    <div class="para_wrap">
+                        <!-- <h4 class="title">Project:</h4> -->
+                        <div class="text">
+                            <p>
+                                <b>Company:</b> Spot by NetApp | <a href="https://docs.spot.io/ocean/features/roll-gen" target="_blank">Ocean</a><br>
+                                <b>Role:</b>  Product designer<br>
+                                <b>Timeline:</b> 5 months<br>
+                                <b>Deliverables:</b> Wireframes, prototypes, UI components, user testing<br>
+                                <b>Teammates:</b> Product designers, Product manager, back-end and front-end engineers
+                            </p>
+                        </div>
+                    </div>
+                    <div class="para_wrap">
+                        <h4 class="title">Overview</h4>
+                        <div class="text">
+                            <p>
+                                Spot by NetApp is a CloudOps company helping DevOps with cloud infrastructure automation and optimisation. Rolls are automated processes that realign the cluster's nodes to match the desired state.
+                                <br>The current Rolls page in the Kubernetes cluster management system lacked intuitive design and user-friendly interactions, potentially slowing down efficient cluster management and user productivity.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="para_wrap">
+                        <h4 class="title">The challenge</h4>
+                        <div class="text">
+                            <p>
+                                The existing Rolls page design did not effectively support users' needs for monitoring, troubleshooting, and managing cluster rolls, and it seemed to have been designed for super-users, so it required a significant amount of users to reach out to support for clarifications.
+                            </p>
+                        </div>
+                        <div class="work-images">
+                            <figure class="work-image">
+                                <img src="images/works/rolls-original.jpg">
+                            </figure>
+                            <p class="captions">Original Rolls page</p>
+                        </div>
+                    </div>
+                    <div class="para_wrap">
+                        <h4 class="title">Research Process</h4>
+                        <div class="text">
+                            <p>
+                                By monitoring via Fullstory, we found that the usage of this feature is much lower in the UI vs the API compared to other features. 
+                            </p>
+                            <p>
+                                That led us to investigate and conduct several customer interviews.
+                            </p>
+                        </div>
+
+                        <div class="text">
+                            <h5>Customer interviews and user testing</h5>
+                            <p>            
+                                We conducted several interview sessions with some design-partners clients. We asked about their need for the Rolls feature and their comfort using it.<br>
+                                We also asked them to share their screens and describe their actions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="para_wrap">
+                        <h4 class="title">Key Research Findings</h4>
+                        <div class="text">
+                            <ol>
+                                <li><b>Information and Organization:</b> The layout lacks structure, making it difficult to quickly comprehend relevant roll data.</li>
+                                <li><b>Filtering and Sorting:</b> Users need more advanced options to find specific rolls based on status, time range, node details, etc.</li>
+                                <li><b>Troubleshooting and Diagnostics:</b> Detailed roll information and the ability to interact with rolls are limited, impacting users' ability to investigate and resolve problems.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="para_wrap">
+                        <h4 class="title">Design Solution</h4>
+                        <div class="text">
+                            <p>Based on research findings, we prioritized:</p>
+                            <ol>
+                                <li>Improving the visibility of Rolls in progress by providing visual annotations and animation on the Roll’s state</li>
+                                <li>Providing a clear division of the previous states and options of “Rolls in progress”, “History” and “Scheduled rolls”</li>
+                            </ol>
+                        </div>
+
+                        <div class="text">
+                            <h5>Design Process</h5>
+                            <ol>
+                                <li>Analyzed existing design system components</li>
+                                <li>Created a solution for showing the indication of a roll in progress and the division into its’ batches</li>
+                                           
+                            </ol>
+                        </div>
+                        <h5>
+                            Selected screenshot from the project
+                        </h5>
+                        <div class="work-">
+                            <div class="image-text_wrap">
+                                <figure class="work-image">
+                                    <img src="images/works/rolls-animation.gif">
+                                </figure>
+                                <p class="captions">Roll in progress batch indication</p>
+                            </div>
+                        </div>
+                        <div class="work-image_wrap">
+                            <div class="image-text_wrap">
+                                <figure class="work-image">
+                                    <img src="images/works/rolls-main.jpg">
+                                </figure>
+                                <p class="captions">Revamped Rolls page</p>
+                            </div>
+                            <div class="image-text_wrap">
+                                <figure class="work-image">
+                                    <img src="images/works/roll-history.jpg">
+                                </figure>
+                                <p class="captions">Completed Rolls list</p>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h5>User testing</h5>
+                            <p>Conducted user tests within internal teams and customers represents and iterated by feedback.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="para_wrap">
+                        <h4 class="title">Impact</h4>
+                        <div class="text">
+                            <p>By implementing these improvements, the Rolls page became more intuitive, efficient, and valuable for Kubernetes cluster administrators, helping them better understand and manage the ongoing alignment of their cluster infrastructure.
+                            </p> 
+                        </div>
+                    </div>
+
+                    <div class="para_wrap">
+                        <h4 class="title">Success measurement</h4>
+                        <div class="text">
+                            <ul>
+                                <li>Reduced the transition between the UI and the API, thus aiding in maintaining focus on crucial tasks</li>
+                                <li>Increased user satisfaction and reduced friction by eliminating their need for expert calls</li>
+                            </ul>   
+                        </div>
+                    </div>
+
+                    <div class="para_wrap">
+                        <h4 class="title">What I Learned</h4>
+                        <div class="text">
+                            <p>Working on the Rolls page has emphasised the importance of designing for a user base that relies heavily on the functionality of the platform. By deeply understanding their workflows, pain points, and needs, I can create solutions that truly make a difference in their day-to-day cluster management activities. 
+                            </p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollLine").style.width = scrolled + "%";
+        }
+
+        $('.nav-icon').click(function(){
+            $('.nav-menu').addClass('on');
+        });
+        $('.nav-menu').click(function(){
+            $(this).removeClass('on');
+        });
+    </script>
+</body>
+
+</html>

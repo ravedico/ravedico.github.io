@@ -1,0 +1,44 @@
+@mixin centerVH{
+    position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);
+}
+@mixin centerV{
+    position: absolute;top: 50%;;transform: translateY(-50%);
+}
+@mixin centerH{
+    position: absolute;left: 50%;transform: translateX(-50%);
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1400px;
+
+@mixin small {
+    @media (max-width: #{$screen-sm}) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (max-width: #{$screen-md}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (max-width: #{$screen-lg}) {
+        @content;
+    }
+}
+
+@mixin x-large {
+    @media (max-width: #{$screen-xl}) {
+        @content;
+    }
+}
