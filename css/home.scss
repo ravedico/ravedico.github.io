@@ -201,7 +201,7 @@ section{
 .hero-menu{
     display: flex;
     align-items: center;
-    // gap: 1.5rem;
+    gap: 1.5rem;
     margin-top: 1.5rem;
     font-size: 1.5rem;
     @include small{
@@ -215,7 +215,8 @@ section{
         font-weight: 300;
         cursor: pointer;
         a{
-            padding: .5rem 1rem;
+            font-size: 1.6rem;
+            padding: .5rem 1.2rem;
             font-weight: 500;
             color: $theme-color;
             text-decoration: none;
@@ -366,6 +367,7 @@ $img-s: 21rem;
         }
     }
     .work-image{
+        cursor: pointer;
         flex: 1;
         height: fit-content;
         // max-width: 50rem;
@@ -389,6 +391,7 @@ $img-s: 21rem;
     }
     button{
         margin-top: 2rem;
+        cursor: pointer;
     }
 }
 

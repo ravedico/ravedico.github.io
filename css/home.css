@@ -164,6 +164,7 @@ section .container {
 .hero-menu {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
   margin-top: 1.5rem;
   font-size: 1.5rem;
 }
@@ -181,7 +182,8 @@ section .container {
   cursor: pointer;
 }
 .hero-menu li a {
-  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  padding: 0.5rem 1.2rem;
   font-weight: 500;
   color: hsl(202, 84%, 39%);
   text-decoration: none;
@@ -317,6 +319,7 @@ section .container {
   }
 }
 .work_wrap_h .work-image {
+  cursor: pointer;
   flex: 1;
   height: -moz-fit-content;
   height: fit-content;
@@ -337,6 +340,7 @@ section .container {
 }
 .work_wrap_h button {
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .about_sec {
