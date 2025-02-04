@@ -377,6 +377,10 @@ $img-s: 21rem;
     }
     .text{
         flex: 1;
+        margin-top: 20px;
+        @include small{
+            margin-top: 0;
+        }
         p{
             @include small{
                 font-size: 1.5rem;
