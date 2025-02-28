@@ -105,8 +105,9 @@ section{
         }
     }
     .title{
-        font-size: 8vw;
+        font-size: clamp(5rem, 8vw, 20rem);
         line-height: 1;
+        font-weight: 900;
         span{
             margin-left: -.5rem;
             display: block;

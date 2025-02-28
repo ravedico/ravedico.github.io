@@ -107,8 +107,9 @@ section .container {
   }
 }
 .hero .title {
-  font-size: 8vw;
+  font-size: clamp(5rem, 8vw, 20rem);
   line-height: 1;
+  font-weight: 900;
 }
 .hero .title span {
   margin-left: -0.5rem;
