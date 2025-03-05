@@ -1,0 +1,240 @@
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(3rem);
+          backdrop-filter: blur(3rem);
+  padding: 10rem;
+  border-radius: 5vw;
+  box-shadow: 0 0 6rem 0 rgba(54, 84, 99, 0.3);
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .card {
+    padding: 2rem;
+  }
+}
+.card a {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 3rem auto 0;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 51, 51, 0.9);
+  border-radius: 2rem;
+  color: #fff;
+  transition: 0.5s cubic-bezier(0.4, -0.75, 0.75, 1.75);
+}
+.card a:hover {
+  padding: 1rem 3rem;
+  background-color: hsl(0, 100%, 60%);
+}
+
+.background {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.background span {
+  position: absolute;
+  width: 30vmin;
+  height: 30vmin;
+  border-radius: 100%;
+  animation: orbAnimation 6s linear infinite, orbColor 6s linear infinite;
+}
+.background span:nth-child(1) {
+  top: 47%;
+  left: 9%;
+  width: 34.5rem;
+  height: 34.5rem;
+  background-color: hsl(344, 85%, 51%);
+  opacity: 0.9;
+  filter: blur(0.6rem);
+  animation-duration: 15.4s;
+  animation-delay: -3s;
+  transform-origin: -17vw 19vh;
+}
+.background span:nth-child(2) {
+  top: 39%;
+  left: 16%;
+  width: 16.5rem;
+  height: 16.5rem;
+  background-color: hsl(272, 67%, 40%);
+  opacity: 1;
+  filter: blur(0.6rem);
+  animation-duration: 12.2s;
+  animation-delay: -6s;
+  transform-origin: -18vw -16vh;
+}
+.background span:nth-child(3) {
+  top: 4%;
+  left: 81%;
+  width: 12rem;
+  height: 12rem;
+  background-color: hsl(260, 51%, 30%);
+  opacity: 1;
+  filter: blur(1.5rem);
+  animation-duration: 12s;
+  animation-delay: -3.1s;
+  transform-origin: 0vw 5vh;
+}
+.background span:nth-child(4) {
+  top: 27%;
+  left: 40%;
+  width: 18rem;
+  height: 18rem;
+  background-color: hsl(217, 94%, 59%);
+  opacity: 0.6;
+  filter: blur(0.75rem);
+  animation-duration: 14.4s;
+  animation-delay: -5.1s;
+  transform-origin: 24vw -16vh;
+}
+.background span:nth-child(5) {
+  top: 33%;
+  left: 11%;
+  width: 19.5rem;
+  height: 19.5rem;
+  background-color: hsl(260, 51%, 30%);
+  opacity: 0.5;
+  filter: blur(0.4rem);
+  animation-duration: 10.8s;
+  animation-delay: -2.3s;
+  transform-origin: -19vw -17vh;
+}
+.background span:nth-child(6) {
+  top: 28%;
+  left: 2%;
+  width: 9rem;
+  height: 9rem;
+  background-color: hsl(120, 89%, 41%);
+  opacity: 0.5;
+  filter: blur(1.05rem);
+  animation-duration: 12.7s;
+  animation-delay: -6s;
+  transform-origin: -6vw -21vh;
+}
+.background span:nth-child(7) {
+  top: 69%;
+  left: 25%;
+  width: 25.5rem;
+  height: 25.5rem;
+  background-color: hsl(120, 89%, 41%);
+  opacity: 0.4;
+  filter: blur(1.5rem);
+  animation-duration: 11.4s;
+  animation-delay: -9.3s;
+  transform-origin: 15vw 13vh;
+}
+.background span:nth-child(8) {
+  top: 34%;
+  left: 99%;
+  width: 13.5rem;
+  height: 13.5rem;
+  background-color: hsl(175, 66%, 44%);
+  opacity: 0.7;
+  filter: blur(0.65rem);
+  animation-duration: 12.9s;
+  animation-delay: -9.7s;
+  transform-origin: -18vw -13vh;
+}
+.background span:nth-child(9) {
+  top: 51%;
+  left: 30%;
+  width: 19.5rem;
+  height: 19.5rem;
+  background-color: hsl(344, 85%, 51%);
+  opacity: 0.7;
+  filter: blur(0.15rem);
+  animation-duration: 14.1s;
+  animation-delay: -0.7s;
+  transform-origin: 16vw 19vh;
+}
+.background span:nth-child(10) {
+  top: 33%;
+  left: 45%;
+  width: 9rem;
+  height: 9rem;
+  background-color: hsl(0, 100%, 60%);
+  opacity: 0.6;
+  filter: blur(0.85rem);
+  animation-duration: 11.7s;
+  animation-delay: -6.2s;
+  transform-origin: 8vw 10vh;
+}
+.background span:nth-child(11) {
+  top: 51%;
+  left: 76%;
+  width: 28.5rem;
+  height: 28.5rem;
+  background-color: hsl(175, 66%, 44%);
+  opacity: 0.8;
+  filter: blur(0.85rem);
+  animation-duration: 14s;
+  animation-delay: -15.5s;
+  transform-origin: 18vw 21vh;
+}
+.background span:nth-child(12) {
+  top: 18%;
+  left: 51%;
+  width: 9rem;
+  height: 9rem;
+  background-color: hsl(0, 100%, 60%);
+  opacity: 0.7;
+  filter: blur(0.6rem);
+  animation-duration: 15.9s;
+  animation-delay: -7s;
+  transform-origin: -20vw -21vh;
+}
+.background span:nth-child(13) {
+  top: 8%;
+  left: 56%;
+  width: 9rem;
+  height: 9rem;
+  background-color: hsl(217, 94%, 59%);
+  opacity: 0.6;
+  filter: blur(0.95rem);
+  animation-duration: 12.4s;
+  animation-delay: -13s;
+  transform-origin: -8vw 25vh;
+}
+.background span:nth-child(14) {
+  top: 1%;
+  left: 7%;
+  width: 13.5rem;
+  height: 13.5rem;
+  background-color: hsl(120, 89%, 41%);
+  opacity: 0.9;
+  filter: blur(0.6rem);
+  animation-duration: 11.4s;
+  animation-delay: -7.4s;
+  transform-origin: -5vw 6vh;
+}
+.background span:nth-child(15) {
+  top: 98%;
+  left: 48%;
+  width: 18rem;
+  height: 18rem;
+  background-color: hsl(0, 100%, 60%);
+  opacity: 0.5;
+  filter: blur(0.9rem);
+  animation-duration: 15.6s;
+  animation-delay: -15.1s;
+  transform-origin: 15vw -12vh;
+}
+
+@keyframes orbAnimation {
+  100% {
+    transform: translate3d(0, 0, 0.1rem) rotate(360deg);
+  }
+}/*# sourceMappingURL=404.css.map */

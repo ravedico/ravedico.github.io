@@ -1,10 +1,10 @@
 ::-moz-selection {
-  background: hsl(0, 100%, 60%);
+  background: hsl(0, 100%, 38%);
   color: #fff;
 }
 
 ::selection {
-  background: hsl(0, 100%, 60%);
+  background: hsl(0, 100%, 38%);
   color: #fff;
 }
 
@@ -14,7 +14,7 @@
   left: 0;
   z-index: 11;
   height: 0.2rem;
-  background-color: hsl(0, 100%, 60%);
+  background-color: hsl(0, 100%, 38%);
   border-radius: 0.4rem;
   transition: 0.3s cubic-bezier(0.4, 0.15, 0.33, 1.3);
 }
@@ -28,7 +28,7 @@
     position: relative;
     width: 1.4rem;
     height: 0.3rem;
-    background-color: hsl(200, 30%, 30%);
+    background-color: hsl(260, 100%, 6%);
     border-radius: 1rem;
   }
 }
@@ -40,7 +40,7 @@
   width: 0.3rem;
   height: 1rem;
   border-radius: 1rem;
-  background-color: hsl(200, 30%, 30%);
+  background-color: hsl(260, 100%, 6%);
 }
 .back-icon:before {
   top: 0;
@@ -62,7 +62,7 @@ header {
   background-color: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  box-shadow: 0 0 20px 0 rgba(54, 84, 99, 0.1);
+  box-shadow: 0 0 20px 0 rgba(10, 0, 31, 0.1);
   transition: 2s ease-out;
 }
 header.header-scroll {
@@ -112,15 +112,16 @@ header .nav-menu {
 }
 header .menu-item {
   font-size: 1.8rem;
+  line-height: 1;
   font-weight: 400;
   cursor: pointer;
 }
 header .menu-item a {
-  color: hsl(202, 84%, 39%);
+  color: hsl(202, 74%, 50%);
   text-decoration: none;
 }
 header .menu-item a:hover {
-  color: hsl(0, 100%, 60%);
+  color: hsl(0, 100%, 38%);
   text-decoration: none;
 }
 header .menu-item a:hover:focus {
@@ -140,17 +141,26 @@ header .menu-item:focus {
 header .logo {
   margin-right: 4rem;
   font-size: 2.4rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   white-space: nowrap;
-  color: hsl(0, 100%, 60%);
-  letter-spacing: -0.03rem;
+  color: hsl(0, 100%, 38%);
+  cursor: pointer;
 }
 header .logo:hover {
-  color: hsl(202, 84%, 39%);
+  color: hsl(202, 74%, 50%);
 }
 header .logo:hover a {
   text-decoration: none;
+}
+header .logo:hover span {
+  color: hsl(0, 100%, 38%);
+}
+header .logo span {
+  font-weight: 900;
+  color: hsl(202, 74%, 50%);
+  position: relative;
+  bottom: 4px;
 }
 
 .scroll_wrap {
@@ -175,7 +185,7 @@ header .logo:hover a {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 3rem;
-  border: 1px solid hsl(200, 30%, 30%);
+  border: 1px solid hsl(260, 100%, 6%);
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.7, -2, 0.3, 2.7);
 }
@@ -187,7 +197,7 @@ header .logo:hover a {
   top: 0.5rem;
   width: 3px;
   height: 1rem;
-  background-color: hsl(200, 30%, 30%);
+  background-color: hsl(260, 100%, 6%);
   border-radius: 3px;
 }
 .scroll:hover {
@@ -204,7 +214,6 @@ header .logo:hover a {
 }
 .work-image:hover {
   box-shadow: 0 1rem 2rem 0.5rem rgba(0, 0, 0, 0.15);
-  transform: scale(1.005);
 }
 .work-image .work-link {
   position: absolute;
@@ -215,4 +224,36 @@ header .logo:hover a {
   font-weight: 500;
   color: #fff;
   opacity: 0;
+}
+
+.btn-style {
+  background-image: linear-gradient(90deg, hsl(202, 74%, 50%), #4eade4, #1b7ab1, hsl(202, 74%, 50%));
+  box-shadow: 0 4px 15px 0 hsl(202, 74%, 50%);
+  transition: 0.2s ease-in-out;
+}
+.btn-style:hover {
+  background-position: 100% 0;
+  box-shadow: 0 -4px 10px 0 rgba(33, 153, 222, 0.5), inset 2px 2px 2px 0 rgba(0, 0, 0, 0.5), inset -2px -2px 4px 0 rgba(255, 255, 255, 0.4);
+}
+
+.chip {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  padding: 0.2rem 0.8rem;
+  background-color: rgba(33, 153, 222, 0.2);
+  border-radius: 3rem;
+  border: 1px solid rgba(33, 153, 222, 0.8);
+  font-size: 1.1rem;
+}
+
+button, .button {
+  box-shadow: 0 5px 10px 0 rgba(27, 122, 177, 0.5);
+}
+button:hover, .button:hover {
+  box-shadow: 0 2px 5px 0 rgba(27, 122, 177, 0.5);
+  background-color: #37a3e1;
+  transform: scale(99%);
 }/*# sourceMappingURL=components.css.map */

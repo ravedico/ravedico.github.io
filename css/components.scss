@@ -130,6 +130,7 @@ header{
     }
     .menu-item{
         font-size: 1.8rem;
+        line-height: 1;
         font-weight: 400;
         cursor: pointer;
         a{
@@ -156,16 +157,24 @@ header{
     .logo{
         margin-right: 4rem;
         font-size: 2.4rem;
-        font-weight: 500;
+        font-weight: 600;
         text-transform: uppercase;
         white-space: nowrap;
         color: $primary-color;
-        letter-spacing: -0.03rem;
+        cursor: pointer;
         &:hover{
             color: $theme-color;
             a{
                 text-decoration: none;
             }
+            span{
+                color: $primary-color;
+            }
+        }
+        span{
+            font-weight: 900;
+            color: $theme-color;
+            position: relative;bottom: 4px;
         }
     }
 }
@@ -202,13 +211,14 @@ header{
 .work-image{
     overflow: hidden;
     // aspect-ratio: 2/1.1;
+    // display: flex;
     position: relative;
     border-radius: .5rem;
     box-shadow: 0 .5rem 2rem 0 rgba(#000, .15);
     transition: .2s ease;
     &:hover{
         box-shadow: 0 1rem 2rem .5rem rgba(#000, .15);
-        transform: scale(1.005);
+        // transform: scale(1.005);
         // .work-link{
         //     opacity: 1;
         // }
@@ -236,5 +246,36 @@ header{
         font-weight: 500;
         color: #fff;
         opacity: 0;
+    }
+}
+
+.btn-style{
+    background-image: linear-gradient(90deg, $theme-color, lighten($theme-color, 10%), darken($theme-color, 10%), $theme-color);
+    box-shadow: 0 4px 15px 0 $theme-color;
+    transition: .2s ease-in-out;
+    &:hover{
+        background-position: 100% 0;
+        box-shadow: 0 -4px 10px 0 rgba($theme-color, .5), inset 2px 2px 2px 0 rgba(#000, .5), inset -2px -2px 4px 0 rgba(#fff, .4);
+    }
+}
+
+.chip{
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    padding: .2rem .8rem;
+    background-color: rgba($theme-color, .2);
+    border-radius: 3rem;
+    border: 1px solid rgba($theme-color, .8);
+    font-size: 1.1rem;
+}
+
+button, .button{
+    box-shadow: 0 5px 10px 0 rgba(darken($theme-color, 10%), .5);
+    &:hover{
+        box-shadow: 0 2px 5px 0 rgba(darken($theme-color, 10%), .5);
+        background-color: lighten($theme-color, 5%);
+        transform: scale(99%);
     }
 }

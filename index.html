@@ -12,13 +12,15 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- META DATA -->
-    <meta name="description" content="UX|UI Designer">
+    <meta name="description" content="UX Product Designer">
     <meta name="viewport" content="width=device-width, max-width=device-width, initial-scale=1.0, user-scalable=1">
     <meta name="author" content="Yogev Raved">
     <meta charset="UTF-8">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+
+    
     <!-- CSS -->
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/components.css" rel="stylesheet" type="text/css">
@@ -42,7 +44,7 @@
     <div class="scroll-top top-btn"></div>
     <header>
         <div class="scroll-top logo">
-            Yogev Raved
+            Yogev Raved<span>_</span>
         </div>
         <ul class="nav-menu">
             <div class="back-icon"></div>
@@ -56,18 +58,48 @@
                 <a href="#contact">Contact</a>
             </li>
             <li class="menu-item">
-                <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">Resume</a>
+                <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">CV</a>
             </li>
         </ul>
         <div class="nav-icon"></div>
     </header>
     <div id="wrapper">
         <section id="hero" class="hero">
+            <div class="bg-parallax">
+                <div class="scene">
+                    <span data-depth=".1"></span>
+                </div>
+                <div class="scene">
+                    <span data-depth=".2"></span>
+                </div>
+                <div class="scene">
+                    <span data-depth=".3"></span>
+                </div>
+            </div>
+            <ul class="hero-menu">
+                <li class="menu-item">
+                    <a href="#work">Work</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#about">About me</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#contact">Contact</a>
+                </li>
+                <li class="menu-item">
+                    <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">CV</a>
+                </li>
+            </ul>
             <div class="container">
                 <div class="hero-scenes_wrap">
                     <div class="figure_wrap centered">
+                        <figure data-depth="0.3">
+                            <img src="images/yogev01.jpg">
+                        </figure>
+                    </div>
+                    <!-- <div class="figure_wrap centered">
                         <div class="scene">                           
-                            <figure data-depth="0.1">
+                            <figure data-depth="0.3">
                                 <img src="images/yogev01.jpg">
                             </figure>
                         </div>
@@ -76,113 +108,114 @@
                         <div class="scene">
                             <span data-depth="1"></span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="text">
-                    <div class="h_wrap">
-                        <h1>Hi, I'm Yogev</h1>
-                        <h2>UX & Product Designer</h2>
-                    </div>
-                    <h5 class="title">Building end-to-end user experiences for complex systems.
+                    <h1 class="my-name">Hi, I'm Yogev</h1>
+                    <h2 class="title"><span>Product</span><span>Designer</span></h2>
+                    <h5 class="sub-title">Building end-to-end user experiences for complex systems.
                         <br>Looking for opportunities that will push me to solve problems in innovative ways :)
                     </h5>
-                    <ul class="hero-menu">
-                        <li class="menu-item">
-                            <a href="#work">Work</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">Resume</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
+            <a href="#work" class="arrow-link">
+                <div class="scroll-down-arrow"></div>
+            </a>
         </section>
-        <div class="work_sec" id="work">
+        <section class="work_sec" id="work">
             <div class="container">
-                <div class="sec_title">
-                    <h2>WORK</h2>
-                </div>
                 <div class="work_wrap_h">
-                    <figure class="work-image">
-                        <a href="project-config-templates.html" target="_self">
-                            <img src="images/works/ct-main.jpg">
-                        </a>
+                    <figure class="work-image work-name_ct" onclick="location.href='project-config-templates.html';">
+                        <img src="images/works/ct-main.jpg">
                     </figure>
                     <div class="text">
-                        <h4 class="work-name"><b>Configuration templates</b> | Spot by NetApp</h4>
-                        <h5 class="sub-title">Big-data applications management tool for data engineers.</h5>
-                        <p>I helped data engineers with the automation and optimization of big-data applications. I worked on improving the experience and process of managing configurations of big-data applications.
+                        <h4 class="work-name"><b>Configuration templates</b> Spot by NetApp</h4>
+                        <h5 class="sub-title">Big-data applications management tool for data engineers</h5>
+                        <p class="work-desc">I helped data engineers with the automation and optimization of big-data applications. <br>
+                        I worked on improving the experience and process of managing configurations of big-data applications.
                         </p>
-                        <button onclick="location.href='project-config-templates.html';">Read more</button>
+                        <div class="chips_wrap">
+                            <div class="chip">UX research</div>
+                            <div class="chip">Product Design</div>
+                            <div class="chip">Design system</div>
+                        </div>
+                        <button onclick="location.href='project-config-templates.html';"><span>View project</span></button>
                     </div>
                 </div>
 
                 <div class="work_wrap_h">
-                    <figure class="work-image">
-                        <a href="project-cluster-roll.html" target="_self">
-                            <img src="images/works/roll-main.jpg">
-                        </a>
-                    </figure>
-                    <div class="text">
-                        <h4 class="work-name"><b>Kubernetes cluster roll</b> | Spot by NetApp</h4>
-                        <h5 class="sub-title">SaaS web application</h5>
-                        <p>Helping DevOps engineers with cloud infrastructure automation and optimization. I worked on improving the usability and the experience of performing optimization for Kubernetes clusters.
-                        </p>
-                        <button onclick="location.href='project-cluster-roll.html';">Read more</button>
-                    </div>
+                    <figure class="work-image work-name_rl" onclick="location.href='project-cluster-roll.html';">
+                            <video autoplay loop muted>
+                                <source src="images/works/roll-vid-01b.mp4" type="video/mp4">
+                            </video>
+                        </figure>
+                        <div class="text">
+                            <h4 class="work-name"><b>Kubernetes cluster roll</b> Spot by NetApp</h4>
+                            <h5 class="sub-title">SaaS web application</h5>
+                            <p class="work-desc">Helping DevOps engineers with cloud infrastructure automation and optimization. I worked on improving the usability and the experience of performing optimization for Kubernetes clusters.
+                            </p>
+                            <div class="chips_wrap">
+                                <div class="chip">Product Design</div>
+                                <div class="chip">Design system</div>
+                            </div>
+                            <button onclick="location.href='project-cluster-roll.html';"><span>View project</span></button>
+                        </div>
                 </div>
 
                 <div class="work_wrap_h">
-                    <figure class="work-image">
-                        <a href="project-pathomatic.html" target="_self">
+                    <figure class="work-image work-name_pt" onclick="location.href='project-pathomatic.html';">
                             <img src="images/works/pathomatic-main.jpg">
-                        </a>
                     </figure>
                     <div class="text">
-                        <h4 class="work-name"><b>Pathology</b> | Ichilov hospital</h4>
+                        <h4 class="work-name"><b>Pathomatic</b> Ichilov hospital</h4>
                         <h5 class="sub-title">Helping to prevent delays in cancer discoveries</h5>
-                        <p>Designing an interface of a medical tissue scanner for the Ichilov Hospital</p>
-                        <button onclick="location.href='project-pathomatic.html';">Read more</button>
+                        <p class="work-desc">Designing an interface of a medical tissue scanner for the Ichilov Hospital</p>
+                        <div class="chips_wrap">
+                            <div class="chip">UX research</div>
+                            <div class="chip">Product Design</div>
+                            <div class="chip">Design system</div>
+                            <div class="chip">Branding</div>
+                        </div>
+                        <button onclick="location.href='project-pathomatic.html';"><span>View project</span></button>
                     </div>
                 </div>
             
                 <div class="work_wrap_h">
-                    <figure class="work-image">
-                        <a href="project-clixscale.html" target="_self">
-                            <img src="images/works/cs-desktop-dash1.jpg">
-                        </a>
+                    <figure class="work-image work-name_cx" onclick="location.href='project-clixscale.html';">
+                            <img src="images/works/cx-main.jpg">
                     </figure>
                     <div class="text">
                         <h4 class="work-name"><b>ClixScale</b></h4>
                         <h5 class="sub-title">Marketing campaigns monitoring tool</h5>
-                        <p>Worked on designing user experience and interface that improves monitoring of campaigns  and the communication between campaign managers and their affiliates</p>
-                        <button onclick="location.href='project-clixscale.html';">Read more</button>
+                        <p class="work-desc">Worked on designing user experience and interface that improves monitoring of campaigns and the communication between campaign managers and their affiliates</p>
+                        <div class="chips_wrap">
+                            <div class="chip">UX research</div>
+                            <div class="chip">Product Design</div>
+                            <div class="chip">Design system</div>
+                            <div class="chip">Branding</div>
+                        </div>
+                        <button onclick="location.href='project-clixscale.html';"><span>View project</span></button>
                     </div>
                 </div>
-
+                
                 <div class="work_wrap_h">
-                    <figure class="work-image">
-                        <a href="project-ecommerce.html" target="_self">
-                            <img src="images/works/mp-main.jpg">
-                        </a>
+                    <figure class="work-image work-name_ec" onclick="location.href='project-ecommerce.html';">
+                        <img src="images/works/mp-main.jpg">
                     </figure>
                     <div class="text">
                         <h4 class="work-name"><b>eCommerce websites</b></h4>
-                        <!-- <h5 class="sub-title">Marketing campaigns monitoring tool</h5> -->
-                        <p>Designed various eCommerce websites such as antimalware software, VOD streaming platforms, fitness videos, IQ games and more.</p>
-                        <button onclick="location.href='project-ecommerce.html';">Read more</button>
+                        <p class="work-desc">Designed various eCommerce websites such as antimalware software, VOD streaming platforms, fitness videos, IQ games and more.</p>
+                        <div class="chips_wrap">
+                            <div class="chip">Web Design</div>
+                            <div class="chip">Branding</div>
+                        </div>
+                        <button onclick="location.href='project-ecommerce.html';"><span>View project</span></button>
                     </div>
                 </div>
 
                 
             </div>
-        </div>
+        </section>
         <section class="about_sec" id="about">
             <div class="container">
                 <div class="text">
@@ -220,7 +253,7 @@
                 <div class="text">
                     <h5 class="title">Skillset</h5>
                     <p>                            
-                        <span class="text-title">UX:</span> Facilitating Design thinking workshops, conducting surveys and interviews, user journeys, Usability tests, information architecture, wireframing & prototyping. Using <s>Figma</s> aany prototyping tool which is popular while reading these lines ;)
+                        <span class="text-title">UX:</span> Facilitating Design thinking workshops, conducting surveys and interviews, user journeys, Usability tests, information architecture, wireframing & prototyping. Using <s>Figma</s> any prototyping tool which is popular while reading these lines ;)
                     </p>
                     <p>                            
                         <span class="text-title">UI:</span> Responsive design for mobile & desktop, micro-interactions, branding and creating design systems and graphic languages.
@@ -232,45 +265,14 @@
             <div class="container">
                 <div class="text">
                     <p>Thank you! ( ˘ ³˘)</p>
-                    <!-- <p>Contact me if you wish to create <span class="switch">beautiful</span> things together</p> -->
                     <p class="contact-text">
                         <a href="tel:+972504464674">+972-50-4464674</a> <span>|</span> <a href="mailto:ravedico@gmail.com">ravedico@gmail.com</a> <span>|</span> <a href="https://www.linkedin.com/in/yogev-raved/" target="_blank">LinkedIn</a>
                     </p>
                 </div>
-                <!-- <div class="scene_wrap">
-                    <div class="centered">
-                        <div class="scene">
-                            <span class="bc_wrap" data-depth="0.1">
-                                <div class="bc">
-                                    <div class="bc-text">
-                                        <div class="bc-name_wrap">
-                                            <h5 class="bc-name">Yogev Raved</h5>
-                                            <h6 class="bc-title">Product designer</h5>
-                                        </div>
-                                        <div class="bc-contact">
-                                            <p><a href="tel:+972504464674">+972-50-4464674</a></p>
-                                            <span>|</span>
-                                            <p><a href="mailto:ravedico@gmail.com">ravedico@gmail.com</a></p>
-                                        </div>
-                                        <div class="bc-contact">
-                                            <p><a href="https://www.linkedin.com/in/yogev-raved" target="_blank">LinkedIn</a></p>
-                                            <span>|</span>
-                                            <p><a href="https://www.behance.net/ravedico95c0" target="_blank">Behance</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="centered">
-                        <div class="scene">
-                            <span data-depth="0.2"></span>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
     </div>
+
     
     <script type="text/javascript">
         let scenes = [];
@@ -312,7 +314,17 @@
                 $(this).removeClass('on');
             });
         </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

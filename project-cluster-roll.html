@@ -7,12 +7,12 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- META DATA -->
-    <meta name="description" content="UX Designer">
+    <meta name="description" content="UX Product Designer">
     <meta name="viewport" content="width=device-width, max-width=device-width, initial-scale=1.0, user-scalable=1">
     <meta name="author" content="Yogev Raved">
     <meta charset="UTF-8">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link href="css/reset.css" rel="stylesheet" type="text/css">
@@ -42,7 +42,7 @@
         <header>
             <div class="logo home-link">
                 <a href="index.html">
-                    Yogev Raved
+                    Yogev Raved<span>_</span>
                 </a>
             </div>
             <ul class="nav-menu">
@@ -73,35 +73,41 @@
                 </div>
             </div>
         </header>
-        <section>
+        <section class="hero hero_roll">
             <div class="container">
                 <div class="page-title">
-                    <h3><span>Case study:</span> Kubernetes cluster roll</h3>
-                    <h5>Helping DevOps engineers with cloud infrastructure automation and optimization
-                    </h5>
+                    <h2><span>Case study:</span><br>
+                         Kubernetes cluster roll</h2>
+                    <h4>Helping DevOps engineers with cloud infrastructure automation and optimization</h4>
                 </div>
-                <div class="main-image">
-
-                </div>
+            </div>
+        </section>
+        <section class="sec-work">
+            <div class="container">
                 <div class="content">
-                    <div class="para_wrap">
-                        <!-- <h4 class="title">Project:</h4> -->
+                    <div class="para_wrap col-2">
                         <div class="text">
-                            <p>
-                                <b>Company:</b> Spot by NetApp | <a href="https://docs.spot.io/ocean/features/roll-gen" target="_blank">Ocean</a><br>
-                                <b>Role:</b>  Product designer<br>
-                                <b>Timeline:</b> 5 months<br>
-                                <b>Deliverables:</b> Wireframes, prototypes, UI components, user testing<br>
-                                <b>Teammates:</b> Product designers, Product manager, back-end and front-end engineers
-                            </p>
+                            <p><b>Company:</b> Spot by NetApp | <b>Product:</b> Ocean</p>
+                            <p><b>Role:</b>  Product designer</p>
+                            <p><b>Timeline:</b> 5 months</p>
+                            <p><b>Deliverables:</b> Wireframes, prototypes, UI components, user testing</p>
+                            <p><b>Teammates:</b> Product designers, Product manager, back-end and front-end engineers</p>
                         </div>
+                        <!-- <div class="video_wrap">
+                            <video autoplay loop muted>
+                                <source src="images/works/roll-vid-01.mp4" type="video/mp4">
+                            </video>
+                        </div> -->
+                        <figure class="work-image">
+                            <img src="images/works/roll-main.jpg">
+                        </figure>
                     </div>
                     <div class="para_wrap">
                         <h4 class="title">Overview</h4>
                         <div class="text">
                             <p>
                                 Spot by NetApp is a CloudOps company helping DevOps with cloud infrastructure automation and optimisation. Rolls are automated processes that realign the cluster's nodes to match the desired state.
-                                <br>The current Rolls page in the Kubernetes cluster management system lacked intuitive design and user-friendly interactions, potentially slowing down efficient cluster management and user productivity.
+                                <br>The original Rolls page in the Kubernetes cluster management system lacked intuitive design and user-friendly interactions, potentially slowing down efficient cluster management and user productivity.
                             </p>
                         </div>
                     </div>
@@ -109,12 +115,12 @@
                         <h4 class="title">The challenge</h4>
                         <div class="text">
                             <p>
-                                The existing Rolls page design did not effectively support users' needs for monitoring, troubleshooting, and managing cluster rolls, and it seemed to have been designed for super-users, so it required a significant amount of users to reach out to support for clarifications.
+                                The existing Rolls page design did not effectively support users' needs for managing, troubleshooting, and monitoring cluster rolls, and it seemed to have been designed for super-users, so it required a significant amount of users to reach out to support for clarifications.
                             </p>
                         </div>
                         <div class="work-images">
                             <figure class="work-image">
-                                <img src="images/works/rolls-original.jpg">
+                                <img src="images/works/roll-original.jpg">
                             </figure>
                             <p class="captions">Original Rolls page</p>
                         </div>
@@ -136,6 +142,20 @@
                                 We conducted several interview sessions with some design-partners clients. We asked about their need for the Rolls feature and their comfort using it.<br>
                                 We also asked them to share their screens and describe their actions.
                             </p>
+                        </div>
+                        <div class="work-image_wrap">
+                            <div class="image-text_wrap">
+                                <figure class="work-image">
+                                    <img src="images/works/roll-ux-1.jpg">
+                                </figure>
+                                <p class="captions">User journy mapping</p>
+                            </div>
+                            <div class="image-text_wrap">
+                                <figure class="work-image">
+                                    <img src="images/works/roll-ux-2.jpg">
+                                </figure>
+                                <p class="captions">Flow charts</p>
+                            </div>
                         </div>
                     </div>
                     <div class="para_wrap">
@@ -169,14 +189,6 @@
                         <h5>
                             Selected screenshot from the project
                         </h5>
-                        <div class="work-">
-                            <div class="image-text_wrap">
-                                <figure class="work-image">
-                                    <img src="images/works/rolls-animation.gif">
-                                </figure>
-                                <p class="captions">Roll in progress batch indication</p>
-                            </div>
-                        </div>
                         <div class="work-image_wrap">
                             <div class="image-text_wrap">
                                 <figure class="work-image">
@@ -189,6 +201,14 @@
                                     <img src="images/works/roll-history.jpg">
                                 </figure>
                                 <p class="captions">Completed Rolls list</p>
+                            </div>
+                        </div>
+                        <div class="work-">
+                            <div class="image-text_wrap">
+                                <figure class="work-image">
+                                    <img src="images/works/rolls-animation.gif">
+                                </figure>
+                                <p class="captions">Roll in progress batch indication</p>
                             </div>
                         </div>
                         <div class="text">
@@ -208,9 +228,10 @@
                     <div class="para_wrap">
                         <h4 class="title">Success measurement</h4>
                         <div class="text">
+                            <p>By monitoring with Fullstory and BI reports we discovered:</p>
                             <ul>
-                                <li>Reduced the transition between the UI and the API, thus aiding in maintaining focus on crucial tasks</li>
-                                <li>Increased user satisfaction and reduced friction by eliminating their need for expert calls</li>
+                                <li>Reduced the transition between the UI and the API by <b>50%</b>, thus aiding in maintaining focus on crucial tasks</li>
+                                <li>Increased user satisfaction and reduced friction by eliminating their need for help from support</li>
                             </ul>   
                         </div>
                     </div>

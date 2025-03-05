@@ -17,8 +17,8 @@ html {
 
 body {
   position: relative;
-  font-family: "Poppins", sans-serif;
-  color: hsl(200, 30%, 30%);
+  font-family: "Inter", serif;
+  color: hsl(260, 100%, 6%);
 }
 @media (max-width: 576px) {
   body {
@@ -90,12 +90,12 @@ h6 {
 }
 
 p, li {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.8;
 }
 @media (max-width: 1400px) {
   p, li {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 li {
@@ -127,19 +127,31 @@ img {
   position: relative;
 }
 
-button {
+button, .button {
+  position: relative;
   padding: 10px 20px;
   outline: 0;
   border: 0;
-  background-color: hsl(202, 84%, 39%);
+  background-color: hsl(202, 74%, 50%);
   border-radius: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", serif;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.2s ease;
 }
-button:hover {
-  background-color: #1499e6;
+button:hover, .button:hover {
+  background-color: #4eade4;
+}
+button.outline, .button.outline {
+  border: 1px solid hsl(202, 74%, 50%);
+  background-color: transparent;
+  color: hsl(202, 74%, 50%);
+}
+button.outline:hover, .button.outline:hover {
+  background-color: #37a3e1;
+  border: 1px solid #4eade4;
+  color: #fff;
 }
 
 .slick-slider, .slider_wrap, .slick-list, .slick-track, .slider_item {
