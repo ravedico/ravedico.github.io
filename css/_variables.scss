@@ -1,14 +1,12 @@
-$primary-color: hsl(0, 100%, 38%);
-$theme-color: hsl(202, 74%, 50%);
-// $bg-color: #96959e;
-$bg-color: #d9f2f2;
-$text-color: hsl(260, 100%, 6%);
-
-$colors: 
-    hsl(344, 85%, 51%), //clixscale
-    hsl(260, 51%, 30%), //vod
-    hsl(175, 66%, 44%), //farmer's helper
-    $primary-color, //master protection
-    hsl(217, 94%, 59%), //iqtest
-    hsl(272, 67%, 40%), //estore 
-    hsl(120, 89%, 41%);
+// $theme-color: hsl(260, 100%, 60%);
+// $theme-color: hsl(41, 98%, 64%);
+// $theme-color: hsl(244, 92%, 62%);
+// $theme-color: #D02E64;
+$theme-color: #b6003d;
+$theme-color-2: hsl(212, 100%, 34%);
+$bg-color: hsl(240%, 88%, 6%);
+$bg-color: hsl(224, 22%, 17%);
+$text-color: hsl(260, 100%, 98%);
+$button-color: rgba(lighten($bg-color, 60%), .1);
+$button-color: rgba($theme-color, .9);
+$stroke-color: rgba($text-color, .2);

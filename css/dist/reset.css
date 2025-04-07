@@ -1,0 +1,165 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  font-family: "Inter", serif;
+  background-color: #222735;
+  color: #f8f5ff;
+}
+@media (max-width: 576px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+object {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 2.8rem;
+  }
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+@media (max-width: 768px) {
+  h4 {
+    font-size: 2rem;
+  }
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+@media (max-width: 576px) {
+  h5 {
+    font-size: 1.6rem;
+  }
+}
+
+h6 {
+  font-size: 1.6rem;
+}
+@media (max-width: 768px) {
+  h6 {
+    font-size: 1.6rem;
+  }
+}
+
+p, li {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+@media (max-width: 1400px) {
+  p, li {
+    font-size: 1.5rem;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+#wrapper {
+  position: relative;
+}
+
+button, .button {
+  position: relative;
+  padding: 1rem 2rem;
+  outline: 0;
+  border: 0;
+  background-color: rgba(182, 0, 61, 0.9);
+  border: 1px solid #e9004e;
+  border-radius: 1rem;
+  font-family: "Inter", serif;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+button:hover, .button:hover {
+  background-color: #e9004e;
+  border: 1px solid #b6003d;
+}
+button.outline, .button.outline {
+  border: 1px solid #b6003d;
+  background-color: transparent;
+  color: #b6003d;
+}
+button.outline:hover, .button.outline:hover {
+  background-color: #d00046;
+  border: 1px solid #e9004e;
+  color: #fff;
+}
+
+.hover-follower {
+  transition: transform 0.3s ease, all 0.3s ease;
+  /* Smooth transition */
+  will-change: transform;
+  /* Optimize for performance */
+}

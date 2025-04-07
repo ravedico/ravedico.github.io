@@ -29,13 +29,13 @@ $blurRadius: (random($orbS)) * .2;
         width: -moz-fit-content;
         width: fit-content;
         margin: 3rem auto 0;padding: 1rem 2rem;
-        background-color: rgba($primary-color, .9);
+        background-color: rgba($theme-color, .9);
         border-radius: 2rem;
         color: #fff;
         transition: .5s cubic-bezier(0.4, -0.75, 0.75, 1.75);
         &:hover{
             padding: 1rem 3rem;
-            background-color: $primary-color;
+            background-color: $theme-color;
         }
     }
 }
