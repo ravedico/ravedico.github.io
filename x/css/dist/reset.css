@@ -4,8 +4,7 @@
   margin: 0;
   padding: 0;
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,8 +17,8 @@ html {
 body {
   position: relative;
   font-family: "Inter", serif;
-  background-color: hsl(224, 22%, 17%);
-  color: hsl(260, 100%, 98%);
+  background-color: #222735;
+  color: #f8f5ff;
 }
 @media (max-width: 576px) {
   body {
@@ -159,6 +158,8 @@ button.outline:hover, .button.outline:hover {
 }
 
 .hover-follower {
-  transition: transform 0.3s ease, all 0.3s ease; /* Smooth transition */
-  will-change: transform; /* Optimize for performance */
-}/*# sourceMappingURL=reset.css.map */
+  transition: transform 0.3s ease, all 0.3s ease;
+  /* Smooth transition */
+  will-change: transform;
+  /* Optimize for performance */
+}

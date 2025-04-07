@@ -1,6 +1,6 @@
 body {
-  color: hsl(260, 100%, 98%);
-  background-color: hsl(224, 22%, 17%);
+  color: #f8f5ff;
+  background-color: #222735;
 }
 
 .top-btn {
@@ -29,7 +29,7 @@ body {
   width: 1.2rem;
   height: 0.3rem;
   border-radius: 1rem;
-  background-color: hsl(260, 100%, 98%);
+  background-color: #f8f5ff;
 }
 .top-btn:before {
   left: 0.5rem;
@@ -151,7 +151,7 @@ section .container {
 .hero {
   position: relative;
   padding: 4rem;
-  background: linear-gradient(-45deg, hsl(224, 22%, 17%), #363e54);
+  background: linear-gradient(-45deg, #222735, #363e54);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   overflow: hidden;
@@ -194,7 +194,7 @@ section .container {
 }
 .hero .text {
   margin: 4rem 0;
-  color: hsl(260, 100%, 98%);
+  color: #f8f5ff;
 }
 .hero .hero-menu {
   width: 100%;
@@ -217,7 +217,7 @@ section .container {
   background: none;
   border: 0;
   font-size: 1.8rem;
-  color: hsl(260, 100%, 98%);
+  color: #f8f5ff;
   cursor: pointer;
 }
 .hero .hero-menu button:hover, .hero .hero-menu li a:hover {
@@ -252,7 +252,7 @@ section .container {
   top: 50%;
   width: 3rem;
   height: 2px;
-  background-color: hsl(260, 100%, 98%);
+  background-color: #f8f5ff;
   transition: 0.2s ease-in-out;
 }
 .hero a.arrow-link .scroll-down-arrow::before {
@@ -281,7 +281,7 @@ section .container {
   border-radius: 0 4rem 0;
   border-bottom: 1px solid rgba(248, 245, 255, 0.2);
   border-left: 1px solid rgba(248, 245, 255, 0.2);
-  background: linear-gradient(45deg, hsl(224, 22%, 17%) 20%, rgba(34, 39, 53, 0) 60%);
+  background: linear-gradient(45deg, #222735 20%, rgba(34, 39, 53, 0) 60%);
 }
 @media (max-width: 576px) {
   .my-image {
@@ -566,4 +566,4 @@ footer p span {
   100% {
     background-position: 0% 50%;
   }
-}/*# sourceMappingURL=home.css.map */
+}

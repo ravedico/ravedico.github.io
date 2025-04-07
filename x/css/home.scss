@@ -2,6 +2,10 @@
 @import '_mixins';
 
 
+body{
+    color: $text-color;
+    background-color: $bg-color;
+}
 .top-btn{
     position: fixed;right: 2rem;bottom: 2rem;z-index: 2;
     @include size(3rem);
@@ -22,7 +26,7 @@
         transform-origin: center;
         @include size(1.2rem, .3rem);
         border-radius: 1rem;
-        background-color: #fff;
+        background-color: $text-color;
     }
     &:before{
         left: .5rem;
@@ -63,10 +67,6 @@ section{
     align-items: center;
     justify-content: center;
     min-height: 40rem;
-    // background-color: #fdfdfd;
-    &:nth-child(odd){
-        background-color: $bg-color;
-    }
     @include medium{
         height: auto; 
         min-height: auto; 
@@ -84,19 +84,70 @@ section{
 .title{
     margin-bottom: 3rem;
     font-weight: 500;
-    @include small{
-        // text-align: center;
-    }
 }
 
 ////
 
+.bg-parallax{
+    position: absolute;
+    @include size(100%, 1000px);
+    mix-blend-mode: screen;
+    div{
+        position: absolute;
+        top: 0;left: 0;
+        @include size(100%);
+        span{
+            @include size(100%, 1000px);
+            &:after{
+                content: '';
+                position: absolute;top: 0;left: 0;
+                @include size(100%);
+                transform: rotate(-8deg);
+                background-repeat: repeat;
+                filter: invert(100%);
+                background-size: cover;
+            }
+        }
+        &:nth-child(1){
+            opacity: 0.1;
+            filter: blur(1.2px);
+            span{
+                &:after{
+                    background-image: url(../images/hero-bg-2c.svg);
+                    background-size: 800px;
+                }
+            }
+        }
+        &:nth-child(2){
+            opacity: 0.1;
+            filter: blur(1px);
+            span{
+                &:after{
+                    background-image: url(../images/hero-bg-2b.svg);
+                    background-size: 1200px;
+                }
+            }
+        }
+        &:nth-child(3){
+            opacity: 0.2;
+            filter: blur(.8px);
+            span{
+                &:after{
+                    background-image: url(../images/hero-bg-2a.svg);
+                    background-size: 1500px;
+                }
+            }
+        }
+    }
+}
+
 .hero{
+    position: relative;
     padding: 4rem;
-    background: linear-gradient(-45deg, darken($theme-color, 10%), #000);
+    background: linear-gradient(-45deg, $bg-color, lighten($bg-color, 10%));
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
-
+    overflow: hidden;
     .my-name{
         font-size: 3rem;
         font-weight: 300;
@@ -130,7 +181,9 @@ section{
     }
     .text{
         margin: 4rem 0;
-        color: #fff; 
+        color: $text-color; 
+        // text-shadow: 5px 5px 5px rgba(#000, .2);
+
     }
     .hero-menu{
         width: 100%;
@@ -141,21 +194,21 @@ section{
         gap: 3rem;
         font-size: 1.5rem;
         font-weight: 300;
+        z-index: 1;
         @include medium{
-            position: relative;
-            top: initial;right: inherit;
-            order: 2;
+            justify-content: center;
+font-weight: 500;
         }
         button, li a{
             background: none;
             border: 0;
             font-size: 1.8rem;
-            color: #fff;
+            color: $text-color;
             cursor: pointer;
             &:hover{
                 opacity: .8;
                 border: 0;
-                background: none;
+                background: rgba($bg-color, .8);
                 text-decoration: none;
             }
         }
@@ -180,7 +233,7 @@ section{
                 top: 50%;
                 width: 3rem;
                 height: 2px;
-                background-color: #fff;
+                background-color: $text-color;
                 transition: .2s ease-in-out;
             }
             &::before{
@@ -207,94 +260,29 @@ section{
     }
 }
 
-$img-s: 20rem;
-.hero-scenes_wrap{
-    position: relative;
-    @include size($img-s);
-    margin-top: 5rem;
-    margin-right: 10rem;
-    @include small{
-        margin: 0 auto;
-    }
-    .centered{
-        @include centerVH;
-        &:first-child{
-            z-index: 3;
-            @include size($img-s - 1rem);
-        }
-        &:last-child{
-            z-index: 1;
-            @include size($img-s - .5rem);
-            span{
-                @include size($img-s - .5rem);
-                background-color: linear-gradient(rgba($primary-color, .8), rgba($theme-color, .8));
-                filter: blur(8px);
-            }
-        }
-    }
-    .figure_wrap{
-        z-index: 2;
-    }
-    figure{
-        overflow: hidden;
-        @include size($img-s);
-        border-radius: 50%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        box-shadow: 0 0 0 1px rgba(#fff, .3);
-        @include small{
-            margin: auto;
-        }
-    }
-    span{
-        border-radius: 50%;
-    }
-}
 
-.work-scenes_wrap{
-    position: relative;
-    @include size(100%);
-    .centered{
-        @include centerVH;
-        &:first-child{
-            z-index: 3;
-            @include size(100%);
-        }
-        &:last-child{
-            z-index: 1;
-            @include size(100%);
-            span{
-                @include size(100%);
-                background-color: linear-gradient(rgba($primary-color, .8), rgba($theme-color, .8));
-                filter: blur(8px);
-            }
-        }
-        
+$img-s: 20rem;
+
+.my-image{
+    margin-top: 5rem;
+    margin-right: 5rem;
+    overflow: hidden;
+    @include size($img-s);
+    border-radius: 0 4rem 0;
+    border-bottom: 1px solid $stroke-color;
+    border-left: 1px solid $stroke-color;
+    background: linear-gradient(45deg, $bg-color 20%, rgba($bg-color, 0) 60%);
+    @include small{
+        margin: 2rem auto 0;
+        @include size($img-s / 1.5);
     }
-    .figure_wrap{
-        z-index: 2;
-    }
-    figure{
-        overflow: hidden;
-        @include size($img-s);
-        border-radius: 50%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        box-shadow: 0 0 0 1px rgba(#fff, .3);
-        @include small{
-            margin: auto;
-        }
-    }
-    span{
-        border-radius: 50%;
+    img{
+        filter: drop-shadow(-4px 4px 4px rgba(#ffffff, .2));
     }
 }
 
 .work_sec{    
     padding: 5rem;
-    // background-color: rgba($bg-color, .5);
     @include small{
         padding: 2rem;
     }
@@ -324,9 +312,16 @@ $img-s: 20rem;
     gap: 6rem;
     margin-bottom: 10rem;
     transition: .2s ease-in;
+    &:last-child{
+        margin: 0;
+    }
     @include small{
         flex-direction: column;
         gap: 2rem;
+        padding: 2rem;
+        border: 1px solid rgba($text-color, .2);
+        margin-bottom: 2rem;
+        border-radius: 1rem;
     }
     .text{
         order: 1;
@@ -340,20 +335,13 @@ $img-s: 20rem;
             line-height: 1.4;
         }
         button{
-            // display: none;
             margin-top: 3rem;
-            &:after{
-                content: '->';
-                font-size: 120%;
-                margin-left: 1rem;
-            }
         }
     }
 
     .work-name{
-        margin-bottom: 1rem;
-        font-weight: 500;
         margin: 0;
+        font-weight: 500;
         font-size: 2rem;
         line-height: 1.4;
         @include small{
@@ -375,6 +363,7 @@ $img-s: 20rem;
             font-size: 1.5rem;
         }
     }
+
     .work-image{
         cursor: pointer;
         flex: 1;
@@ -383,28 +372,22 @@ $img-s: 20rem;
         position: relative;
         aspect-ratio: 16/9;
         overflow: hidden;
-        box-shadow:  10px 10px 30px rgba($text-color, .2);
         @include small{
             order: 1;
+            // height: 100px;
+            background: #ccc;
+            width: 100%;
         }        
-img, video{
+        &:hover{
+            // opacity: 0.8;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 2px rgba(lighten($theme-color, 50%), .8), 0 0 20px 0 rgba(#000, .8);
+        }
+        img, video{
             transition: .5s ease;
             position: absolute;
+            z-index: 1;
             width: 100%;        
-        }
-        
-        &:hover{
-            img, video{
-                transition: .3s cubic-bezier(0.40, -0.60, 0.50, 0.60);
-                transition: .3s ease-in-out;
-                transform: translate(-50%, -50%) !important;
-                top: 50% !important;
-                left: 50% !important;
-            }
-        }
-
-        button{
-            position: absolute;right: 2rem;bottom: 2rem;
         }
 
         &.work-name_ct{
@@ -444,7 +427,9 @@ img, video{
 }
 
 .about_sec{
-    padding: 10rem 0;
+    border-top: 1px solid $stroke-color;
+    border-bottom: 1px solid $stroke-color;
+    padding: 5rem 0;
     @include large{
         padding: 5rem;
     }
@@ -487,7 +472,7 @@ img, video{
         line-height: 2;
         a{
             &:hover{
-                color: $primary-color;
+                color: $theme-color;
             }
             @include small{
                 display: block;

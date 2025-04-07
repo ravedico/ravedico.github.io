@@ -65,6 +65,17 @@
     </header>
     <div id="wrapper">
         <section id="hero" class="hero">
+            <div class="bg-parallax">
+                <div class="scene">
+                    <span data-depth=".1"></span>
+                </div>
+                <div class="scene">
+                    <span data-depth=".2"></span>
+                </div>
+                <div class="scene">
+                    <span data-depth=".3"></span>
+                </div>
+            </div>
             <ul class="hero-menu">
                 <li class="menu-item">
                     <a href="#work">Work</a>
@@ -80,19 +91,10 @@
                 </li>
             </ul>
             <div class="container">
-                <div class="hero-scenes_wrap">
-                    <div class="figure_wrap centered">
-                        <div class="scene">                           
-                            <figure data-depth="0.3">
-                                <img src="images/yogev01.jpg">
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="centered">
-                        <div class="scene">
-                            <span data-depth="1"></span>
-                        </div>
-                    </div>
+                <div class="figure_wrap">
+                    <figure class="my-image">
+                        <img src="images/yogev01.png">
+                    </figure>
                 </div>
                 <div class="text">
                     <h1 class="my-name">Hi, I'm Yogev</h1>
@@ -109,7 +111,7 @@
         <section class="work_sec" id="work">
             <div class="container">
                 <div class="work_wrap_h">
-                    <figure class="work-image work-name_ct" onclick="location.href='project-config-templates.html';">
+                    <figure data-scale="1" data-translate-x="0.05" data-translate-y="0.05" class="work-image  work-name_ct" onclick="location.href='project-config-templates.html';">
                         <img src="images/works/ct-main.jpg">
                     </figure>
                     <div class="text">
@@ -123,31 +125,33 @@
                             <div class="chip">Product Design</div>
                             <div class="chip">Design system</div>
                         </div>
-                        <button class="outline" onclick="location.href='project-config-templates.html';"><span>View project</span></button>
+                        <button data-scale="1.05" class="hover-follower" onclick="location.href='project-config-templates.html';">
+                            <span>View project -></span>
+                        </button>
                     </div>
                 </div>
 
                 <div class="work_wrap_h">
-                    <figure class="work-image work-name_rl" onclick="location.href='project-cluster-roll.html';">
-                            <video autoplay loop muted>
-                                <source src="images/works/roll-vid-01b.mp4" type="video/mp4">
-                            </video>
-                        </figure>
-                        <div class="text">
-                            <h4 class="work-name"><b>Kubernetes cluster roll</b> Spot by NetApp</h4>
-                            <h5 class="sub-title">SaaS web application</h5>
-                            <p class="work-desc">Helping DevOps engineers with cloud infrastructure automation and optimization. I worked on improving the usability and the experience of performing optimization for Kubernetes clusters.
-                            </p>
-                            <div class="chips_wrap">
-                                <div class="chip">Product Design</div>
-                                <div class="chip">Design system</div>
-                            </div>
-                            <button onclick="location.href='project-cluster-roll.html';"><span>View project</span></button>
+                    <figure data-scale="1" data-translate-x="0.05" data-translate-y="0.05" class="work-image hover-follower work-name_rl" onclick="location.href='project-cluster-roll.html';">
+                        <video autoplay loop muted>
+                            <source src="images/works/roll-vid-01b.mp4" type="video/mp4">
+                        </video>
+                    </figure>
+                    <div class="text">
+                        <h4 class="work-name"><b>Kubernetes cluster roll</b> Spot by NetApp</h4>
+                        <h5 class="sub-title">SaaS web application</h5>
+                        <p class="work-desc">Helping DevOps engineers with cloud infrastructure automation and optimization. I worked on improving the usability and the experience of performing optimization for Kubernetes clusters.
+                        </p>
+                        <div class="chips_wrap">
+                            <div class="chip">Product Design</div>
+                            <div class="chip">Design system</div>
                         </div>
+                        <button data-scale="1.05" class="hover-follower" onclick="location.href='project-cluster-roll.html';"><span>View project</span></button>
+                    </div>
                 </div>
 
                 <div class="work_wrap_h">
-                    <figure class="work-image work-name_pt" onclick="location.href='project-pathomatic.html';">
+                    <figure data-scale="1" data-translate-x="0.05" data-translate-y="0.05" class="work-image hover-follower  work-name_pt" onclick="location.href='project-pathomatic.html';">
                             <img src="images/works/pathomatic-main.jpg">
                     </figure>
                     <div class="text">
@@ -160,12 +164,12 @@
                             <div class="chip">Design system</div>
                             <div class="chip">Branding</div>
                         </div>
-                        <button onclick="location.href='project-pathomatic.html';"><span>View project</span></button>
+                        <button data-scale="1.05" class="hover-follower" onclick="location.href='project-pathomatic.html';"><span>View project</span></button>
                     </div>
                 </div>
             
                 <div class="work_wrap_h">
-                    <figure class="work-image work-name_cx" onclick="location.href='project-clixscale.html';">
+                    <figure data-scale="1" data-translate-x="0.05" data-translate-y="0.05" class="work-image hover-follower  work-name_cx" onclick="location.href='project-clixscale.html';">
                             <img src="images/works/cx-main.jpg">
                     </figure>
                     <div class="text">
@@ -178,12 +182,12 @@
                             <div class="chip">Design system</div>
                             <div class="chip">Branding</div>
                         </div>
-                        <button onclick="location.href='project-clixscale.html';"><span>View project</span></button>
+                        <button data-scale="1.05" class="hover-follower" onclick="location.href='project-clixscale.html';"><span>View project</span></button>
                     </div>
                 </div>
                 
                 <div class="work_wrap_h">
-                    <figure class="work-image work-name_ec" onclick="location.href='project-ecommerce.html';">
+                    <figure data-scale="1" data-translate-x="0.05" data-translate-y="0.05" class="work-image hover-follower  work-name_ec" onclick="location.href='project-ecommerce.html';">
                         <img src="images/works/mp-main.jpg">
                     </figure>
                     <div class="text">
@@ -193,7 +197,7 @@
                             <div class="chip">Web Design</div>
                             <div class="chip">Branding</div>
                         </div>
-                        <button onclick="location.href='project-ecommerce.html';"><span>View project</span></button>
+                        <button data-scale="1.05" class="hover-follower" onclick="location.href='project-ecommerce.html';"><span>View project</span></button>
                     </div>
                 </div>
 
@@ -234,7 +238,7 @@
                         I also have experience in front-end coding for web applications. Writing clean html & css and programming in JavaScript.
                     </p>
                 </div>
-                <div class="text">
+                <div class="text hover-follower">
                     <h5 class="title">Skillset</h5>
                     <p>                            
                         <span class="text-title">UX:</span> Facilitating Design thinking workshops, conducting surveys and interviews, user journeys, Usability tests, information architecture, wireframing & prototyping. Using <s>Figma</s> any prototyping tool which is popular while reading these lines ;)
@@ -256,7 +260,6 @@
             </div>
         </section>
     </div>
-
     
     <script type="text/javascript">
         let scenes = [];
@@ -269,35 +272,63 @@
             relativeInput: true,
         });
         
-        </script>
-        <script>
-            $(function() {
-                $(window).scroll(function() {
-                    var scroll = $(window).scrollTop();
-                    if (scroll >= 300) {
-                        $('header').addClass('header-scroll');
-                        $('.top-btn').addClass('show');
-                    } else {
-                        $('header').removeClass('header-scroll');
-                        $('.top-btn').removeClass('show');
-                    }
-                });
+    </script>
+
+    <script>
+        document.querySelectorAll('.hover-follower').forEach(element => {
+            // Get custom translation and scale values
+            const translateXFactor = element.getAttribute('data-translate-x') || 0.2;
+            const translateYFactor = element.getAttribute('data-translate-y') || 0.2;
+            const scaleFactor = element.getAttribute('data-scale') || 1.05; // Default scale is 1.05
+            
+            element.addEventListener('mousemove', function (e) {
+                let rect = element.getBoundingClientRect();
+                let mouseX = e.clientX - rect.left;
+                let mouseY = e.clientY - rect.top;
+
+                let centerX = rect.width / 2;
+                let centerY = rect.height / 2;
+
+                let offsetX = (mouseX - centerX) * translateXFactor;
+                let offsetY = (mouseY - centerY) * translateYFactor;
+
+                element.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scaleFactor})`; // Apply the individual scale
             });
 
-            $('.scroll-top').click(function(){
-                $('html, body').animate({
-                    scrollTop: $('body').offset().top
-                }, 500);
-                $('.nav-menu').removeClass('show');
+            element.addEventListener('mouseleave', function () {
+                element.style.transform = 'scale(1)'; // Reset scale when the mouse leaves
             });
+        });
+    </script>
 
-            $('.nav-icon').click(function(){
-                $('.nav-menu').addClass('on');
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 300) {
+                    $('header').addClass('header-scroll');
+                    $('.top-btn').addClass('show');
+                } else {
+                    $('header').removeClass('header-scroll');
+                    $('.top-btn').removeClass('show');
+                }
             });
-            $('.nav-menu').click(function(){
-                $(this).removeClass('on');
-            });
-        </script>
+        });
+
+        $('.scroll-top').click(function(){
+            $('html, body').animate({
+                scrollTop: $('body').offset().top
+            }, 500);
+            $('.nav-menu').removeClass('show');
+        });
+
+        $('.nav-icon').click(function(){
+            $('.nav-menu').addClass('on');
+        });
+        $('.nav-menu').click(function(){
+            $(this).removeClass('on');
+        });
+    </script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
