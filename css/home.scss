@@ -52,11 +52,15 @@ section{
 
 .hero{
     position: relative;
+    height: 80vh;
     padding: 8rem 4rem 4rem;
     background: linear-gradient(-45deg, $bg-color, lighten($bg-color, 10%));
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
     overflow: hidden;
+    @include small{
+        height: auto;
+    }
     .my-name{ 
         font-size: 3rem;
         font-weight: 300;
