@@ -1,12 +1,8 @@
-// $theme-color: hsl(260, 100%, 60%);
-// $theme-color: hsl(41, 98%, 64%);
-// $theme-color: hsl(244, 92%, 62%);
-// $theme-color: #D02E64;
 $theme-color: #b6003d;
-$theme-color-2: hsl(212, 100%, 34%);
+$theme-color-2: hsl(210, 100%, 40%);
 $bg-color: hsl(240%, 88%, 6%);
-$bg-color: hsl(224, 22%, 17%);
-$text-color: hsl(260, 100%, 98%);
+$bg-color: #fff;
+$text-color: hsl(221, 15%, 22%);
 $button-color: rgba(lighten($bg-color, 60%), .1);
 $button-color: rgba($theme-color, .9);
 $stroke-color: rgba($text-color, .2);

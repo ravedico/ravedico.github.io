@@ -90,7 +90,7 @@
   width: 0.2rem;
   height: 90%;
   border-radius: 0.2rem;
-  background-color: white;
+  background-color: #4a5573;
 }
 
 .hero {
@@ -107,7 +107,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .hero.hero_ct {
   background-image: url(../images/works/ct-bg-1.jpg);
@@ -127,21 +127,22 @@
 .hero .container {
   position: relative;
   z-index: 1;
-  max-width: 100rem;
   height: 100%;
   margin: auto;
-  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hero .page-title {
+  width: 100%;
   margin: 4rem 0 0;
   text-align: center;
   padding: 4rem;
   backdrop-filter: blur(0.5rem);
+  background-color: rgba(0, 102, 204, 0.05);
 }
 .hero .page-title h2 {
+  color: #0066cc;
   line-height: 1.2;
 }
 .hero .page-title h2 span {
@@ -227,7 +228,7 @@
 }
 .content .title {
   padding-top: 4rem;
-  border-top: 1px solid rgba(248, 245, 255, 0.2);
+  border-top: 1px solid rgba(34, 39, 53, 0.2);
   margin-bottom: 1rem;
 }
 @media (max-width: 576px) {
@@ -315,10 +316,10 @@
 blockquote {
   width: fit-content;
   padding: 0.4rem 1rem;
-  background-color: #363e54;
+  background-color: white;
   font-size: 1.4rem;
-  border-left: 0.4rem solid #363e54;
-  box-shadow: inset 0.4rem 0 0 0 #222735;
+  border-left: 0.4rem solid white;
+  box-shadow: inset 0.4rem 0 0 0 #fff;
   padding-left: 2rem;
 }
 
@@ -406,7 +407,7 @@ blockquote {
   position: absolute;
   width: 0.2rem;
   height: 1.2rem;
-  background-color: #f8f5ff;
+  background-color: #222735;
   border-radius: 0.2rem;
 }
 @media (max-width: 576px) {

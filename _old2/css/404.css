@@ -53,184 +53,184 @@
   animation: orbAnimation 6s linear infinite, orbColor 6s linear infinite;
 }
 .background span:nth-child(1) {
-  top: 85%;
-  left: 33%;
-  width: 7.5rem;
-  height: 7.5rem;
-  background-color: hsl(272, 67%, 40%);
-  opacity: 1;
-  filter: blur(1.05rem);
-  animation-duration: 11s;
-  animation-delay: -13.8s;
-  transform-origin: -7vw -9vh;
-}
-.background span:nth-child(2) {
-  top: 9%;
-  left: 75%;
-  width: 40.5rem;
-  height: 40.5rem;
-  background-color: hsl(260, 51%, 30%);
-  opacity: 0.5;
-  filter: blur(1.45rem);
-  animation-duration: 11.1s;
-  animation-delay: -6.3s;
-  transform-origin: 4vw -3vh;
-}
-.background span:nth-child(3) {
-  top: 13%;
-  left: 1%;
+  top: 75%;
+  left: 54%;
   width: 15rem;
   height: 15rem;
+  background-color: hsl(175, 66%, 44%);
+  opacity: 0.9;
+  filter: blur(0.8rem);
+  animation-duration: 10.9s;
+  animation-delay: -15s;
+  transform-origin: -21vw -14vh;
+}
+.background span:nth-child(2) {
+  top: 1%;
+  left: 14%;
+  width: 16.5rem;
+  height: 16.5rem;
   background-color: hsl(344, 85%, 51%);
-  opacity: 0.6;
-  filter: blur(0.95rem);
-  animation-duration: 12.7s;
-  animation-delay: -8.7s;
-  transform-origin: 7vw 19vh;
+  opacity: 1;
+  filter: blur(1.25rem);
+  animation-duration: 13s;
+  animation-delay: -10.4s;
+  transform-origin: -17vw -11vh;
+}
+.background span:nth-child(3) {
+  top: 14%;
+  left: 44%;
+  width: 21rem;
+  height: 21rem;
+  background-color: hsl(260, 51%, 30%);
+  opacity: 0.3;
+  filter: blur(0.8rem);
+  animation-duration: 15.5s;
+  animation-delay: -9.4s;
+  transform-origin: -18vw -6vh;
 }
 .background span:nth-child(4) {
-  top: 56%;
-  left: 13%;
-  width: 27rem;
-  height: 27rem;
-  background-color: hsl(120, 89%, 41%);
-  opacity: 0.4;
-  filter: blur(1.25rem);
-  animation-duration: 11.4s;
-  animation-delay: -3.2s;
-  transform-origin: -7vw 11vh;
-}
-.background span:nth-child(5) {
-  top: 39%;
-  left: 89%;
-  width: 33rem;
-  height: 33rem;
-  background-color: hsl(272, 67%, 40%);
-  opacity: 0.3;
-  filter: blur(1.5rem);
-  animation-duration: 10.1s;
-  animation-delay: -12.5s;
-  transform-origin: 6vw 20vh;
-}
-.background span:nth-child(6) {
-  top: 96%;
-  left: 21%;
-  width: 39rem;
-  height: 39rem;
-  background-color: hsl(0, 100%, 38%);
-  opacity: 0.7;
-  filter: blur(0.85rem);
-  animation-duration: 11.6s;
-  animation-delay: -10.1s;
-  transform-origin: 20vw -6vh;
-}
-.background span:nth-child(7) {
-  top: 84%;
-  left: 52%;
-  width: 28.5rem;
-  height: 28.5rem;
-  background-color: hsl(120, 89%, 41%);
-  opacity: 0.8;
-  filter: blur(0.15rem);
-  animation-duration: 14.6s;
-  animation-delay: -12.8s;
-  transform-origin: 23vw -18vh;
-}
-.background span:nth-child(8) {
-  top: 81%;
-  left: 51%;
-  width: 6rem;
-  height: 6rem;
-  background-color: hsl(120, 89%, 41%);
-  opacity: 0.8;
-  filter: blur(0.65rem);
-  animation-duration: 11.8s;
-  animation-delay: -3.5s;
-  transform-origin: 12vw -17vh;
-}
-.background span:nth-child(9) {
-  top: 57%;
-  left: 17%;
-  width: 28.5rem;
-  height: 28.5rem;
-  background-color: hsl(175, 66%, 44%);
-  opacity: 0.2;
-  filter: blur(1.1rem);
-  animation-duration: 13.6s;
-  animation-delay: -6.1s;
-  transform-origin: -11vw 14vh;
-}
-.background span:nth-child(10) {
-  top: 14%;
-  left: 76%;
-  width: 37.5rem;
-  height: 37.5rem;
-  background-color: hsl(217, 94%, 59%);
-  opacity: 0.4;
-  filter: blur(1.15rem);
-  animation-duration: 12.7s;
-  animation-delay: -9.2s;
-  transform-origin: -15vw -10vh;
-}
-.background span:nth-child(11) {
-  top: 81%;
-  left: 56%;
-  width: 45rem;
-  height: 45rem;
-  background-color: hsl(120, 89%, 41%);
-  opacity: 0.7;
-  filter: blur(1.35rem);
-  animation-duration: 14.5s;
-  animation-delay: -7s;
-  transform-origin: -9vw 22vh;
-}
-.background span:nth-child(12) {
-  top: 14%;
-  left: 97%;
-  width: 27rem;
-  height: 27rem;
-  background-color: hsl(0, 100%, 38%);
-  opacity: 0.3;
-  filter: blur(0.6rem);
-  animation-duration: 15.8s;
-  animation-delay: -6.2s;
-  transform-origin: -17vw 21vh;
-}
-.background span:nth-child(13) {
-  top: 9%;
-  left: 31%;
+  top: 54%;
+  left: 79%;
   width: 24rem;
   height: 24rem;
+  background-color: hsl(260, 51%, 30%);
+  opacity: 0.8;
+  filter: blur(0.75rem);
+  animation-duration: 12s;
+  animation-delay: -4.4s;
+  transform-origin: 21vw 8vh;
+}
+.background span:nth-child(5) {
+  top: 61%;
+  left: 84%;
+  width: 36rem;
+  height: 36rem;
+  background-color: hsl(0, 100%, 38%);
+  opacity: 0.9;
+  filter: blur(1rem);
+  animation-duration: 14.1s;
+  animation-delay: -12.4s;
+  transform-origin: -5vw -8vh;
+}
+.background span:nth-child(6) {
+  top: 74%;
+  left: 35%;
+  width: 13.5rem;
+  height: 13.5rem;
   background-color: hsl(272, 67%, 40%);
-  opacity: 1;
-  filter: blur(1.15rem);
-  animation-duration: 11.8s;
-  animation-delay: -4.6s;
-  transform-origin: 0vw 25vh;
+  opacity: 0.7;
+  filter: blur(1.45rem);
+  animation-duration: 11.5s;
+  animation-delay: -0.6s;
+  transform-origin: -4vw -4vh;
+}
+.background span:nth-child(7) {
+  top: 56%;
+  left: 66%;
+  width: 9rem;
+  height: 9rem;
+  background-color: hsl(120, 89%, 41%);
+  opacity: 0.7;
+  filter: blur(0.85rem);
+  animation-duration: 10.9s;
+  animation-delay: -13.3s;
+  transform-origin: -10vw -8vh;
+}
+.background span:nth-child(8) {
+  top: 37%;
+  left: 54%;
+  width: 19.5rem;
+  height: 19.5rem;
+  background-color: hsl(175, 66%, 44%);
+  opacity: 0.7;
+  filter: blur(1rem);
+  animation-duration: 11.6s;
+  animation-delay: -4s;
+  transform-origin: -15vw -11vh;
+}
+.background span:nth-child(9) {
+  top: 66%;
+  left: 43%;
+  width: 27rem;
+  height: 27rem;
+  background-color: hsl(120, 89%, 41%);
+  opacity: 0.1;
+  filter: blur(0.4rem);
+  animation-duration: 10.8s;
+  animation-delay: -0.8s;
+  transform-origin: -4vw -1vh;
+}
+.background span:nth-child(10) {
+  top: 2%;
+  left: 5%;
+  width: 31.5rem;
+  height: 31.5rem;
+  background-color: hsl(344, 85%, 51%);
+  opacity: 0.9;
+  filter: blur(0.1rem);
+  animation-duration: 11s;
+  animation-delay: -3.5s;
+  transform-origin: -7vw -15vh;
+}
+.background span:nth-child(11) {
+  top: 47%;
+  left: 62%;
+  width: 39rem;
+  height: 39rem;
+  background-color: hsl(217, 94%, 59%);
+  opacity: 0.1;
+  filter: blur(1.1rem);
+  animation-duration: 14.5s;
+  animation-delay: -13s;
+  transform-origin: -18vw 4vh;
+}
+.background span:nth-child(12) {
+  top: 91%;
+  left: 19%;
+  width: 33rem;
+  height: 33rem;
+  background-color: hsl(344, 85%, 51%);
+  opacity: 0.2;
+  filter: blur(0.35rem);
+  animation-duration: 14s;
+  animation-delay: -10.2s;
+  transform-origin: -2vw -11vh;
+}
+.background span:nth-child(13) {
+  top: 48%;
+  left: 49%;
+  width: 34.5rem;
+  height: 34.5rem;
+  background-color: hsl(344, 85%, 51%);
+  opacity: 0.8;
+  filter: blur(0.75rem);
+  animation-duration: 13.5s;
+  animation-delay: -6.2s;
+  transform-origin: -24vw 9vh;
 }
 .background span:nth-child(14) {
-  top: 45%;
-  left: 15%;
-  width: 37.5rem;
-  height: 37.5rem;
-  background-color: hsl(272, 67%, 40%);
-  opacity: 0.1;
-  filter: blur(1.4rem);
-  animation-duration: 11.5s;
-  animation-delay: -5.2s;
-  transform-origin: -4vw -17vh;
+  top: 52%;
+  left: 55%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: hsl(217, 94%, 59%);
+  opacity: 0.7;
+  filter: blur(0.25rem);
+  animation-duration: 15.3s;
+  animation-delay: -7.1s;
+  transform-origin: 24vw -15vh;
 }
 .background span:nth-child(15) {
-  top: 17%;
-  left: 28%;
-  width: 43.5rem;
-  height: 43.5rem;
-  background-color: hsl(175, 66%, 44%);
-  opacity: 0.3;
-  filter: blur(0.05rem);
-  animation-duration: 13.3s;
-  animation-delay: -2s;
-  transform-origin: -18vw -6vh;
+  top: 19%;
+  left: 79%;
+  width: 22.5rem;
+  height: 22.5rem;
+  background-color: hsl(260, 51%, 30%);
+  opacity: 0.2;
+  filter: blur(1.4rem);
+  animation-duration: 13.7s;
+  animation-delay: -10s;
+  transform-origin: -14vw 0vh;
 }
 
 @keyframes orbAnimation {
