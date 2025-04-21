@@ -78,15 +78,21 @@
     }
 }
 
+header{
+    background-color: rgba(#fff, .8);
+}
+
 .hero{
-    height: calc(30vh);
-    position: relative;
+    padding: 14rem 4rem 4rem;
+        position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
     @include medium{
         height: auto;
+        padding: 10rem 0 0;
+        background-image: none !important;
     }
     &:after{
         content: '';
@@ -116,34 +122,26 @@
         height: 100%;
         margin: auto;
         // padding: 2rem;
-        // display: flex;align-items: center;justify-content: center;
+        display: flex;align-items: center;justify-content: center;
     }
     .page-title{
-        width: 100%;
-        margin: 7rem 0 0;
         text-align: center;
-        padding: 2rem;
+        padding: 3rem 4rem;
         backdrop-filter: blur(.5rem);
-        background-color: rgba(#fff, .05);
+        background-color: rgba(#fff, .8);
+        border-radius: 2rem;
+        box-shadow: 0 0 20px 0 rgba($text-color, .05);
         @include medium{
-            margin: 6rem 0 0;
-            padding: 4rem;
+            padding: 0 1rem 4rem;
             text-align: left;
             border-bottom: 1px solid rgba($text-color, .2);
-        }
-        &::after{
-            content: '';
-            left: -10%;
-            position: absolute;bottom: 0;
-            width: 120%;
-            height: 1rem;
-            filter: blur(.5rem);
-            backdrop-filter: blur(.5rem);
-            background-color: rgba($bg-color, .5);
+            border-radius: 0;
+            box-shadow: none;
         }
         h2{
             color: $text-color;  
             line-height: 1.2;
+            font-weight: 800;
             span{
                 font-weight: 400;
                 display: none; 
@@ -164,7 +162,7 @@
         margin: 10rem auto 5rem;
         @include medium{
             margin: 0;
-            padding: 4rem;   
+            padding: 4rem 1rem;   
         }
     }
     .uc-text{
@@ -180,10 +178,6 @@
 }
 
 .page-title{
-    margin-bottom: 5rem;
-    @include small{
-        margin-bottom: 3rem;
-    }
     h3{
         span{
             font-weight: 400;

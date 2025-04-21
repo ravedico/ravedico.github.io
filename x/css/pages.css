@@ -91,24 +91,31 @@
   width: 0.2rem;
   height: 90%;
   border-radius: 0.2rem;
-  background-color: white;
+  background-color: #5b657b;
 }
 
 .hero {
-  height: calc(50vh + 6rem);
+  height: 30vh;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: top center;
+  background-attachment: fixed;
 }
-.hero:before {
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+}
+.hero:after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+  mix-blend-mode: screen;
 }
 .hero.hero_ct {
   background-image: url(../images/works/ct-bg-1.jpg);
@@ -128,30 +135,51 @@
 .hero .container {
   position: relative;
   z-index: 1;
-  max-width: 100rem;
   height: 100%;
   margin: auto;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .hero .page-title {
-  margin: 4rem 0 0;
+  width: 100%;
+  margin: 7rem 0 0;
   text-align: center;
-  padding: 4rem;
+  padding: 2rem;
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+@media (max-width: 768px) {
+  .hero .page-title {
+    margin: 6rem 0 0;
+    padding: 4rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(48, 53, 65, 0.2);
+  }
+}
+.hero .page-title::after {
+  content: "";
+  left: -10%;
+  position: absolute;
+  bottom: 0;
+  width: 120%;
+  height: 1rem;
+  filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .hero .page-title h2 {
+  color: hsl(221, 15%, 22%);
   line-height: 1.2;
 }
 .hero .page-title h2 span {
   font-weight: 400;
+  display: none;
 }
 .hero .page-title h4 {
-  margin-top: 2rem;
   font-weight: 400;
+}
+.hero .page-title br {
+  display: none;
 }
 
 .sec-work .container {
@@ -229,7 +257,7 @@
 }
 .content .title {
   padding-top: 4rem;
-  border-top: 1px solid rgba(248, 245, 255, 0.2);
+  border-top: 1px solid rgba(48, 53, 65, 0.2);
   margin-bottom: 1rem;
 }
 @media (max-width: 576px) {
@@ -319,10 +347,10 @@ blockquote {
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.4rem 1rem;
-  background-color: #363e54;
+  background-color: white;
   font-size: 1.4rem;
-  border-left: 0.4rem solid #363e54;
-  box-shadow: inset 0.4rem 0 0 0 hsl(224, 22%, 17%);
+  border-left: 0.4rem solid white;
+  box-shadow: inset 0.4rem 0 0 0 #fff;
   padding-left: 2rem;
 }
 
@@ -410,7 +438,7 @@ blockquote {
   position: absolute;
   width: 0.2rem;
   height: 1.2rem;
-  background-color: hsl(260, 100%, 98%);
+  background-color: hsl(221, 15%, 22%);
   border-radius: 0.2rem;
 }
 @media (max-width: 576px) {

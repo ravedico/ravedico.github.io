@@ -18,8 +18,8 @@ html {
 body {
   position: relative;
   font-family: "Inter", serif;
-  background-color: hsl(224, 22%, 17%);
-  color: hsl(260, 100%, 98%);
+  background-color: #fff;
+  color: hsl(221, 15%, 22%);
 }
 @media (max-width: 576px) {
   body {

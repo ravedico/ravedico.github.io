@@ -41,15 +41,17 @@
 </head>
 
 <body class="home">
-    <div class="scroll-top top-btn"></div>
     <header>
-        <div class="scroll-top logo">
+        <div class="logo">
             Yogev Raved<span>_</span>
         </div>
         <ul class="nav-menu">
             <div class="back-icon"></div>
             <li class="menu-item">
                 <a href="#work">Work</a>
+            </li>
+            <li class="menu-item">
+                <a href="images/Yogev-Raved-Product-Designer.pdf" target="_blank">Case studies</a>
             </li>
             <li class="menu-item">
                 <a href="#about">About me</a>
@@ -65,35 +67,10 @@
     </header>
     <div id="wrapper">
         <section id="hero" class="hero">
-            <div class="bg-parallax">
-                <div class="scene">
-                    <span data-depth=".1"></span>
-                </div>
-                <div class="scene">
-                    <span data-depth=".2"></span>
-                </div>
-                <div class="scene">
-                    <span data-depth=".3"></span>
-                </div>
-            </div>
-            <ul class="hero-menu">
-                <li class="menu-item">
-                    <a href="#work">Work</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#about">About me</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#contact">Contact</a>
-                </li>
-                <li class="menu-item">
-                    <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">CV</a>
-                </li>
-            </ul>
             <div class="container">
                 <div class="figure_wrap">
-                    <figure class="my-image">
-                        <img src="images/yogev01.png">
+                    <figure class="my-image hover-follower" data-scale="1" data-translate-x="0.2" data-translate-y="0.2">
+                        <img src="images/yogev01.jpg">
                     </figure>
                 </div>
                 <div class="text">
@@ -110,8 +87,9 @@
         </section>
         <section class="work_sec" id="work">
             <div class="container">
+
                 <div class="work_wrap_h">
-                    <figure data-scale="1" data-translate-x="0.05" data-translate-y="0.05" class="work-image  work-name_ct" onclick="location.href='project-config-templates.html';">
+                    <figure data-scale="1" data-translate-x="0.05" data-translate-y="0.05" class="work-image hover-follower  work-name_ct" onclick="location.href='project-config-templates.html';">
                         <img src="images/works/ct-main.jpg">
                     </figure>
                     <div class="text">
@@ -302,32 +280,24 @@
     </script>
 
     <script>
-        $(function() {
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-                if (scroll >= 300) {
-                    $('header').addClass('header-scroll');
-                    $('.top-btn').addClass('show');
-                } else {
-                    $('header').removeClass('header-scroll');
-                    $('.top-btn').removeClass('show');
-                }
-            });
-        });
-
-        $('.scroll-top').click(function(){
-            $('html, body').animate({
-                scrollTop: $('body').offset().top
-            }, 500);
-            $('.nav-menu').removeClass('show');
-        });
-
         $('.nav-icon').click(function(){
             $('.nav-menu').addClass('on');
         });
         $('.nav-menu').click(function(){
             $(this).removeClass('on');
         });
+        document.addEventListener('click', function (event) {
+    const navMenu = document.querySelector('.nav-menu');
+    const navIcon = document.querySelector('.nav-icon');
+
+    if (
+        navMenu.classList.contains('on') &&
+        !navMenu.contains(event.target) &&
+        !navIcon.contains(event.target)
+    ) {
+        navMenu.classList.remove('on');
+    }
+});
     </script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

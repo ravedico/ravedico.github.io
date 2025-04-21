@@ -94,8 +94,12 @@
   background-color: #5b657b;
 }
 
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .hero {
-  height: 30vh;
+  padding: 14rem 4rem 4rem;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -105,6 +109,8 @@
 @media (max-width: 768px) {
   .hero {
     height: auto;
+    padding: 10rem 0 0;
+    background-image: none !important;
   }
 }
 .hero:after {
@@ -137,39 +143,32 @@
   z-index: 1;
   height: 100%;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero .page-title {
-  width: 100%;
-  margin: 7rem 0 0;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 4rem;
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  box-shadow: 0 0 20px 0 rgba(48, 53, 65, 0.05);
 }
 @media (max-width: 768px) {
   .hero .page-title {
-    margin: 6rem 0 0;
-    padding: 4rem;
+    padding: 0 1rem 4rem;
     text-align: left;
     border-bottom: 1px solid rgba(48, 53, 65, 0.2);
+    border-radius: 0;
+    box-shadow: none;
   }
-}
-.hero .page-title::after {
-  content: "";
-  left: -10%;
-  position: absolute;
-  bottom: 0;
-  width: 120%;
-  height: 1rem;
-  filter: blur(0.5rem);
-  -webkit-backdrop-filter: blur(0.5rem);
-          backdrop-filter: blur(0.5rem);
-  background-color: rgba(255, 255, 255, 0.5);
 }
 .hero .page-title h2 {
   color: hsl(221, 15%, 22%);
   line-height: 1.2;
+  font-weight: 800;
 }
 .hero .page-title h2 span {
   font-weight: 400;
@@ -189,7 +188,7 @@
 @media (max-width: 768px) {
   .sec-work .container {
     margin: 0;
-    padding: 4rem;
+    padding: 4rem 1rem;
   }
 }
 .sec-work .uc-text p {
@@ -200,14 +199,6 @@
   white-space: nowrap;
 }
 
-.page-title {
-  margin-bottom: 5rem;
-}
-@media (max-width: 576px) {
-  .page-title {
-    margin-bottom: 3rem;
-  }
-}
 .page-title h3 span {
   font-weight: 400;
 }

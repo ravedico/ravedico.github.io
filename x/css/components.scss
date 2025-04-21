@@ -1,208 +1,234 @@
-    @import '_variables';
-    @import '_mixins';
+@import '_variables';
+@import '_mixins';
 
-    ////  
+////  
 
-    ::selection { 
-        background: lighten($bg-color, 10%);
-        color: #fff; 
+::selection { 
+    background: rgba($text-color, .1);
+    color: rgba($theme-color-2, .95); 
+}
+
+#scrollLine{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    height: .2rem;
+    background-color: $theme-color;
+    border-radius: .4rem;
+    transition: .3s cubic-bezier(0.4, 0.15, 0.33, 1.3);
+}
+
+.back-icon{
+    display: none;
+    @include small{
+        // display: block;       
+        position: relative;
+        @include size(1.4rem, .3rem);
+        background-color: $text-color;
+        border-radius: 1rem;
     }
-
-    #scrollLine{ 
-        position: fixed;
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        right: 0;
+        transform-origin: center;
+        @include size(.3rem, 1rem);
+        border-radius: 1rem;
+        background-color: $text-color;
+    }
+    &:before{
         top: 0;
-        left: 0;
-        z-index: 11;
-        height: .2rem;
-        background-color: $theme-color;
-        border-radius: .4rem;
-        transition: .3s cubic-bezier(0.4, 0.15, 0.33, 1.3);
+        transform: rotate(45deg);
     }
+    &:after{
+        top: -.7rem;
+        transform: rotate(-45deg);
+    }
+}
 
-    .back-icon{
-        display: none;
-        @include small{
-            display: block;       
-            position: relative;
-            @include size(1.4rem, .3rem);
-            background-color: $text-color;
-            border-radius: 1rem;
-        }
-        &:before, &:after{
-            content: '';
+header{
+    position: fixed;top: 0;
+    z-index: 10;
+    display: flex;align-items: center;justify-content: space-between;
+    width: 100%;
+    padding: 2rem 3rem;
+    // background-color: rgba(darken($bg-color, 50%), 0.2);
+    backdrop-filter: blur(10px);
+    transition: 2s ease-out;
+    @include small{
+        padding: 1.5rem;
+    }
+    .nav_wrap{
+        position: relative;
+        display: flex;
+        margin-left: auto;
+    }
+    .nav-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;        
+        font-size: 1.5rem;
+        @include medium{                        
             position: absolute;
-            right: 0;
-            transform-origin: center;
-            @include size(.3rem, 1rem);
+            top: -100vh;
+            z-index: 1;
+            flex-direction: column;
+            align-items: flex-start;
+            width: calc(100% - 4rem);
+            // height: calc(100vh - 4rem);
+            margin: 0;
+            padding: 5rem 0;
+            background-color: rgba($bg-color, .95);
+            backdrop-filter: blur(10px);
             border-radius: 1rem;
-            background-color: $text-color;
-        }
-        &:before{
-            top: 0;
-            transform: rotate(45deg);
-        }
-        &:after{
-            top: -.7rem;
-            transform: rotate(-45deg);
+            box-shadow: 0 0 2rem 0 rgba(#000, .1), 0 5px 10px 0 rgba(#000, .2), 0 0 0 2px rgba($theme-color-2, .2);
+            transition: .5s ease;
+            text-align: center;
+            justify-content: flex-start;
+            @include centerH;
+            &.on{
+                top: 7rem;
+            }
         }
     }
-
-    header{
-        position: fixed;top: 0;
-        z-index: 10;
-        display: flex;align-items: center;justify-content: space-between;
-        width: 100%;
-        padding: 2rem 3rem;
-        background-color: rgba(darken($bg-color, 50%), 0.2);
-        backdrop-filter: blur(20px);
-        transition: 2s ease-out;
-        &.header-scroll{
-            top: 0;
-            transition: 3s ease-out;
-            transition-delay: 0.000002s;
-        }
-        @include small{
-            padding: 1.5rem;
-        }
-        .nav_wrap{
-            position: relative;
-            display: flex;
-            margin-left: auto;
-        }
-        .nav-icon{
-            display: none;
-        }
-        .nav-menu{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;        
-            font-size: 1.5rem;
-            @include small{                        
-                position: absolute;top: 1.5rem;right: -100%;
-                z-index: 1;
-                flex-direction: column;
-                align-items: flex-start;
-                // gap: 3rem;
-                width: 16rem;
-                margin: 0;
-                padding: 3rem;
-                background-color: #fff;
-                border-radius: 1rem;
-                box-shadow: 0 0 2rem 0 rgba(#000, .1);
-                transition: .2s ease;
-                &.on{
-                    right: 1.5rem;
-                }
-            }
-        }
-        .menu-item{
-            font-size: 1.8rem;
-            line-height: 1;
-            font-weight: 400;
-            cursor: pointer;
-            a{
-                color: $text-color;
-                text-decoration: none;
-                &:hover{
-                    color: $theme-color;
-                    text-decoration: none;
-                    &:focus{
-                        outline: 0;
-                        border: 0;
-                    }
-                }
-            }
-            &:focus{
-                outline: 0;
-                border: 0;
-            }
-            @include small{
-                font-size: 1.4rem;
-                font-weight: 500;
-            }
-        }
-        .logo{
-            margin-right: 4rem;
-            font-size: 2.4rem;
-            font-weight: 600;
-            // text-transform: uppercase;
-            white-space: nowrap;
+    .menu-item{
+        font-size: 1.8rem;
+        line-height: 1;
+        font-weight: 400;
+        cursor: pointer;
+        a{
+            display: block;
             color: $text-color;
-            cursor: pointer;
-            transition: .2s ease;
+            text-decoration: none;
             &:hover{
                 color: $theme-color;
-                a{
-                    text-decoration: none;
+                text-decoration: none;
+                &:focus{
+                    outline: 0;
+                    border: 0;
                 }
-                span{
-                    color: $text-color;
-                }
-            }
-            span{
-                font-weight: 900;
-                color: $theme-color;
-                position: relative;bottom: 4px;
             }
         }
+        &:focus{
+            outline: 0;
+            border: 0;
+        }
+        @include small{
+            width: 100%;
+            font-size: 2.4rem;
+            font-weight: 500;
+            text-align: left;
+            padding: 0 5rem;
+        }
     }
-
-    .scroll_wrap{
-        @include centerH;
-        bottom: 3rem;z-index: 1;
-        @include size(3rem,4rem);
-    }
-
-    .scroll{
-        position: relative;
-        @include centerVH;
-        @include size(100%);
-        background-color: rgba(#fff,.5);
-        backdrop-filter: blur(5px);
-        border-radius: 3rem;
-        border: 1px solid $text-color;
+    .logo{
+        margin-right: 4rem;
+        font-size: 2.4rem;
+        font-weight: 600;
+        // text-transform: uppercase;
+        white-space: nowrap;
+        color: $theme-color;
         cursor: pointer;
-        transition: 0.5s cubic-bezier(0.7, -2, 0.3, 2.7);
-        &:after{
-            content: '';
-            @include centerH;
-            top: 0.5rem;
-            @include size(3px, 1rem);
-            background-color: $text-color;
-            border-radius: 3px;
-        }
-        &:hover{
-            @include size(106%);
-        }
-    }
-
-    .work-image{
-        overflow: hidden;
-        position: relative;
-        border-radius: .5rem;
-        box-shadow: 0 .5rem 2rem 0 rgba(#000, .15);
         transition: .2s ease;
         &:hover{
-            box-shadow: 0 1rem 2rem .5rem rgba(#000, .15);
+            color: $theme-color-2;
+            a{
+                text-decoration: none;
+            }
+            span{
+                color: $theme-color;
+            }
         }
-        .work-link{
-            @include centerVH;
-            text-align: center;
-            font-weight: 500;
-            color: #fff;
-            opacity: 0;
+        span{
+            font-weight: 900;
+            color: $theme-color-2;
+            position: relative;bottom: 4px;
         }
     }
+}
 
-    .chip{
-        width: fit-content;
+.nav-icon{
+    display: none;
+    @include medium{
         display: flex;
-        flex-wrap: wrap;
-        white-space: nowrap;
-        padding: .2rem .8rem;
-        background-color: rgba($theme-color-2, .5);
-        border-radius: 3rem;
-        border: 1px solid rgba($theme-color-2, 1);
-        font-size: 1.1rem;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        &::before,&::after{
+            content: '';
+            @include size(2rem, .3rem);
+            background-color: $text-color;
+            border-radius: 1rem;
+        }
     }
+    .hero &{
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        width: 6rem;
+        height: 6rem;
+
+        display: none;
+    }
+}
+.scroll_wrap{
+    @include centerH;
+    bottom: 3rem;z-index: 1;
+    @include size(3rem,4rem);
+}
+
+.scroll{
+    position: relative;
+    @include centerVH;
+    @include size(100%);
+    background-color: rgba(#fff,.5);
+    backdrop-filter: blur(5px);
+    border-radius: 3rem;
+    border: 1px solid $text-color;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.7, -2, 0.3, 2.7);
+    &:after{
+        content: '';
+        @include centerH;
+        top: 0.5rem;
+        @include size(3px, 1rem);
+        background-color: $text-color;
+        border-radius: 3px;
+    }
+    &:hover{
+        @include size(106%);
+    }
+}
+
+.work-image{
+    overflow: hidden;
+    position: relative;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 2rem 0 rgba(#000, .15);
+    transition: .2s ease;
+    &:hover{
+        box-shadow: 0 1rem 2rem .5rem rgba(#000, .15);
+    }
+    .work-link{
+        @include centerVH;
+        text-align: center;
+        font-weight: 500;
+        color: #fff;
+        opacity: 0;
+    }
+}
+
+.chip{
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    padding: .2rem .8rem;
+    background-color: rgba($theme-color-2, .2);
+    border-radius: 3rem;
+    border: 1px solid rgba($theme-color-2, .5);
+    font-size: 1.1rem;
+}

@@ -1,11 +1,11 @@
 ::-moz-selection {
-  background: #363e54;
-  color: #fff;
+  background: rgba(48, 53, 65, 0.1);
+  color: rgba(0, 102, 204, 0.95);
 }
 
 ::selection {
-  background: #363e54;
-  color: #fff;
+  background: rgba(48, 53, 65, 0.1);
+  color: rgba(0, 102, 204, 0.95);
 }
 
 #scrollLine {
@@ -24,11 +24,10 @@
 }
 @media (max-width: 576px) {
   .back-icon {
-    display: block;
     position: relative;
     width: 1.4rem;
     height: 0.3rem;
-    background-color: hsl(260, 100%, 98%);
+    background-color: hsl(221, 15%, 22%);
     border-radius: 1rem;
   }
 }
@@ -40,7 +39,7 @@
   width: 0.3rem;
   height: 1rem;
   border-radius: 1rem;
-  background-color: hsl(260, 100%, 98%);
+  background-color: hsl(221, 15%, 22%);
 }
 .back-icon:before {
   top: 0;
@@ -60,15 +59,9 @@ header {
   justify-content: space-between;
   width: 100%;
   padding: 2rem 3rem;
-  background-color: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   transition: 2s ease-out;
-}
-header.header-scroll {
-  top: 0;
-  transition: 3s ease-out;
-  transition-delay: 0.000002s;
 }
 @media (max-width: 576px) {
   header {
@@ -80,34 +73,37 @@ header .nav_wrap {
   display: flex;
   margin-left: auto;
 }
-header .nav-icon {
-  display: none;
-}
 header .nav-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
   font-size: 1.5rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   header .nav-menu {
     position: absolute;
-    top: 1.5rem;
-    right: -100%;
+    top: -100vh;
     z-index: 1;
     flex-direction: column;
     align-items: flex-start;
-    width: 16rem;
+    width: calc(100% - 4rem);
     margin: 0;
-    padding: 3rem;
-    background-color: #fff;
+    padding: 5rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     border-radius: 1rem;
-    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
-    transition: 0.2s ease;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(0, 102, 204, 0.2);
+    transition: 0.5s ease;
+    text-align: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   header .nav-menu.on {
-    right: 1.5rem;
+    top: 7rem;
   }
 }
 header .menu-item {
@@ -117,7 +113,8 @@ header .menu-item {
   cursor: pointer;
 }
 header .menu-item a {
-  color: hsl(260, 100%, 98%);
+  display: block;
+  color: hsl(221, 15%, 22%);
   text-decoration: none;
 }
 header .menu-item a:hover {
@@ -134,8 +131,11 @@ header .menu-item:focus {
 }
 @media (max-width: 576px) {
   header .menu-item {
-    font-size: 1.4rem;
+    width: 100%;
+    font-size: 2.4rem;
     font-weight: 500;
+    text-align: left;
+    padding: 0 5rem;
   }
 }
 header .logo {
@@ -143,24 +143,52 @@ header .logo {
   font-size: 2.4rem;
   font-weight: 600;
   white-space: nowrap;
-  color: hsl(260, 100%, 98%);
+  color: #b6003d;
   cursor: pointer;
   transition: 0.2s ease;
 }
 header .logo:hover {
-  color: #b6003d;
+  color: hsl(210, 100%, 40%);
 }
 header .logo:hover a {
   text-decoration: none;
 }
 header .logo:hover span {
-  color: hsl(260, 100%, 98%);
+  color: #b6003d;
 }
 header .logo span {
   font-weight: 900;
-  color: #b6003d;
+  color: hsl(210, 100%, 40%);
   position: relative;
   bottom: 4px;
+}
+
+.nav-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .nav-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-icon::before, .nav-icon::after {
+    content: "";
+    width: 2rem;
+    height: 0.3rem;
+    background-color: hsl(221, 15%, 22%);
+    border-radius: 1rem;
+  }
+}
+.hero .nav-icon {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: 6rem;
+  height: 6rem;
+  display: none;
 }
 
 .scroll_wrap {
@@ -185,7 +213,7 @@ header .logo span {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 3rem;
-  border: 1px solid hsl(260, 100%, 98%);
+  border: 1px solid hsl(221, 15%, 22%);
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.7, -2, 0.3, 2.7);
 }
@@ -197,7 +225,7 @@ header .logo span {
   top: 0.5rem;
   width: 3px;
   height: 1rem;
-  background-color: hsl(260, 100%, 98%);
+  background-color: hsl(221, 15%, 22%);
   border-radius: 3px;
 }
 .scroll:hover {
@@ -233,8 +261,8 @@ header .logo span {
   flex-wrap: wrap;
   white-space: nowrap;
   padding: 0.2rem 0.8rem;
-  background-color: rgba(0, 81, 173, 0.5);
+  background-color: rgba(0, 102, 204, 0.2);
   border-radius: 3rem;
-  border: 1px solid #0051ad;
+  border: 1px solid rgba(0, 102, 204, 0.5);
   font-size: 1.1rem;
 }/*# sourceMappingURL=components.css.map */
