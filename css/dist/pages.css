@@ -90,24 +90,31 @@
   width: 0.2rem;
   height: 90%;
   border-radius: 0.2rem;
-  background-color: #4a5573;
+  background-color: #5b657b;
 }
 
 .hero {
-  height: calc(50vh + 6rem);
+  height: calc(30vh);
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: top center;
+  background-attachment: fixed;
 }
-.hero:before {
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+}
+.hero:after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+  mix-blend-mode: screen;
 }
 .hero.hero_ct {
   background-image: url(../images/works/ct-bg-1.jpg);
@@ -129,28 +136,47 @@
   z-index: 1;
   height: 100%;
   margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .hero .page-title {
   width: 100%;
-  margin: 4rem 0 0;
+  margin: 7rem 0 0;
   text-align: center;
-  padding: 4rem;
+  padding: 2rem;
   backdrop-filter: blur(0.5rem);
-  background-color: rgba(0, 102, 204, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+@media (max-width: 768px) {
+  .hero .page-title {
+    margin: 6rem 0 0;
+    padding: 4rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(48, 53, 65, 0.2);
+  }
+}
+.hero .page-title::after {
+  content: "";
+  left: -10%;
+  position: absolute;
+  bottom: 0;
+  width: 120%;
+  height: 1rem;
+  filter: blur(0.5rem);
+  backdrop-filter: blur(0.5rem);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .hero .page-title h2 {
-  color: #0066cc;
+  color: #303541;
   line-height: 1.2;
 }
 .hero .page-title h2 span {
   font-weight: 400;
+  display: none;
 }
 .hero .page-title h4 {
-  margin-top: 2rem;
   font-weight: 400;
+}
+.hero .page-title br {
+  display: none;
 }
 
 .sec-work .container {
@@ -228,7 +254,7 @@
 }
 .content .title {
   padding-top: 4rem;
-  border-top: 1px solid rgba(34, 39, 53, 0.2);
+  border-top: 1px solid rgba(48, 53, 65, 0.2);
   margin-bottom: 1rem;
 }
 @media (max-width: 576px) {
@@ -407,7 +433,7 @@ blockquote {
   position: absolute;
   width: 0.2rem;
   height: 1.2rem;
-  background-color: #222735;
+  background-color: #303541;
   border-radius: 0.2rem;
 }
 @media (max-width: 576px) {
