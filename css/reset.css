@@ -18,8 +18,9 @@ html {
 body {
   position: relative;
   font-family: "Inter", serif;
-  background-color: #fff;
   color: hsl(221, 15%, 22%);
+  background: linear-gradient(135deg, #fff 70%, rgba(64, 149, 191, 0.3));
+  background-attachment: fixed;
 }
 @media (max-width: 576px) {
   body {
@@ -51,6 +52,11 @@ h2 {
 @media (max-width: 768px) {
   h2 {
     font-size: 2.5rem;
+  }
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 2rem;
   }
 }
 
@@ -131,12 +137,15 @@ img {
 
 button, .button {
   position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 1rem 2rem;
   outline: 0;
   border: 0;
   background-color: rgba(182, 0, 61, 0.9);
-  border: 1px solid #e9004e;
-  border-radius: 1rem;
+  border: 0;
+  border-radius: 4rem;
+  box-shadow: 0 10px 10px -10px rgba(182, 0, 61, 0.5);
   font-family: "Inter", serif;
   color: #fff;
   font-weight: 600;
@@ -145,7 +154,7 @@ button, .button {
 }
 button:hover, .button:hover {
   background-color: #e9004e;
-  border: 1px solid #b6003d;
+  box-shadow: 0 20px 10px -15px rgba(182, 0, 61, 0.2);
 }
 button.outline, .button.outline {
   border: 1px solid #b6003d;
@@ -161,4 +170,12 @@ button.outline:hover, .button.outline:hover {
 .hover-follower {
   transition: transform 0.3s ease, all 0.3s ease; /* Smooth transition */
   will-change: transform; /* Optimize for performance */
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
 }/*# sourceMappingURL=reset.css.map */

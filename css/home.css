@@ -1,11 +1,3 @@
-body {
-  color: hsl(221, 15%, 22%);
-  background-color: #fff;
-}
-
-body {
-  position: relative;
-}
 body:after {
   content: "";
   position: fixed;
@@ -14,6 +6,19 @@ body:after {
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+
+header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  top: 1rem;
+}
+@media (max-width: 576px) {
+  header {
+    width: 95vw;
+  }
 }
 
 section {
@@ -45,21 +50,20 @@ section .container {
 
 .title {
   margin-bottom: 3rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero {
   position: relative;
-  height: 80vh;
-  padding: 8rem 4rem 4rem;
-  background: linear-gradient(-45deg, #fff, white);
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
-  overflow: hidden;
+  height: 90vh;
+  min-height: 60rem;
+  padding-top: 10rem;
 }
 @media (max-width: 576px) {
   .hero {
     height: auto;
+    min-height: auto;
+    padding: 15rem 0 5rem;
   }
 }
 .hero .my-name {
@@ -68,25 +72,46 @@ section .container {
 }
 @media (max-width: 576px) {
   .hero .my-name {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 .hero .title {
-  font-size: clamp(5rem, 8vw, 14rem);
+  font-size: clamp(5rem, 6vw, 14rem);
   line-height: 1;
   font-weight: 900;
+}
+@media (max-width: 576px) {
+  .hero .title {
+    font-size: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+  }
 }
 .hero .title span {
   margin-left: -0.5rem;
   display: block;
 }
+@media (max-width: 576px) {
+  .hero .title span {
+    margin: 0;
+  }
+}
 .hero .sub-title {
   font-size: 2rem;
   font-weight: 300;
 }
+@media (max-width: 576px) {
+  .hero .sub-title {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: 2rem;
+  }
+}
 .hero .container {
-  display: flex;
-  justify-content: center;
+  max-width: 100rem;
+  padding: 0 5rem;
+  margin: auto;
 }
 @media (max-width: 576px) {
   .hero .container {
@@ -94,13 +119,28 @@ section .container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     height: 100%;
+    padding: 0 2rem;
+  }
+}
+.hero .figure_wrap {
+  display: flex;
+  align-items: start;
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .hero .figure_wrap {
+    align-items: center;
   }
 }
 .hero .text {
-  margin: 4rem 0;
+  margin-left: 20rem;
   color: hsl(221, 15%, 22%);
+}
+@media (max-width: 576px) {
+  .hero .text {
+    margin: 0;
+  }
 }
 .hero .hero-menu {
   width: 100%;
@@ -164,7 +204,7 @@ section .container {
   width: 3rem;
   height: 5px;
   border-radius: 1rem;
-  background-color: hsl(210, 100%, 40%);
+  background-color: hsl(200, 50%, 50%);
   transition: 0.2s ease-in-out;
 }
 .hero a.arrow-link .scroll-down-arrow::before {
@@ -185,19 +225,18 @@ section .container {
 }
 
 .my-image {
-  margin-top: 5rem;
   margin-right: 5rem;
   overflow: hidden;
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 100%;
   background: linear-gradient(45deg, #b6003d 20%, rgba(182, 0, 61, 0) 60%);
 }
 @media (max-width: 576px) {
   .my-image {
-    margin: 2rem auto 0;
-    width: 13.3333333333rem;
-    height: 13.3333333333rem;
+    margin-right: 2rem;
+    width: 10rem;
+    height: 10rem;
   }
 }
 .my-image img {
@@ -215,6 +254,7 @@ section .container {
 .work_sec .container {
   margin: 5rem auto;
   max-width: 90rem;
+  scroll-padding-top: 0;
 }
 @media (max-width: 576px) {
   .work_sec .container {
@@ -249,13 +289,14 @@ section .container {
   .work_wrap_h {
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
-    border: 1px solid rgba(48, 53, 65, 0.2);
-    margin-bottom: 2rem;
+    margin-top: 4rem;
     border-radius: 1rem;
   }
 }
 .work_wrap_h .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   order: 1;
   width: 25rem;
 }
@@ -263,21 +304,20 @@ section .container {
   .work_wrap_h .text {
     width: 100%;
     order: 2;
+    padding-left: 1rem;
   }
 }
 .work_wrap_h .text p {
-  margin: 2rem 0;
   line-height: 1.4;
 }
 .work_wrap_h .text button {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .work_wrap_h .work-name {
   margin: 0;
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.4;
-  color: hsl(210, 100%, 40%);
 }
 @media (max-width: 576px) {
   .work_wrap_h .work-name {
@@ -308,18 +348,15 @@ section .container {
   position: relative;
   aspect-ratio: 16/9;
   overflow: hidden;
-  box-shadow: 2px 2px 0 4px rgba(0, 102, 204, 0.2);
+  box-shadow: 0 0 0 2px rgba(64, 149, 191, 0.4);
+  border-radius: 2rem;
 }
 @media (max-width: 576px) {
   .work_wrap_h .work-image {
     order: 1;
     background: #ccc;
     width: 100%;
-    box-shadow: 0 0 0 1px rgba(0, 102, 204, 0.2);
   }
-}
-.work_wrap_h .work-image:hover {
-  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.4);
 }
 .work_wrap_h .work-image img, .work_wrap_h .work-image video {
   transition: 0.5s ease;
@@ -329,7 +366,7 @@ section .container {
 }
 .work_wrap_h .work-image.work-name_ct img, .work_wrap_h .work-image.work-name_ct video {
   transform: scale(2.5) rotate(-8deg);
-  top: 45%;
+  top: 40%;
   left: 35%;
 }
 .work_wrap_h .work-image.work-name_rl img, .work_wrap_h .work-image.work-name_rl video {
@@ -352,8 +389,7 @@ section .container {
 }
 
 .about_sec {
-  border-top: 1px solid rgba(48, 53, 65, 0.2);
-  border-bottom: 1px solid rgba(48, 53, 65, 0.2);
+  box-shadow: inset 0px 30px 30px -30px rgba(48, 53, 65, 0.1);
   padding: 5rem 0;
 }
 @media (max-width: 1024px) {
@@ -363,17 +399,18 @@ section .container {
 }
 @media (max-width: 576px) {
   .about_sec {
-    padding: 3rem;
+    padding: 5rem 2rem 2rem;
+    margin-top: 5rem;
   }
 }
 .about_sec .container {
-  max-width: 80rem;
+  max-width: 90rem;
 }
 .about_sec .text {
   margin-bottom: 5rem;
 }
 .about_sec .title {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .about_sec p {
   position: relative;
@@ -385,6 +422,9 @@ section .container {
   color: #252932;
 }
 
+.sec_contact {
+  box-shadow: inset 0px 30px 30px -30px rgba(48, 53, 65, 0.1);
+}
 @media (max-width: 768px) {
   .sec_contact {
     min-height: auto;
@@ -466,16 +506,4 @@ footer p span {
 }
 .chips_wrap .chip {
   position: relative;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }/*# sourceMappingURL=home.css.map */
