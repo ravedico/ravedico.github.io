@@ -17,7 +17,8 @@
 $screen-sm: 576px;
 $screen-md: 768px;
 $screen-lg: 1024px;
-$screen-xl: 1400px;
+$screen-xl: 1440px;
+$screen-xxl: 1920px;
 
 @mixin small {
     @media (max-width: #{$screen-sm}) {
@@ -39,6 +40,12 @@ $screen-xl: 1400px;
 
 @mixin x-large {
     @media (max-width: #{$screen-xl}) {
+        @content;
+    }
+}
+
+@mixin xx-large {
+    @media (max-width: #{$screen-xxl}) {
         @content;
     }
 }

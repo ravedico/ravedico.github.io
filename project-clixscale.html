@@ -20,7 +20,7 @@
     <link href="css/components.css" rel="stylesheet" type="text/css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
-    <script src="js/pages.js"></script>
+    <!-- <script src="js/pages.js"></script> -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1S9ZDW1TBJ"></script>
@@ -34,43 +34,42 @@
 </head>
 
 <body class="page work-page">
-    <div id="overlay">
+    <!-- <div id="overlay">
         <div class="gallery"></div>
-    </div>
+    </div> -->
+    <div id="scrollLine"></div>
     <div id="wrapper">
         <header>
             <div class="container">
-                <div class="logo home-link">
+                <div class="yr-logo home-link">
                     <a href="index.html">
                         Yogev Raved<span>_</span>
                     </a>
                 </div>
-                <ul class="nav-menu">
-                    <div class="back-icon"></div>
-                    <li class="menu-item work-menu">
+                <div class="nav-menu">
+                    <div class="menu-item work-menu">
                         <a>Work </a>
-                        <ul class="menu-dropdown">
-                        <li><a href="project-config-templates.html">Config-templates</a></li>
-                        <li><a href="project-clixscale.html">ClixScale</a></li>
-                        <li><a href="project-cluster-roll.html">Cluster rolls</a></li>
-                        <li><a href="project-pathomatic.html">Pathomatic</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
+                        <div class="menu-dropdown">
+                            <div class="p-link"><a href="project-config-templates.html">Config-templates</a></div>
+                            <div class="p-link"><a href="project-clixscale.html">ClixScale</a></div>
+                            <div class="p-link"><a href="project-cluster-roll.html">Cluster rolls</a></div>
+                            <div class="p-link"><a href="project-pathomatic.html">Pathomatic</a></div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
                         <a href="images/Yogev-Raved-Product-Designer.pdf" target="_blank">Case studies</a>
-                    </li>
-                    <li class="menu-item">
+                    </div>
+                    <div class="menu-item">
                         <a href="#about">About me</a>
-                    </li>
-                    <li class="menu-item">
+                    </div>
+                    <div class="menu-item">
                         <a href="#contact">Contact</a>
-                    </li>
-                    <li class="menu-item">
+                    </div>
+                    <div class="menu-item">
                         <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">CV</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
                 <div class="nav_wrap">
-                    <div class="nav-icon"></div>
                     <div class="work-nav">
                         <div class="nav-prev">
                             <a href="project-config-templates.html"></a>
@@ -83,19 +82,25 @@
                             <span class="nav-arrow"></span>
                         </div>
                     </div>
-                </div>
+                </div>                
             </div>
         </header>
-        <section class="hero">
+
+        <section class="sec-work hero" id="sec-goal">
             <div class="container">
                 <figure class="project-logo">
                     <img src="images/works/clixscale-logo.svg">
                 </figure>
                 <div class="page-title">
-                    <h2>Marketing campaigns<br>
-                        monitoring tool
-                    </h2>
-                    <p>Helped to improve campaign monitoring and manager-affiliate communication.</p>
+                    <h3>Marketing campaigns<br>
+                        monitoring tool</h3>
+                    <div class="text">
+                        <p>Helped to improve campaign monitoring and manager-affiliate communication<br>
+                            <a href="https://clixscale.com/" target="_blank">
+                                ClixScale by Intellforce
+                            </a>
+                        </p>
+                    </div>
                 </div>
                 <div class="project-info_wrap">
                     <div class="project-info-item">
@@ -105,33 +110,436 @@
                     <div class="project-info-item">
                         <h5>Teammates</h5>
                         <p>Product Managers,<br>
-                            fullstack developers</p>
+                              developers</p>
                     </div>
                     <div class="project-info-item">
                         <h5>Deliverables</h5>
                         <p>User research, wireframes, prototypes, UI design and design system creation</p>
                     </div>
-                    <div class="project-info-item">
-                        <h5>Users</h5>
-                        <p>About 70 at launch</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-work">
+            <div class="container">
+                <div class="sec-title">
+                    <h3>Overview</h3>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <p>
+                            ClixScale is a web application for marketing campaign managers and financial teams to control and monitor marketing campaigns and bank accounts. This is an interesting product that was born out of a need of the company for a unique customizable platform for monitoring marketing activity. The uniqueness of this system on the competitor's products in the market is in its simplicity.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="proto_wrap">
-            <div class="container">
-                <iframe src="https://embed.figma.com/proto/VA3ySVIZpbjacguNAdl0E2/YR-Case-study-Clixscale?page-id=0%3A1&node-id=14-1049&p=f&viewport=350%2C-63%2C0.06&scaling=scale-down-width&content-scaling=fixed&hide-ui=0&embed-host=share" allowfullscreen></iframe>
-            </div>
-        </section>
+
         <section class="sec-work">
             <div class="container">
-            <div class="para_wrap">
-                <div class="text">
-                    <h4>What I Learned</h4>
-                    <p>Working on the Clixscale campaign management platform challenged me to think about how to make a complex tool feel simple and easy to use. I focused on presenting important data clearly, so users could quickly understand campaign performance. I also ensured the design worked well for different types of users by considering their specific goals and tasks. This helped create a flexible platform that feels intuitive for everyone.</p>  
+                <div class="sec-title">
+                    <p class="pre-title">The goal</p>
+                    <h3>Some context</h3>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <ul>
+                            <li>A web application designed to simplify marketing campaign management with a user-friendly interface</li>
+                            <li>It streamlines workflows and enhances collaboration, making campaign monitoring more efficient</li>
+                            <li>It started as an inner product and expanded to be used with more than 30 partners</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section class="sec-work">
+            <div class="container">
+                <div class="sec-title">
+                    <h3>What do we want to achieve?</h3>
+                </div>
+                <div class="content">
+                    <div class="data_wrap pb-5">
+                        <div class="data-item">
+                            <figure class="icon">
+                                <img src="images/works/icon-l-graph.svg">
+                            </figure>
+                            <div class="data-text">
+                                <div class="label">Real-time performance tracking</div>
+                                <div class="info">Support crucial decision-making</div>
+                            </div>
+                        </div>
+                        <div class="data-item">
+                            <figure class="icon">
+                                <img src="images/works/icon-l-star.svg">
+                            </figure>
+                            <div class="data-text">
+                                <div class="label">Easy campaign selection</div>
+                                <div class="info">Better organization saves time</div>
+                            </div>
+                        </div>
+                        <div class="data-item">
+                            <figure class="icon">
+                                <img src="images/works/icon-l-chat.svg">
+                            </figure>
+                            <div class="data-text">
+                                <div class="label">Clear communication channels</div>
+                                <div class="info">Reduces friction among business partners</div>
+                            </div>
+                        </div>
+                        <div class="data-item">
+                            <figure class="icon">
+                                <img src="images/works/icon-l-pie.svg">
+                            </figure>
+                            <div class="data-text">
+                                <div class="label">Transparent reporting mechanisms</div>
+                                <div class="info">Financial teams can monitor more closely</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-frame" id="sec-research">
+            <div class="container">
+                <h1>Research</h1>
+            </div>
+        </section>
+
+        <section class="sec-work">
+            <div class="container">
+                <div class="sec-title">
+                    <h3>Who are the users?</h3>
+                </div>
+                <div class="content row">
+                    <div class="col">
+                        <div class="text">
+                            <h4 class="title">Advertising and Marketing Managers</h4>
+                            <p>Responsible for driving online sales through digital marketing campaigns, optimizing customer retention, analyzing data, and collaborating with cross-functional teams.</p>
+                            <blockquote>“I need seamless tools to track performance, personalize campaigns, and scale efficiently while optimizing ad spend”</blockquote> 
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text">
+                            <h4 class="title">Marketing affiliate manager</h4>
+                            <p>A strategic affiliate manager focused on partnerships, conversions, and commission optimization. Seeks reliable tracking, high-performing affiliates, and scalable growth.</p>
+                            <blockquote>“I need accurate tracking, strong relationships, and the right incentives to drive consistent, high-quality traffic”</blockquote> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-work">
+            <div class="container">
+                <div class="sec-title">
+                    <h3>Interview and surveys</h3>
+                </div>
+                    <div class="content row col-50">
+                        <div class="col">
+                            <div class="text">
+                                <h4 class="title">Interviews</h4>
+    
+                                <ul>
+                                    <li>We interviewed several affiliate managers, to gather insights on their experiences, challenges, and needs when working with marketing campaign management tools. The goal was to identify key pain points, preferred features, and opportunities for improvement to enhance usability and efficiency.</li>
+                                </ul>
+                            </div>
+                            <div class="text">
+                                <h4 class="title">Surveys</h4>
+                                <ul>
+                                    <li>We composed a series of questions, sent it to partners and shared it within marketing and affiliate communities.</li>
+                                    <li>This survey is designed to gather insights about their experience with marketing campaign tools. We aimed to understand their needs, preferred tools, and challenges when working with partners.</li>
+                                </ul>
+                            </div>   
+                        </div>
+                        <div class="work-images">
+                            <figure class="">
+                                <img src="images/works/cx-ux-users.png">
+                            </figure>
+                        </div>
+                    </div>
+
+                    
+            </div>
+        </section>   
+
+        <section class="sec-work">
+            <div class="container">
+                <div class="sec-title">
+                    <h3>Key Research Findings</h3>
+                </div>
+                <div class="content "> 
+                        <div class="text">
+                                <h4 class="title">“As a marketing manager, I want to:</h4>
+        
+                                <ul>
+                                    <li>Improve affiliate engagement</li>
+                                        <li>Ensure transparent reporting and analytics</li>
+                                        <li>Track and compare performance to monitor spending</li>
+                                        <li>Verify traffic quality</li>
+                                </ul>
+                            </div>    
+                                   
+                </div>
+                <div class="content "> 
+
+                            <div class="text">
+                                <h4 class="title">“As an affiliate manager, I want to:</h4>
+        
+                                <ul>
+                                    <li>Optimize campaigns with real-time data</li>
+                                    <li>Ensure fair and accurate payments</li>
+                                    <li>Enable direct contact with advertisers for faster issue resolution</li>
+                                    <li>Integrate multiple tracking tools into one dashboard</li>
+                                </ul>
+                            </div>                   
+
+              
+                </div>
+                <div class="content "> 
+                                 
+
+                            <div class="text">
+                                <h4 class="title">Insights</h4>
+        
+                                <ol>
+                                    <li>Most tools in the market fit less to medium/small networks</li>
+                                    <li>Simplify multi-channel campaign tracking</li>
+                                    <li>Streamline affiliate onboarding</li>
+                                    <li>Increase visibility into campaign metrics</li>
+                                    <li>Improve communication workflows</li>
+                                </ol>
+                            </div>                 
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-frame" id="sec-ideation">
+            <div class="container">
+                <h1>Ideation & exploration</h1>
+            </div>
+        </section>
+
+        <section class="sec-work">
+            <div class="container">
+                <div class="sec-title">
+                    <h3>Design solution</h3>
+                </div>
+                <div class="content">  
+                    <div class="text">
+                            <ul>
+                                <li>UI including campaigns list and their data</li>
+                                <li>Performance dashboard with real-time stats</li>
+                                <li>Responsive design for all devices</li>
+                                <li>Embedding them within the emerging financial platform we had worked on</li>
+                                
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-work">
+            <div class="container">
+                <div class="sec-title">
+                    <h3>Design process</h3>
+                </div>
+                <div class="content row col-50">  
+                    <div class="col">
+                        <div class="text">
+                            <ul>
+                                <li>Information Architecture</li>
+                                <li>Designed an intuitive dashboard layout</li>
+                                <li>Developed clear navigation for campaign selection and management</li>
+                                <li>Wireframing & Prototyping</li>
+                                <li>Created low-fidelity wireframes</li>
+                                <li>Developed interactive prototypes for user testing</li>
+                                <li>Iterative design based on user feedback</li>
+                                <li>Design system and UI</li>
+                                <li>Developed a design system from scratch and implemented it over the wireframes</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <figure class="no-border">
+                            <img src="images/works/cx-ux-p.png">
+                        </figure>
+                    </div>      
+                </div>
+                <div class="content row">
+                    <div class="col">
+                        <p><b>Create campaign</b></p>
+                        <figure class="no-border">
+                            <img src="images/works/cx-ux-1a.jpg">
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <p><b>Edit</b></p>
+                        <figure class="no-border">
+                            <img src="images/works/cx-ux-1b.jpg">
+                        </figure>
+                    </div>                        
+                    <div class="col">
+                        <p><b>Monitoring - main</b></p>
+                        <figure class="no-border">
+                            <img src="images/works/cx-ux-1c.jpg">
+                        </figure>
+                    </div>                        
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <h4 class="title">Expanded sections</h4>
+                        <p>I researched the most suitable design pattern by conducting several user testing sessions to find out the clearest option to filter group elements. With high-level prototypes, I gained some interesting insights and the tabbed division option demonstrated the best usability.</p>
+                    </div>
+                    <div class="row col-50">
+                        <div class="col">                        
+                            <p><b>Expanded sections</b></p>
+                            <figure class="no-border">
+                                <img src="images/works/cx-ux-2a.jpg">
+                            </figure>
+                        </div>
+                        <div class="col">                        
+                            <p><b>Tabs division</b></p>
+                            <figure class="no-border">
+                                <img src="images/works/cx-ux-2b.jpg">
+                            </figure>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="content row col-50">  
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-frame" id="sec-ideation">
+            <div class="container">
+                <h1>Final design</h1>
+            </div>
+        </section>
+
+        <section class="sec-work">
+            <div class="container">
+                <div class="content">
+                    <div class="text">
+                        <h4 class="title">Main page</h4>
+                        <p>I have created high-fidelity mockups and ready-for-dev Figma files, considering all edge cases, empty states and placeholders.</p>
+                    </div>
+                    <figure class="work-image no-border img-show">
+                        <img src="images/works/cx-main-anno.png" class="img-hover">
+                        <img src="images/works/cx-main-a.png">
+                    </figure>
+                </div>
+                
+                <div class="content">
+                    <div class="text">
+                        <p>Main page - Grouped by product</p>
+                    </div>
+                    <figure class="work-image">
+                        <img src="images/works/cx-main-grouped.jpg">
+                    </figure>
+                </div>
+
+                <div class="content">
+                    <div class="text">
+                        <p>Empty state</p>
+                    </div>
+                    <figure class="no-border">
+                        <img src="images/works/cx-main-empty.jpg">
+                    </figure>
+                </div>
+
+                <div class="content row col-50">
+                    <div class="text">
+                        <h4 class="title">Campaign actions</h4>
+                        <p>Each campaign card contains</p>
+                        <ul>
+                            <li>Campaign screenshot</li>
+                            <li>Name and id</li>
+                            <li>Status indicator</li>
+                            <li>Stats data</li>
+                            <li>Hover on a card shows links to the stats and the edit pages</li>
+                        </ul>
+                    </div>                        
+
+                    <figure class="">
+                        <img src="images/works/cx-thumb.png">
+                    </figure>
+                    <figure class="">
+                        <img src="images/works/cx-thumb-vid.gif">
+                    </figure>
+                </div>
+
+                <div class="content">
+                    <div class="text">
+                        <h4 class="title">New campaign</h4>
+                    </div>
+                    <figure class="">
+                        <img src="images/works/cx-new-campaign.png">
+                    </figure>
+                </div>
+
+                <div class="content">
+                    <div class="text">
+                        <p>Edit campaign</p>
+                    </div>
+                    <figure class="work-image">
+                        <img src="images/works/cx-edit.jpg">
+                    </figure>
+                </div>
+
+                <div class="content">
+                    <div class="text">
+                        <h4 class="title">Campaign Stats</h4>
+                    </div>
+                    <div class="row col-50">
+                        <div class="col">
+                            <div class="text">
+                                <p>This stats page shows crucial data on each campaign:</p>
+                                <ul>
+                                    <li>Filter by date and view by time segment.</li>
+<li>                                    Revenue and Conversion rotate.</li>
+<li>                                    Funnel that breaks down the customer steps until billing the phase.</li>
+<li>                                    Conversion amount by original publication source.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <figure class="work-image">
+                            <img src="images/works/cx-stats.jpg">
+                        </figure>
+                    </div>
+                </div>
+                
+                <div class="content">
+                    <div class="text">
+                        <h4 class="title">Financial management</h4>
+                        <p>Accounts management page for monitoring and controlling financial accounts</p>
+                    </div>
+                    <div class="row col-50">
+                        <figure class="work-image">
+                            <img src="images/works/cx-finance.jpg">
+                        </figure>
+                        <figure class="work-image">
+                            <img src="images/works/cx-finance-edit.jpg">
+                        </figure>
+
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <h4 class="title">What I learned</h4>
+                        <p>Working as the only designer in a small team taught me a lot about wearing many hats and trusting my instincts. I had to take full ownership of the design process, make quick decisions, and stay flexible as things shifted. It pushed me to communicate clearly with everyone—from developers to product managers—and find creative ways to keep the user at the center, even when juggling tight timelines or shifting priorities.</p>
+
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
         <footer>
             <div class="nav_wrap">
                 <div class="work-nav">
@@ -151,13 +559,31 @@
     </div>
 
     <script>
+        window.onscroll = function() {myFunction()};
 
-        $('.nav-icon').click(function(){
-            $('.nav-menu').addClass('on');
-        });
-        $('.nav-menu').click(function(){
-            $(this).removeClass('on');
-        });
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollLine").style.width = scrolled + "%";
+        }
+
+        // Prevent orphan words
+        function preventOrphans() {
+            const elements = document.querySelectorAll('p, li');
+            elements.forEach(element => {
+                const text = element.innerHTML;
+                const words = text.split(' ');
+                if (words.length > 1) {
+                    const lastTwoWords = words.slice(-2).join('&nbsp;');
+                    const remainingWords = words.slice(0, -2).join(' ');
+                    element.innerHTML = remainingWords + ' ' + lastTwoWords;
+                }
+            });
+        }
+
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', preventOrphans);
     </script>
 </body>
 

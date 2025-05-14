@@ -27,9 +27,20 @@ body{
     // background-color: $bg-color;
     background: linear-gradient(135deg, $bg-color 70%, rgba($theme-color-2, .3));
     background-attachment: fixed;
+
+    
+    // cursor: url('../images/cursor-pointer.png'), auto;
+    
+    
     @include small{
         font-size: 1.4rem;
     }
+    
+    a{
+        // cursor: url('../images/cursor-pointer.png'), auto;
+
+    }
+
 }
 
 object{
@@ -37,7 +48,7 @@ object{
 }
 
 h1,h2,h3,h4,h5,h6,p,li{
-    line-height: 1.8;
+    // line-height: 1.8;
 }
 
 h1 {
@@ -81,10 +92,10 @@ h6 {
 } 
 
 p,li{
-    font-size: 1.5rem;
-    line-height: 1.8;
+    font-size: 1.8rem;
+    line-height: 1.5;
     @include x-large{
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
     }
 }
 
@@ -153,6 +164,9 @@ button, .button{
 
 .mt-2{
     margin-top: 2rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
 }
 
 .pb-5{
