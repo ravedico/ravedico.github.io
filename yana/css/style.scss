@@ -2,7 +2,7 @@
 @import '../../css/_mixins';
 
 $primary-color: hsl(130, 100%, 60%);
-$theme-color: hsl(280, 100%, 50%);
+$theme-color: hsl(280, 100%, 80%);
 
 @mixin text-gradient{
     background: linear-gradient(90deg, #fff, $theme-color);
@@ -10,23 +10,29 @@ $theme-color: hsl(280, 100%, 50%);
     -webkit-text-fill-color: transparent;
 }
 
-::-webkit-scrollbar {   
-    width: auto;
+::selection { 
+    background: $primary-color;
+    color: #000; 
 }
-::-webkit-scrollbar-track {
-    background: default;
-}
-::-webkit-scrollbar-thumb {
-    background: default; 
-    border-radius: 10px;
-    transition: .2s ease;
-    &:hover {
-        background: default;
-    }
-}   
+
+// ::-webkit-scrollbar {   
+//     width: auto;
+// }
+// ::-webkit-scrollbar-track {
+//     background: default;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background: default; 
+//     border-radius: 10px;
+//     transition: .2s ease;
+//     &:hover {
+//         background: default;
+//     }
+// }   
 
 body{
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: "Space Mono", monospace;
+    background: #000;
 }
 
 p, li {
@@ -106,17 +112,21 @@ p, li {
 //// 
 
 header{
+    max-width: 100%;
+    border-radius: 0;
     padding: .5rem 3rem;
     background: linear-gradient( #000, rgba($primary-color,.2));
     @include small{
         justify-content: space-between;
+        padding: 0;
     }
     &.dark{
         background-color: darken($text-color, 20%); 
         color: #fff;
     }
     .logo{
-        width: 5rem;
+        width: 6rem;
+        margin: 2rem auto 0;
         font-weight: 500;
          color: $primary-color;
          cursor: pointer;
@@ -126,17 +136,38 @@ header{
         //@include text-gradient();
     }
     .menu-item {
+        font-size: 1.8rem;
         font-weight: 300;
         &:hover{
-            //@include text-gradient();
-            color: $primary-color;
+            a{
+                color: $primary-color;
 
+            }
+        }
+        a{
+            color: #fff;
         }
 
     }
     .nav-icon{
         @include small{
             display: none;
+        }
+    }
+    .nav-menu{
+margin: 2rem auto;
+        justify-content: center;
+        gap: 10rem;
+        @include small{
+            margin: 1rem auto;
+            top: 0;
+            position: relative;
+            background: transparent;
+            box-shadow: none;
+            flex-direction: row;
+        }
+        @include small{
+            // display: none;
         }
     }
 }
@@ -186,7 +217,7 @@ section{
     margin-top: 5rem;
     height: 100vh;
     @include small{
-        margin-top: 7rem;
+        margin-top: 0;
     }
     h1{
         margin-bottom: 1rem;
@@ -297,6 +328,9 @@ section{
     .work-image{
         height: fit-content;
         aspect-ratio: auto;
+        border-radius: 0;
+        cursor: pointer;
+        box-shadow: none;
     }
     figure{
         width: 50%;
@@ -324,6 +358,7 @@ section{
     display: flex;
     gap: 3rem;
     margin-bottom: 5rem;
+    align-items: center;
     @include small{
         display: block;
     }
@@ -337,17 +372,23 @@ section{
     }
     .big-text{
         font-size: 20rem;
-        font-size: 10vw;
-        line-height: 0.8;
+        font-size: 6vw;
+        line-height: 1;
         text-align: center;
         span{
             // display: block;
+            position: relative;
         }
         .mark{
             position: absolute;
             transform: rotate(7deg);
             font-size: 150%;
             font-weight: 700;
+            right: -60px;
+            bottom: -15px;
+            display: none;
+            @include small{
+            }
         }
         .color{
             color: $primary-color;
@@ -378,53 +419,21 @@ section{
         margin-bottom: 1rem;
         line-height: 1.5;
         font-weight: 200;
-        span{
+        @include small{
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        span.divider{
             font-weight: 900;
             color: $primary-color;
             //@include text-gradient();
+            @include small{
+                // display: none;
+            }
         }
     }
 }  
 
 ////
-
-.sec_contact{
-    height: 100vh;
-    padding: 5rem 0;
-    @include small{
-        min-height: auto;
-        padding: 3rem;
-    }
-    .text{
-        margin-bottom: 2rem;
-        text-align: center;
-        @include small{
-            margin: 0;
-        }
-    }
-    p{
-        @include small{
-            margin-bottom: 2rem;
-        }
-        a{
-            &:hover{
-                //@include text-gradient();
-                color: $primary-color;
-            }
-            @include small{
-                display: block;
-                margin-bottom: 0.5rem;
-            }
-        }
-    }
-    .contact-text{
-        font-weight: 700;
-        span{
-            display: initial;
-            margin: 0 .5rem;
-            @include small{
-                display: none;
-            }
-        }
-    }
-}
