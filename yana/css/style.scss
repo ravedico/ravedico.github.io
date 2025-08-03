@@ -112,28 +112,41 @@ p, li {
 //// 
 
 header{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
     max-width: 100%;
     border-radius: 0;
     padding: .5rem 3rem;
-    background: linear-gradient( #000, rgba($primary-color,.2));
+    background-color: transparent;
+    backdrop-filter: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
     @include small{
         justify-content: space-between;
         padding: 0;
     }
-    &.dark{
-        background-color: darken($text-color, 20%); 
-        color: #fff;
-    }
+    // .logo{
+    //     width: 6rem;
+    //     font-weight: 500;
+    //      color: $primary-color;
+    //      cursor: pointer;
+    //      &:hover{
+    //         color: $theme-color;
+    //      }
+    //     //@include text-gradient();
+    // }
     .logo{
-        width: 6rem;
-        margin: 2rem auto 0;
+        @include small{
+            display: none;
+        }
+    }
+    .logo-text{
+        font-size: 2.4rem;
         font-weight: 500;
-         color: $primary-color;
-         cursor: pointer;
-         &:hover{
-            color: $theme-color;
-         }
-        //@include text-gradient();
+        color: #fff;
     }
     .menu-item {
         font-size: 1.8rem;
@@ -156,15 +169,10 @@ header{
     }
     .nav-menu{
 margin: 2rem auto;
-        justify-content: center;
-        gap: 10rem;
+        justify-content: flex-end;
+        gap: 4rem;
         @include small{
-            margin: 1rem auto;
-            top: 0;
-            position: relative;
-            background: transparent;
-            box-shadow: none;
-            flex-direction: row;
+display: none;
         }
         @include small{
             // display: none;
@@ -214,11 +222,12 @@ section{
 
 .hero{
     position: relative;
-    margin-top: 5rem;
     height: 100vh;
+    overflow: hidden;
     @include small{
         margin-top: 0;
-    }
+        height: 90vh;
+    } 
     h1{
         margin-bottom: 1rem;
         font-weight: 300;
@@ -233,20 +242,17 @@ section{
         font-weight: 300;
     }
     .video_wrap{
-        position: relative;
+        position: absolute;
+        top: 0;left: 0;
         width: 100%;height: 100%;
-        padding: 5rem;
-        @include small{
-            padding: 0;
-        }
         iframe{
             width: 100%;height: 100%;
         }
-        &:hover{
-            .video-link{
-                opacity: 1;
-            }
-        }
+        // &:hover{
+        //     .video-link{
+        //         opacity: 1;
+        //     }
+        // }
     }
     .video-link{
         @include centerVH; 
@@ -310,6 +316,21 @@ section{
 }
 
 .work{
+    h4{
+        display: none;
+        font-size: 4rem;
+        font-weight: 900;
+        color: #fff;
+        span{
+            font-weight: 300;
+        }
+        @include small{
+            display: block;
+        }
+    }
+    .title{
+        margin-top: 60px;
+    }
     .content{
         max-width: 90vw;
         padding: 5rem;
