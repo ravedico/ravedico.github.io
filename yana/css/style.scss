@@ -160,6 +160,10 @@ header{
         a{
             color: #fff;
         }
+        @include small{
+            text-align: center;
+            margin-top: 2rem;
+        }
 
     }
     .nav-icon{
@@ -168,15 +172,20 @@ header{
         }
     }
     .nav-menu{
-margin: 2rem auto;
+        margin: 2rem auto;
         justify-content: flex-end;
         gap: 4rem;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
         @include small{
-display: none;
-        }
-        @include small{
-            // display: none;
-        }
+            top: 0;
+            display: flex;
+            padding: 0;margin: 0;
+            flex-direction: row;
+
+    }
+
     }
 }
 

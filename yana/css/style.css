@@ -145,6 +145,12 @@ header .menu-item a {
   color: #fff;
 }
 @media (max-width: 576px) {
+  header .menu-item {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 576px) {
   header .nav-icon {
     display: none;
   }
@@ -153,12 +159,21 @@ header .nav-menu {
   margin: 2rem auto;
   justify-content: flex-end;
   gap: 4rem;
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 @media (max-width: 576px) {
   header .nav-menu {
-    display: none;
+    top: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
   }
 }
+
 body {
   transition: background 0.25s ease-in-out;
 }

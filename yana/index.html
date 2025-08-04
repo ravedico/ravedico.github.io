@@ -43,7 +43,7 @@
                 Yana&nbsp;Obolski</div>
         </div>
         <ul class="nav-menu">
-            <li class="menu-item hide-mobile">
+            <li class="menu-item">
                 <a href="https://vimeo.com/1101213804" target="_blank">Showreel</a>
             </li>
             <li class="menu-item">
@@ -58,7 +58,13 @@
     <div id="wrapper">
         <section id="showreel" class="hero">
             <div class="video_wrap">
+                <div class="hide-mobile video-placeholder">
+                    <img src="images/Showreel2025_cover.jpg" alt="Video loading...">
+                </div>
                 <iframe class="hide-mobile" src="https://player.vimeo.com/video/1101213804?background=1" width="" height="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <div class="hide-desktop video-placeholder">
+                    <img src="images/Showreel2025_cover_m.jpg" alt="Video loading...">
+                </div>
                 <iframe class="hide-desktop" src="https://player.vimeo.com/video/1101216215?background=1" width="" height="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>      
             </div>
             <!-- <div class="video_wrap">
@@ -167,23 +173,36 @@ tight deadlines.
     </div>
 
 </body>
-
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+    const players = document.querySelectorAll('.video_wrap iframe');
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    players.forEach(iframe => {
+        const player = new Vimeo.Player(iframe);
+
+        const placeholder = iframe.previousElementSibling;
+        if (placeholder && placeholder.classList.contains('video-placeholder')) {
+            player.on('play', () => {
+                placeholder.style.display = 'none';
+            });
+        }
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
 
     $('.scroll-top').click(function(){
-                $('html, body').animate({
-                    scrollTop: $('body').offset().top
-                }, 500);
-      });
-});
+        $('html, body').animate({
+            scrollTop: $('body').offset().top
+        }, 500);
+    });
 </script>
 
 </html>

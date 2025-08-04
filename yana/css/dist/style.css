@@ -97,10 +97,19 @@ p, li {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   max-width: 100%;
   border-radius: 0;
   padding: 0.5rem 3rem;
-  background: linear-gradient(#000, rgba(51, 255, 85, 0.2));
+  background-color: transparent;
+  backdrop-filter: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 @media (max-width: 576px) {
   header {
@@ -108,19 +117,15 @@ header {
     padding: 0;
   }
 }
-header.dark {
-  background-color: #040506;
-  color: #fff;
+@media (max-width: 576px) {
+  header .logo {
+    display: none;
+  }
 }
-header .logo {
-  width: 6rem;
-  margin: 2rem auto 0;
+header .logo-text {
+  font-size: 2.4rem;
   font-weight: 500;
-  color: #33ff55;
-  cursor: pointer;
-}
-header .logo:hover {
-  color: #dd99ff;
+  color: #fff;
 }
 header .menu-item {
   font-size: 1.8rem;
@@ -133,25 +138,34 @@ header .menu-item a {
   color: #fff;
 }
 @media (max-width: 576px) {
+  header .menu-item {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 576px) {
   header .nav-icon {
     display: none;
   }
 }
 header .nav-menu {
   margin: 2rem auto;
-  justify-content: center;
-  gap: 10rem;
+  justify-content: flex-end;
+  gap: 4rem;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 @media (max-width: 576px) {
   header .nav-menu {
-    margin: 1rem auto;
     top: 0;
-    position: relative;
-    background: transparent;
-    box-shadow: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
     flex-direction: row;
   }
 }
+
 body {
   transition: background 0.25s ease-in-out;
 }
@@ -195,12 +209,13 @@ section .container {
 
 .hero {
   position: relative;
-  margin-top: 5rem;
   height: 100vh;
+  overflow: hidden;
 }
 @media (max-width: 576px) {
   .hero {
     margin-top: 0;
+    height: 90vh;
   }
 }
 .hero h1 {
@@ -219,22 +234,15 @@ section .container {
   font-weight: 300;
 }
 .hero .video_wrap {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  padding: 5rem;
-}
-@media (max-width: 576px) {
-  .hero .video_wrap {
-    padding: 0;
-  }
 }
 .hero .video_wrap iframe {
   width: 100%;
   height: 100%;
-}
-.hero .video_wrap:hover .video-link {
-  opacity: 1;
 }
 .hero .video-link {
   position: absolute;
@@ -300,6 +308,23 @@ section .container {
   }
 }
 
+.work h4 {
+  display: none;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+}
+.work h4 span {
+  font-weight: 300;
+}
+@media (max-width: 576px) {
+  .work h4 {
+    display: block;
+  }
+}
+.work .title {
+  margin-top: 60px;
+}
 .work .content {
   max-width: 90vw;
   padding: 5rem;
