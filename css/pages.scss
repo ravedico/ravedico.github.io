@@ -1,5 +1,7 @@
 @import '_variables';
 @import '_mixins';
+$neo-theme-color: #8a4ce1;
+$neo-theme-color-2: #F6CB45;
 
 html {
     scroll-behavior: smooth;
@@ -114,7 +116,7 @@ header{
         padding: 5rem;
         // border-radius: 2rem;
         padding: 0;
-        // background: linear-gradient(135deg, rgba($theme-color-2, .1), $bg-color 70%, rgba($theme-color-2, .1));
+        // background: linear-gradient(135deg, rgba($neo-theme-color, .1), $bg-color 70%, rgba($neo-theme-color, .1));
         @include medium{
             margin: 0 auto;
             padding: 2rem;
@@ -136,7 +138,7 @@ header{
         padding: 2rem 0 4rem;
         backdrop-filter: blur(.5rem);
         width: 100%; 
-        border-bottom: 1px solid rgba($theme-color-2, .2);
+        border-bottom: 1px solid rgba($neo-theme-color, .2);
         @include medium{
             padding: 1rem 0 2rem;
             // text-align: left;
@@ -171,7 +173,7 @@ header{
     .project-info-item{
         flex: 1;
         h5{
-            color: $theme-color-2;
+            color: $neo-theme-color;
             font-weight: 800;
         }
         p{
@@ -204,7 +206,7 @@ header{
     position: relative;
     margin-bottom: 8rem;
     // padding-bottom: 5rem;
-    border-bottom: 1px solid rgba($theme-color-2, .2);
+    border-bottom: 1px solid rgba($neo-theme-color, .2);
     &:last-child{
         margin: 0;
         border: 0;
@@ -239,7 +241,7 @@ header{
             line-height: 1.2;
         }
         p{
-            color: $theme-color-2;
+            color: $neo-theme-color;
             font-weight: 500;
             margin: 0;
             @include small{
@@ -327,7 +329,8 @@ header{
     }
     p,li{
         a{
-            color: lighten($theme-color, 20%);
+            color: $text-color;
+            text-decoration: underline;
         }
         b{
             font-weight: 600;
@@ -411,11 +414,12 @@ blockquote{
 
 footer{
     margin: 5rem auto;
-    background-color: rgba($bg-color, 0.4);
+    background-color: $neo-theme-color-2;
     backdrop-filter: blur(10px);
     transition: .2s ease-out;
     border-radius: 3rem;
-    box-shadow: 0 0 20px 0 rgba($text-color, .2);
+    border: 1px solid $text-color;
+    box-shadow: 2px 2px 0 0 $text-color;
     // @include centerH;
     // position: fixed;
     // bottom: 2rem;
@@ -449,7 +453,7 @@ footer{
         display: flex;align-items: center;
         font-size: 1.4rem;
         transition: .3s ease;
-        color: $theme-color-2;
+        color: $text-color;
         font-weight: 600;
         cursor: pointer; 
         white-space: nowrap;
@@ -467,6 +471,7 @@ footer{
         a{
             position: absolute;top: 0;left: 0;z-index: 1;
             @include size(100%); 
+            color: $text-color;
         }
     }
     span:not(.nav-arrow){
@@ -480,10 +485,10 @@ footer{
 .nav-next{
     &:hover{
         span{
-            color: $theme-color;
+            color: $text-color;
             transition: .2s ease;
             &:before,&:after{
-                background-color: $theme-color;
+                background-color: $text-color;
                 transition: .2s ease;
             }
         }
@@ -496,7 +501,7 @@ footer{
         content: '';
         position: absolute;
         @include size(.2rem, .8rem);
-        background-color: $theme-color-2;
+        background-color: $text-color;
         border-radius: .2rem;
         @include small{
             height: 1rem;
@@ -637,7 +642,7 @@ figure{
 }
 
 .num-indicator{
-    background-color: $theme-color-2;
+    background-color: $neo-theme-color;
     border-radius: 50%;
     width: 2rem;height: 2rem;
     color: #fff;
@@ -672,7 +677,7 @@ figure{
       width: 120%;
       height: 120%;
       border-radius: 50%;      
-      box-shadow: 0 0 0 2px $theme-color-2, 0 0 10px 0 rgba($text-color, .5);
+      box-shadow: 0 0 0 2px $neo-theme-color, 0 0 10px 0 rgba($text-color, .5);
       animation: ripple 1s ease-in;
     }
     
@@ -697,19 +702,19 @@ figure{
   }
 
   .section-frame{
-      border-top: 1px solid rgba($theme-color-2, .2);
-      background: linear-gradient(180deg, rgba($theme-color-2, .1), rgba($theme-color-2, 0));
+      border-top: 1px solid rgba($neo-theme-color, .2);
+    //   background: linear-gradient(180deg, rgba($neo-theme-color, .1), rgba($neo-theme-color, 0));
       .container{
         width: 100%;
         max-width: $main-width;
         margin: 0 auto;
-        padding: 5rem 5rem 10rem;
+        padding: 5rem 5rem;
         @include small{
             padding: 5rem 2rem;
         }
         h1{
             font-weight: 900;
-            color: $theme-color-2;
+            // color: $neo-theme-color;
         }
     }
   }
@@ -728,6 +733,7 @@ figure{
     width: 100%;
     height: fit-content;
     padding: 0 5rem;
+
     @include small{
         padding: 0 2rem;
     }
@@ -783,7 +789,7 @@ figure{
                 content: '-';
                 font-size: 5rem;
                 font-weight: 100;
-                color: $theme-color-2;
+                color: $neo-theme-color;
                 @include small{
                     display: none;
                 }
@@ -824,7 +830,7 @@ figure{
     .text{
         .title{
             margin-bottom: 2rem;
-            color: $theme-color-2;
+            color: $neo-theme-color;
         }
         .num-indicator{
             position: relative;
@@ -842,7 +848,7 @@ figure{
     }
     &.hero{
         // min-height: calc(100vh - 62px);
-        padding: 15rem 0; 
+        padding: 10rem 0; 
         @include small{
             padding: 5rem 0;
         }
@@ -875,7 +881,7 @@ figure{
 .pre-title{
     font-size: 1.6rem;
     font-weight: 600;
-    color: $theme-color-2;
+    color: $neo-theme-color;
     margin-left: 2.8rem;
     @include small{
         margin: 0;
@@ -919,7 +925,7 @@ display: none;
         height: 100%;
         padding: 2rem 0;
         border-radius: 2rem;
-        box-shadow: 0 0 0 1px $theme-color-2, 0 0 1rem 0 rgba(#000, .1);
+        box-shadow: 0 0 0 1px $neo-theme-color, 0 0 1rem 0 rgba(#000, .1);
     }
     .yr-logo{
         padding: 1rem 2rem;
@@ -929,7 +935,7 @@ display: none;
     }
     .inner-link {
         &:hover {
-            background-color: rgba($theme-color-2, 0.1);
+            background-color: rgba($neo-theme-color, 0.1);
         }
         a {
             display: block;
@@ -941,7 +947,7 @@ display: none;
 
         &.active {
             a {         
-                color: $theme-color-2;
+                color: $neo-theme-color;
                 font-weight: 900;
             }
         }
@@ -981,4 +987,14 @@ display: none;
 
 .hover-text{
     position: absolute;top: 0;left: 0;
+}
+
+.main-content{
+    max-width: $main-width;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid $text-color;
+    box-shadow: 2px 2px 0 0 $text-color;
+    border-radius: 24px;
+    padding-top: 24px;
 }

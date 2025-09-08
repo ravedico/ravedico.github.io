@@ -18,6 +18,7 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/pages.css" rel="stylesheet" type="text/css">
     <link href="css/components.css" rel="stylesheet" type="text/css">
+    <link href="css/neo.css" rel="stylesheet" type="text/css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
     <!-- <script src="js/pages.js"></script> -->
@@ -60,10 +61,10 @@
                         <a href="https://www.figma.com/deck/Yc6UkBtSLxJa8XA6ohNwdI/Yogev-Raved---Case-studies?node-id=1-452&t=i1mqvm27aFUcJdGS-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank">Case studies</a>
                     </div>
                     <div class="menu-item">
-                        <a href="#about">About me</a>
+                        <a href="index.html#about">About me</a>
                     </div>
                     <div class="menu-item">
-                        <a href="#contact">Contact</a>
+                        <a href="index.html#contact">Contact</a>
                     </div>
                     <div class="menu-item">
                         <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">CV</a>
@@ -85,7 +86,7 @@
                 </div>
             </div>
         </header>
-        <section class="sec-work hero" id="sec-goal">
+        <div class="sec-work hero" id="sec-goal">
             <div class="container">
                 <figure class="project-logo">
                     <img src="images/works/spot-logo.svg">
@@ -116,649 +117,651 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="main-content">
 
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Overview</h3>
-                </div>
-                <div class="content">
-                    <div class="text">
-                        <p>
-                            Spot by NetApp is a CloudOps company helping data engineers automate and optimize their big-data applications. My role was to improve the experience and process of managing configurations of big data applications.<br>
-                            As the Lead UX Designer for the Big-data product, I managed this project's user research and user experience design from start to finish with full collaboration between the design, engineering, and product teams.
-                        </p>
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Overview</h3>
                     </div>
-                </div>
-            
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <p class="pre-title">What the #*% is it?</p>
-                    <h3>What are Config-templates?</h3>
-                </div>
-                <div class="content row">
-                    <div class="col">
-                        <div class="text">
-                            <ul>
-                                <li>Data engineers use Apache Spark to run big-data applications. Each type of application needs its own configuration (in a JSON format).</li>
-                                <li>The Config-templates page is a workspace within the Spot console for storing and managing them.</li>
-                            </ul>
-                        </div>
-                        <div class="text">
-                            <div class="title">
-                                <h4>How do users use them?</h4>
-                            </div>
-                            <ul>
-                                <li>Select a template and copy its code.</li>
-                                <li>Paste it in Apache Spark environment and run the app.</li>
-                                <li>Come back to Spot's console to view the app's progress, stats and issues.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <figure class="char-image">
-                        <img src="images/works/char-1.svg">
-                    </figure>
-                </div>
-            </div>
-        </section>
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Motivation for the redesign</h3>
-                </div>
-                <div class="content row">
-                    <div class="col">
+                    <div class="content">
                         <div class="text">
                             <p>
-                                <b>Improving usability issues of the current design:</b>
+                                Spot by NetApp is a CloudOps company helping data engineers automate and optimize their big-data applications. My role was to improve the experience and process of managing configurations of big data applications.<br>
+                                As the Lead UX Designer for the Big-data product, I managed this project's user research and user experience design from start to finish with full collaboration between the design, engineering, and product teams.
                             </p>
-                            <ul>
-                                <li>Template ID is visible only for the selected.</li>
-                                <li>Viewing few amount of templates - only 3 on small screens! makes it hard to browse between templates.</li>
-                                <li>Adding more info to each template such as last editor, number of versions and tags will make each card much more overloaded.</li>
-                            </ul>
                         </div>
                     </div>
-                    
-                    <div class="work-images">
-                        <figure class="work-image work-image-1">
-                            <img src="images/works/ct-original.jpg">
-                        </figure>
-                        <p class="captions">Original config-templates screen</p>
+                
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <p class="pre-title">What the #*% is it?</p>
+                        <h3>What are Config-templates?</h3>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>What do we want to achieve?</h3>
-                </div>
-                <div class="content row">
-
-                    <div class="col">
-                        <div class="data_wrap pb-5">
-                            <div class="data-item">
-                                <figure class="icon">
-                                    <img src="images/works/icon-l-clock.svg">
-                                </figure>
-                                <div class="data-text">
-                                    <div class="label">Reduce time spent on troubleshooting</div>
-                                    <div class="info">Increase user satisfaction</div>
-                                </div>
+                    <div class="content row">
+                        <div class="col">
+                            <div class="text">
+                                <ul>
+                                    <li>Data engineers use Apache Spark to run big-data applications. Each type of application needs its own configuration (in a JSON format).</li>
+                                    <li>The Config-templates page is a workspace within the Spot console for storing and managing them.</li>
+                                </ul>
                             </div>
-                            <div class="data-item">
-                                <figure class="icon">
-                                    <img src="images/works/icon-l-chat.svg">
-                                </figure>
-                                <div class="data-text">
-                                    <div class="label">Reduce support calls</div>
-                                    <div class="info">Save time and money for the customers and for our organization</div>
+                            <div class="text">
+                                <div class="title">
+                                    <h4>How do users use them?</h4>
                                 </div>
-                            </div>
-                            <div class="data-item">
-                                <figure class="icon">
-                                    <img src="images/works/icon-l-users.svg">
-                                </figure>
-                                <div class="data-text">
-                                    <div class="label">More users per team</div>
-                                    <div class="info">Increase product value</div>
-                                </div>
-                            </div>
-                            <div class="data-item">
-                                <figure class="icon">
-                                    <img src="images/works/icon-l-dollar.svg">
-                                </figure>
-                                <div class="data-text">
-                                    <div class="label">Help sell the product to more clients</div>
-                                    <div class="info">More revenue to our organization</div>
-                                </div>
+                                <ul>
+                                    <li>Select a template and copy its code.</li>
+                                    <li>Paste it in Apache Spark environment and run the app.</li>
+                                    <li>Come back to Spot's console to view the app's progress, stats and issues.</li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-
-                    <figure class="char-image">
-                        <img src="images/works/char-2.svg">
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-frame" id="sec-research">
-            <div class="container">
-                <h1>Research</h1>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="content">
-                    <div class="text">
-                        <h4 class="title">Initial Discovery</h4>
-                        <p>We began with a solid foundation:</p>
-                        <ul>
-                            <li>Existing user personas from active customers.</li>
-                            <li>Usage data from current config-template features.</li>
-                            <li>Internal subject matter experts.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Who are the users?</h3>
-                </div>
-                <div class="content row">
-                    <div class="col">
-                        <div class="text">
-                            <h4 class="title">Data engineer</h4>
-                            <p>Designs, builds, and optimizes data pipelines on
-                                Apache Spark, ensuring efficient data ingestion,
-                                transformation, and processing for analytics and
-                                machine learning applications.</p>
-                            <blockquote>"I need things to be very
-                                organized so I can find what I need
-                                easily and focus on my tasks"</blockquote> 
-                        </div>
-                        <figure class="char-image img-sq">
-                            <img src="images/works/user-1.svg">
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <div class="text">
-                            <h4 class="title">Data Platform Engineer (DevOps)</h4>
-                            <p>Develops and maintains the infrastructure for
-                                running Apache Spark applications, managing
-                                scalability, performance, and reliability to support
-                                seamless data operations.</p>
-                            <blockquote>"I need an option to view what changes
-                                were made in the templates over time
-                                and the reasons they were made"</blockquote> 
-                        </div>
-                        <figure class="char-image img-sq">
-                            <img src="images/works/user-2.svg">
+                        <figure class="char-image">
+                            <img src="images/works/char-1.svg">
                         </figure>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Methods</h3>
-                </div>
-                    <div class="content row col-50">
-                        <div class="text">
-                            <h4 class="title">Surveys</h4>
-                            <ul>
-                                <li>Open-ended and closed questions.</li>
-                                <li>Features rating and ideas ranking.</li>
-                                <li>Gained qualitative and quantitative insight.</li>
-                            </ul>
+            </section>
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Motivation for the redesign</h3>
+                    </div>
+                    <div class="content row">
+                        <div class="col">
+                            <div class="text">
+                                <p>
+                                    <b>Improving usability issues of the current design:</b>
+                                </p>
+                                <ul>
+                                    <li>Template ID is visible only for the selected.</li>
+                                    <li>Viewing few amount of templates - only 3 on small screens! makes it hard to browse between templates.</li>
+                                    <li>Adding more info to each template such as last editor, number of versions and tags will make each card much more overloaded.</li>
+                                </ul>
+                            </div>
                         </div>
+                        
                         <div class="work-images">
-                            <figure class="">
-                                <img src="images/works/ct-survey.jpg">
+                            <figure class="work-image work-image-1">
+                                <img src="images/works/ct-original.jpg">
                             </figure>
-                            <p class="captions">Survey results</p>
+                            <p class="captions">Original config-templates screen</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>What do we want to achieve?</h3>
+                    </div>
+                    <div class="content row">
+    
+                        <div class="col">
+                            <div class="data_wrap pb-5">
+                                <div class="data-item">
+                                    <figure class="icon">
+                                        <img src="images/works/icon-l-clock.svg">
+                                    </figure>
+                                    <div class="data-text">
+                                        <div class="label">Reduce time spent on troubleshooting</div>
+                                        <div class="info">Increase user satisfaction</div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <figure class="icon">
+                                        <img src="images/works/icon-l-chat.svg">
+                                    </figure>
+                                    <div class="data-text">
+                                        <div class="label">Reduce support calls</div>
+                                        <div class="info">Save time and money for the customers and for our organization</div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <figure class="icon">
+                                        <img src="images/works/icon-l-users.svg">
+                                    </figure>
+                                    <div class="data-text">
+                                        <div class="label">More users per team</div>
+                                        <div class="info">Increase product value</div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <figure class="icon">
+                                        <img src="images/works/icon-l-dollar.svg">
+                                    </figure>
+                                    <div class="data-text">
+                                        <div class="label">Help sell the product to more clients</div>
+                                        <div class="info">More revenue to our organization</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <figure class="char-image">
+                            <img src="images/works/char-2.svg">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="section-frame" id="sec-research">
+                <div class="container">
+                    <h1>Research</h1>
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="content">
+                        <div class="text">
+                            <h4 class="title">Initial Discovery</h4>
+                            <p>We began with a solid foundation:</p>
+                            <ul>
+                                <li>Existing user personas from active customers.</li>
+                                <li>Usage data from current config-template features.</li>
+                                <li>Internal subject matter experts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Who are the users?</h3>
+                    </div>
+                    <div class="content row">
+                        <div class="col">
+                            <div class="text">
+                                <h4 class="title">Data engineer</h4>
+                                <p>Designs, builds, and optimizes data pipelines on
+                                    Apache Spark, ensuring efficient data ingestion,
+                                    transformation, and processing for analytics and
+                                    machine learning applications.</p>
+                                <blockquote>"I need things to be very
+                                    organized so I can find what I need
+                                    easily and focus on my tasks"</blockquote> 
+                            </div>
+                            <figure class="char-image img-sq">
+                                <img src="images/works/user-1.svg">
+                            </figure>
+                        </div>
+                        <div class="col">
+                            <div class="text">
+                                <h4 class="title">Data Platform Engineer (DevOps)</h4>
+                                <p>Develops and maintains the infrastructure for
+                                    running Apache Spark applications, managing
+                                    scalability, performance, and reliability to support
+                                    seamless data operations.</p>
+                                <blockquote>"I need an option to view what changes
+                                    were made in the templates over time
+                                    and the reasons they were made"</blockquote> 
+                            </div>
+                            <figure class="char-image img-sq">
+                                <img src="images/works/user-2.svg">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Methods</h3>
+                    </div>
+                        <div class="content row col-50">
+                            <div class="text">
+                                <h4 class="title">Surveys</h4>
+                                <ul>
+                                    <li>Open-ended and closed questions.</li>
+                                    <li>Features rating and ideas ranking.</li>
+                                    <li>Gained qualitative and quantitative insight.</li>
+                                </ul>
+                            </div>
+                            <div class="work-images">
+                                <figure class="">
+                                    <img src="images/works/ct-survey.jpg">
+                                </figure>
+                                <p class="captions">Survey results</p>
+                            </div>
+                        </div>
+                        <div class="content row col-50">
+                            <div class="text">
+                                <h4 class="title">Customer & Stakeholder interviews</h4>
+        
+                                <ul>
+                                    <li>Explored their daily workflow for creating and maintaining config-templates.</li>
+                                    <li>Examined integration with existing tools and processes.</li>
+                                    <li>Assessed work aspects both within and outside our product.</li>
+                                    <li>Analyzed current usage patterns and desired capabilities.</li>
+                                    <li>Studied user interactions and workflows.</li>
+                                    <li>Uncovered key pain points and frictions.</li>
+                                    <li>Identified short-term and long-term objectives.</li>
+                                </ul>
+                            </div>
+                            <figure class="no-border ct-img-interview">
+                                <img src="images/works/ct-interviews.png">
+                            </figure>                      
+                        </div>
+                        <div class="content row col-50">
+                            <div class="text">
+                                <h4 class="title">User Journey Mapping</h4>
+        
+                                <ul>
+                                    <li>Collaborative workshops with cross-functional teams.</li>
+                                    <li>Identified key interaction points and friction areas.</li>
+                                    <li>Prioritized problem spaces.</li>
+                                    <li>Created alignment on solution requirements.</li>
+                                </ul>
+                            </div>
+                            <figure class="no-border">
+                                <img src="images/works/ct-ux-0.png">
+                            </figure>
+                    </div>
+                </div>
+            </section>   
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Key Research Findings</h3>
+                    </div>
+                    <div class="content row"> 
+                        <div class="col">
+                            <div class="text">
+                                    <h4 class="title">"As a data engineer I want to:"</h4>
+            
+                                    <ul>
+                                        <li>Filter and sort templates based on various criteria so that I can focus on relevant items.</li>
+                                        <li>Organize and filter config-templates more effectively.</li>
+                                        <li>Group templates by different attributes so that I can better organize my view.</li>
+                                        <li>Perform bulk actions (like editing tags or deleting) on multiple templates at once so that I can manage them more efficiently.</li>
+                                        <li>Compare templates side by side so that I can easily identify differences for debugging.</li>
+                                    </ul>
+                                </div>               
+    
+                        </div>
+                        <div class="col">
+                            <div class="text">
+                                    <h4 class="title">Insights</h4>
+            
+                                    <ol>
+                                        <li>Users strongly desired version control and change history.</li>
+                                        <li>Template organization was a major pain point: Need for logical grouping and categorization and no way to track template purposes, and uses per application.</li>
+                                        <li>Search and filtering capabilities were crucial for large template libraries.</li>
+                                    </ol>
+                                </div>               
+    
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="section-frame" id="sec-ideation">
+                <div class="container">
+                    <h1>Ideation</h1>
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Design solution</h3>
+                    </div>
+                    <div class="content">  
+                        <div class="text">
+                                <h4 class="title">So, we had to do some prioritization based on development capabilities</h4>
+                                <ul>
+                                    <li>Add version history and changelog option.</li>
+                                    <li>Tagging system - This feature did not exist in the Spot console, and deciding on its behavior was challenging.</li>
+                                    <li>Advanced search and filtering.</li>
+                                    <li>Template comparison tools.</li>
+                                    <li>Applications running on config-templates list.</li>
+                                    <li>Presets for templates with common configurations.</li>
+                                    <li>Bulk actions for template management.</li>
+                                    
+                                </ul>
+                                <p><b>The one page improvement task evolved into an enhanced design and development project...</b></p>
+                            </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Design process</h3>
+                    </div>
+                    <div class="content">  
+                        <div class="text">
+                            <h4 class="title">How should we approach each feature's design</h4>
+                            <ul>
+                                <li>Analyzed existing design system components.</li>
+                                <li>Researched applicable design patterns.</li>
+                                <li>Should we add a draft mechanism for unfinished editing.</li>
+                                <li>Should commenting on a changelog be mandatory.</li>
+                                <li>Mechanism of the tagging system.</li>
+                                <li>Low fidelity wireframes on the page layout.</li>
+                                <li>Original Cards layout vs a new table design.</li>
+                                <li>Working with tags.</li>
+                                <li>History view - compare and changelog.</li>
+                                <li>Presets - custom and built in use cases.</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="content row col-50">
-                        <div class="text">
-                            <h4 class="title">Customer & Stakeholder interviews</h4>
-    
-                            <ul>
-                                <li>Explored their daily workflow for creating and maintaining config-templates.</li>
-                                <li>Examined integration with existing tools and processes.</li>
-                                <li>Assessed work aspects both within and outside our product.</li>
-                                <li>Analyzed current usage patterns and desired capabilities.</li>
-                                <li>Studied user interactions and workflows.</li>
-                                <li>Uncovered key pain points and frictions.</li>
-                                <li>Identified short-term and long-term objectives.</li>
-                            </ul>
+                        <div class="col">                        
+                            <p><b>Editing</b></p>
+                            <figure class="no-border">
+                                <img src="images/works/ct-ux-2a.jpg">
+                            </figure>
                         </div>
-                        <figure class="no-border ct-img-interview">
-                            <img src="images/works/ct-interviews.png">
-                        </figure>                      
+                        <div class="col">                        
+                            <p><b>Tagging Process</b></p>
+                            <figure class="no-border">
+                                <img src="images/works/ct-ux-2b.jpg">
+                            </figure>
+                        </div>                        
                     </div>
+    
+                    <div class="content row col-50">  
+                        <div class="col">
+                            <div class="text">
+                                <h4 class="title">Exploring layout directions</h4>
+                                <ul>
+                                    <li>The new features were added to the cards design. Several attempts and iterations of various layouts were made, such as wider cards to hold more data, an expanding panel and a table.</li>
+                                    <li>Several user' interviews and testing were conducted with internal users and with customers.</li>
+                                    <li>The testers were presented with the various layouts, and were asked to perform tasks such as filtering, sorting and performing bulk actions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <div class="col">
+                            <figure class="no-border">
+                                <img src="images/works/ct-ux-4.png">
+                            </figure>
+                        </div> -->
+                    </div>
+    
+                    <div class="content">
+                        <div class="row col-50">
+                            <div class="col">
+                                <div class="text">
+                                    <h4 class="title">Expanded panel</h4>
+                                    <p>By default: The template’s content is collapsed.<br>
+                                    Clicking the expand icon expands the panel over the config-templates list.</p>
+                                    <ul>
+                                        <p class="procon pro">Pros:</p>
+                                        <li>More space for browsing templates</li>
+                                    </ul>
+                                    <ul>
+                                        <p class="procon con">Cons:</p>
+                                        <li>Can view the template content at first look</li>
+                                        <li>Not a usual design pattern</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <figure class="work-image">
+                                    <img src="images/works/ct-ux-5.gif">
+                                </figure>
+                            </div>                                             
+                        </div>                        
+                    </div>
+    
+                    <div class="content">
+                        <div class="row col-50">
+                            <div class="col">
+                                <div class="text">
+                                    <h4 class="title">Cards design - Actions popup</h4>
+                                    <p><b>Issue:</b><br>The placement of bulk action buttons outside this area could be confusing.</p>
+                                    <p><b>Solution:</b><br>Actions popup - Triggered by checking an item</p>
+                                    <ul>
+                                        <li>Selecting a template opens a modal with options.</li>
+                                        <li>Selecting 2 items enables comparison.</li>
+                                    </ul>
+                                    <ul>
+                                        <p class="procon pro">Pros:</p>
+                                        <li>Saves space on the page</li>
+                                    </ul>
+                                    <ul>
+                                        <p class="procon con">Cons:</p>
+                                        <li>No indication for the actions without checking an item</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <figure class="work-image">
+                                    <img src="images/works/ct-ux-6.gif">
+                                </figure>
+                            </div>                                             
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>User testing insights</h3>
+                    </div>
+    
+                    <div class="content">
+                        <div class="row col-50">
+                            <div class="col">
+                                <div class="text">
+                                    <h4 class="title">Card design</h4>
+                                    <ul>
+                                        <p><b>Strength:</b></p>
+                                        <li>Intuitive grouping by attribute - Tags, Author, Cluster</li>
+                                        <li>Template view is wide from the start</li>
+                                    </ul>
+                                    <ul>
+                                        <p><b>Weaknesses:</b></p>
+                                        <li>Sorting is limited</li>
+                                        <li>Only a few templates are on screen</li>
+                                        <li>Added more info to each template makes the cards much more overloaded and harder to browse</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <figure class="no-border">
+                                    <img src="images/works/ct-ux-6.png">
+                                </figure>
+                            </div>                                             
+                        </div>                        
+                    </div>
+    
                     <div class="content row col-50">
-                        <div class="text">
-                            <h4 class="title">User Journey Mapping</h4>
-    
-                            <ul>
-                                <li>Collaborative workshops with cross-functional teams.</li>
-                                <li>Identified key interaction points and friction areas.</li>
-                                <li>Prioritized problem spaces.</li>
-                                <li>Created alignment on solution requirements.</li>
-                            </ul>
-                        </div>
-                        <figure class="no-border">
-                            <img src="images/works/ct-ux-0.png">
-                        </figure>
-                </div>
-            </div>
-        </section>   
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Key Research Findings</h3>
-                </div>
-                <div class="content row"> 
-                    <div class="col">
-                        <div class="text">
-                                <h4 class="title">"As a data engineer I want to:"</h4>
-        
-                                <ul>
-                                    <li>Filter and sort templates based on various criteria so that I can focus on relevant items.</li>
-                                    <li>Organize and filter config-templates more effectively.</li>
-                                    <li>Group templates by different attributes so that I can better organize my view.</li>
-                                    <li>Perform bulk actions (like editing tags or deleting) on multiple templates at once so that I can manage them more efficiently.</li>
-                                    <li>Compare templates side by side so that I can easily identify differences for debugging.</li>
-                                </ul>
-                            </div>               
-
-                    </div>
-                    <div class="col">
-                        <div class="text">
-                                <h4 class="title">Insights</h4>
-        
-                                <ol>
-                                    <li>Users strongly desired version control and change history.</li>
-                                    <li>Template organization was a major pain point: Need for logical grouping and categorization and no way to track template purposes, and uses per application.</li>
-                                    <li>Search and filtering capabilities were crucial for large template libraries.</li>
-                                </ol>
-                            </div>               
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-frame" id="sec-ideation">
-            <div class="container">
-                <h1>Ideation</h1>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Design solution</h3>
-                </div>
-                <div class="content">  
-                    <div class="text">
-                            <h4 class="title">So, we had to do some prioritization based on development capabilities</h4>
-                            <ul>
-                                <li>Add version history and changelog option.</li>
-                                <li>Tagging system - This feature did not exist in the Spot console, and deciding on its behavior was challenging.</li>
-                                <li>Advanced search and filtering.</li>
-                                <li>Template comparison tools.</li>
-                                <li>Applications running on config-templates list.</li>
-                                <li>Presets for templates with common configurations.</li>
-                                <li>Bulk actions for template management.</li>
-                                
-                            </ul>
-                            <p><b>The one page improvement task evolved into an enhanced design and development project...</b></p>
-                        </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Design process</h3>
-                </div>
-                <div class="content">  
-                    <div class="text">
-                        <h4 class="title">How should we approach each feature's design</h4>
-                        <ul>
-                            <li>Analyzed existing design system components.</li>
-                            <li>Researched applicable design patterns.</li>
-                            <li>Should we add a draft mechanism for unfinished editing.</li>
-                            <li>Should commenting on a changelog be mandatory.</li>
-                            <li>Mechanism of the tagging system.</li>
-                            <li>Low fidelity wireframes on the page layout.</li>
-                            <li>Original Cards layout vs a new table design.</li>
-                            <li>Working with tags.</li>
-                            <li>History view - compare and changelog.</li>
-                            <li>Presets - custom and built in use cases.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="content row col-50">
-                    <div class="col">                        
-                        <p><b>Editing</b></p>
-                        <figure class="no-border">
-                            <img src="images/works/ct-ux-2a.jpg">
-                        </figure>
-                    </div>
-                    <div class="col">                        
-                        <p><b>Tagging Process</b></p>
-                        <figure class="no-border">
-                            <img src="images/works/ct-ux-2b.jpg">
-                        </figure>
-                    </div>                        
-                </div>
-
-                <div class="content row col-50">  
-                    <div class="col">
-                        <div class="text">
-                            <h4 class="title">Exploring layout directions</h4>
-                            <ul>
-                                <li>The new features were added to the cards design. Several attempts and iterations of various layouts were made, such as wider cards to hold more data, an expanding panel and a table.</li>
-                                <li>Several user' interviews and testing were conducted with internal users and with customers.</li>
-                                <li>The testers were presented with the various layouts, and were asked to perform tasks such as filtering, sorting and performing bulk actions.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- <div class="col">
-                        <figure class="no-border">
-                            <img src="images/works/ct-ux-4.png">
-                        </figure>
-                    </div> -->
-                </div>
-
-                <div class="content">
-                    <div class="row col-50">
                         <div class="col">
                             <div class="text">
-                                <h4 class="title">Expanded panel</h4>
-                                <p>By default: The template’s content is collapsed.<br>
-                                Clicking the expand icon expands the panel over the config-templates list.</p>
-                                <ul>
-                                    <p class="procon pro">Pros:</p>
-                                    <li>More space for browsing templates</li>
-                                </ul>
-                                <ul>
-                                    <p class="procon con">Cons:</p>
-                                    <li>Can view the template content at first look</li>
-                                    <li>Not a usual design pattern</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <figure class="work-image">
-                                <img src="images/works/ct-ux-5.gif">
-                            </figure>
-                        </div>                                             
-                    </div>                        
-                </div>
-
-                <div class="content">
-                    <div class="row col-50">
-                        <div class="col">
-                            <div class="text">
-                                <h4 class="title">Cards design - Actions popup</h4>
-                                <p><b>Issue:</b><br>The placement of bulk action buttons outside this area could be confusing.</p>
-                                <p><b>Solution:</b><br>Actions popup - Triggered by checking an item</p>
-                                <ul>
-                                    <li>Selecting a template opens a modal with options.</li>
-                                    <li>Selecting 2 items enables comparison.</li>
-                                </ul>
-                                <ul>
-                                    <p class="procon pro">Pros:</p>
-                                    <li>Saves space on the page</li>
-                                </ul>
-                                <ul>
-                                    <p class="procon con">Cons:</p>
-                                    <li>No indication for the actions without checking an item</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <figure class="work-image">
-                                <img src="images/works/ct-ux-6.gif">
-                            </figure>
-                        </div>                                             
-                    </div>                        
-                </div>
-            </div>
-        </section>
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>User testing insights</h3>
-                </div>
-
-                <div class="content">
-                    <div class="row col-50">
-                        <div class="col">
-                            <div class="text">
-                                <h4 class="title">Card design</h4>
+                                <h4 class="title">Table design</h4>
                                 <ul>
                                     <p><b>Strength:</b></p>
-                                    <li>Intuitive grouping by attribute - Tags, Author, Cluster</li>
-                                    <li>Template view is wide from the start</li>
+                                    <li>Sortable by multiple parameters (ID, name, cluster, author, date)</li>
+                                    <li>No need to hide config-template info</li>
+                                    <li>Easier template browsing</li>
                                 </ul>
                                 <ul>
                                     <p><b>Weaknesses:</b></p>
-                                    <li>Sorting is limited</li>
-                                    <li>Only a few templates are on screen</li>
-                                    <li>Added more info to each template makes the cards much more overloaded and harder to browse</li>
+                                    <li>Less initial space for templates (solved with full-screen option)</li>
+                                    <li>Grouping is limited to column headers, missing tag-based grouping (design system)</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col">
-                            <figure class="no-border">
-                                <img src="images/works/ct-ux-6.png">
+                            <figure class="work-image">
+                                <img src="images/works/ct-ux-7.jpg">
                             </figure>
-                        </div>                                             
-                    </div>                        
-                </div>
-
-                <div class="content row col-50">
-                    <div class="col">
-                        <div class="text">
-                            <h4 class="title">Table design</h4>
-                            <ul>
-                                <p><b>Strength:</b></p>
-                                <li>Sortable by multiple parameters (ID, name, cluster, author, date)</li>
-                                <li>No need to hide config-template info</li>
-                                <li>Easier template browsing</li>
-                            </ul>
-                            <ul>
-                                <p><b>Weaknesses:</b></p>
-                                <li>Less initial space for templates (solved with full-screen option)</li>
-                                <li>Grouping is limited to column headers, missing tag-based grouping (design system)</li>
-                            </ul>
                         </div>
                     </div>
-                    <div class="col">
+    
+                    <div class="content">
+                        <div class="text">
+                            <p>Instead of the design system’s grouping option I switched to a simple “Group by” selection</p>
+                        </div>
                         <figure class="work-image">
-                            <img src="images/works/ct-ux-7.jpg">
+                            <img src="images/works/ct-ux-8.jpg">
                         </figure>
                     </div>
-                </div>
-
-                <div class="content">
-                    <div class="text">
-                        <p>Instead of the design system’s grouping option I switched to a simple “Group by” selection</p>
-                    </div>
-                    <figure class="work-image">
-                        <img src="images/works/ct-ux-8.jpg">
-                    </figure>
-                </div>
-
-                <!-- <div class="content">
-                    <figure class="work-image no-border img-show">
-                            <img src="images/works/ct-ux-7a.png" class="img-hover">
-                            <img src="images/works/ct-ux-7b.png">
-                        </figure>   
-                </div> -->
-                
-            </div>
-        </section>
-
-        <section class="section-frame" id="sec-ideation">
-            <div class="container">
-                <h1>Final design & New UI</h1>
-            </div>
-        </section>
-        <section class="sec-work">
-            <div class="container">
-                <!-- <div class="sec-title">
-                    <h3>Main page</h3>
-                </div> -->
-
-                <div class="content">
-                    <div class="text">
-                        <h4 class="title">Main page</h4>
-                        <p>I have created high-fidelity mockups and ready-for-dev Figma files, considering all edge cases, empty states and placeholders. I also had the opportunity to use Spot's newly developed design system.</p>
-                    </div>
-                    <figure class="work-image no-border img-show">
-                        <span class="hover-text">Hover for more info</span>
-                        <img src="images/works/ct-main-anno.png" class="img-hover">
-                        <img src="images/works/ct-main-a.png">
-                    </figure>
-                </div>
-
-                <div class="content">
-                    <div class="text">
-                        <p><b>Behavior of the template panel for multi select.</b><br>
-                            The compare button is enabled when two items are selected.</p>
-                    </div>
-                    <figure class="work-image">
-                        <img src="images/works/ct-final-compare.gif">
-                    </figure>
-                </div>
-
-                <div class="content">
-                    <div class="text">
-                        <p><b>New template popup</b><br>
-                            The user can select to start from a preset, duplicate a template or start from scratch.
-                        </p>
-                    </div>
-                    <figure class="work-image">
-                        <img src="images/works/ct-new-popup.png">
-                    </figure>
-                </div>
-
-                <div class="content">
-                    <div class="text">
-                        <h4 class="title">Presets page</h4>
-                    </div>
-                    <div class="text">
-                        <p>In order to aid selecting the right preset, the user can:</p>
-                        <ul>
-                            <li>Select from some common starter use-cases</li>
-                            <li>Select from a user created preset specific to their needs</li>
-                        </ul>
+    
+                    <!-- <div class="content">
+                        <figure class="work-image no-border img-show">
+                                <img src="images/works/ct-ux-7a.png" class="img-hover">
+                                <img src="images/works/ct-ux-7b.png">
+                            </figure>   
+                    </div> -->
                     
+                </div>
+            </section>
+    
+            <section class="section-frame" id="sec-ideation">
+                <div class="container">
+                    <h1>Final design & New UI</h1>
+                </div>
+            </section>
+            <section class="sec-work">
+                <div class="container">
+                    <!-- <div class="sec-title">
+                        <h3>Main page</h3>
+                    </div> -->
+    
+                    <div class="content">
+                        <div class="text">
+                            <h4 class="title">Main page</h4>
+                            <p>I have created high-fidelity mockups and ready-for-dev Figma files, considering all edge cases, empty states and placeholders. I also had the opportunity to use Spot's newly developed design system.</p>
+                        </div>
+                        <figure class="work-image no-border img-show">
+                            <span class="hover-text">Hover for more info</span>
+                            <img src="images/works/ct-main-anno.png" class="img-hover">
+                            <img src="images/works/ct-main-a.png">
+                        </figure>
                     </div>
-                    <figure class="work-image">
-                        <img src="images/works/ct-presets.jpg">
-                    </figure>
-
-                </div>
-
-                <div class="content">
-                    <div class="text">
-                        <h4 class="title">Tagging system</h4>
+    
+                    <div class="content">
+                        <div class="text">
+                            <p><b>Behavior of the template panel for multi select.</b><br>
+                                The compare button is enabled when two items are selected.</p>
+                        </div>
+                        <figure class="work-image">
+                            <img src="images/works/ct-final-compare.gif">
+                        </figure>
                     </div>
-                    <figure class="no-border">
-                        <img src="images/works/ct-tags.jpg">
-                    </figure>
+    
+                    <div class="content">
+                        <div class="text">
+                            <p><b>New template popup</b><br>
+                                The user can select to start from a preset, duplicate a template or start from scratch.
+                            </p>
+                        </div>
+                        <figure class="work-image">
+                            <img src="images/works/ct-new-popup.png">
+                        </figure>
+                    </div>
+    
+                    <div class="content">
+                        <div class="text">
+                            <h4 class="title">Presets page</h4>
+                        </div>
+                        <div class="text">
+                            <p>In order to aid selecting the right preset, the user can:</p>
+                            <ul>
+                                <li>Select from some common starter use-cases</li>
+                                <li>Select from a user created preset specific to their needs</li>
+                            </ul>
+                        
+                        </div>
+                        <figure class="work-image">
+                            <img src="images/works/ct-presets.jpg">
+                        </figure>
+    
+                    </div>
+    
+                    <div class="content">
+                        <div class="text">
+                            <h4 class="title">Tagging system</h4>
+                        </div>
+                        <figure class="no-border">
+                            <img src="images/works/ct-tags.jpg">
+                        </figure>
+                    </div>
+                    
                 </div>
-                
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>So, how did we do?</h3>
-                </div>
-                <div class="content row">
-
-                    <div class="col">
-                        <div class="data_wrap pb-5">
-                            <div class="data-item">
-                                <figure class="icon">
-                                    <img src="images/works/icon-l-clock.svg">
-                                </figure>
-                                <div class="data-text">
-                                    <div class="label">Time saving</div>
-                                    <div class="info">Reduced troubleshooting and config-template creation time</div>
-                                    <p>Monitored via Pendo</p>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>So, how did we do?</h3>
+                    </div>
+                    <div class="content row">
+    
+                        <div class="col">
+                            <div class="data_wrap pb-5">
+                                <div class="data-item">
+                                    <figure class="icon">
+                                        <img src="images/works/icon-l-clock.svg">
+                                    </figure>
+                                    <div class="data-text">
+                                        <div class="label">Time saving</div>
+                                        <div class="info">Reduced troubleshooting and config-template creation time</div>
+                                        <p>Monitored via Pendo</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="data-item">
-                                <figure class="icon">
-                                    <img src="images/works/icon-l-graph.svg">
-                                </figure>
-                                <div class="data-text">
-                                    <div class="label">Efficiency</div>
-                                    <div class="info">Reduced the amount of unused config-template per customer</div>
-                                    <p>Monitored via BI tools</p>
+                                <div class="data-item">
+                                    <figure class="icon">
+                                        <img src="images/works/icon-l-graph.svg">
+                                    </figure>
+                                    <div class="data-text">
+                                        <div class="label">Efficiency</div>
+                                        <div class="info">Reduced the amount of unused config-template per customer</div>
+                                        <p>Monitored via BI tools</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="data-item">
-                                <figure class="icon">
-                                    <img src="images/works/icon-l-smile.svg">
-                                </figure>
-                                <div class="data-text">
-                                    <div class="label">User satisfaction</div>
-                                    <div class="info">More users per team will start working with the config-template</div>
-                                    <p>Monitored via Solution Architects</p>
+                                <div class="data-item">
+                                    <figure class="icon">
+                                        <img src="images/works/icon-l-smile.svg">
+                                    </figure>
+                                    <div class="data-text">
+                                        <div class="label">User satisfaction</div>
+                                        <div class="info">More users per team will start working with the config-template</div>
+                                        <p>Monitored via Solution Architects</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="data-item">
-                                <figure class="icon">
-                                    <img src="images/works/icon-l-dollar.svg">
-                                </figure>
-                                <div class="data-text">
-                                    <div class="label">Selling point</div>
-                                    <div class="info">Helping tool for the sales team to recruit new clients over competitors</div>
-                                    <p>Monitored via sales reports</p>
+                                <div class="data-item">
+                                    <figure class="icon">
+                                        <img src="images/works/icon-l-dollar.svg">
+                                    </figure>
+                                    <div class="data-text">
+                                        <div class="label">Selling point</div>
+                                        <div class="info">Helping tool for the sales team to recruit new clients over competitors</div>
+                                        <p>Monitored via sales reports</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+    
+                        <figure class="char-image">
+                            <img src="images/works/char-3.svg">
+                        </figure>
                     </div>
-
-                    <figure class="char-image">
-                        <img src="images/works/char-3.svg">
-                    </figure>
-                </div>
-                <div class="content">
-                    <div class="text">
-                        <h4 class="title">Key takeaways</h4>
-                        <p>The config-templates redesign project presented both challenges and <b>learning opportunities</b>, which are the reasons I find <b>UX work so fulfilling</b>. Through this experience, I developed a deeper understanding of the pain points faced by this product's users. The project also enhanced my ability to <b>effectively communicate</b> with colleagues and stakeholders - a valuable skill for all projects. </p>
-
+                    <div class="content">
+                        <div class="text">
+                            <h4 class="title">Key takeaways</h4>
+                            <p>The config-templates redesign project presented both challenges and <b>learning opportunities</b>, which are the reasons I find <b>UX work so fulfilling</b>. Through this experience, I developed a deeper understanding of the pain points faced by this product's users. The project also enhanced my ability to <b>effectively communicate</b> with colleagues and stakeholders - a valuable skill for all projects. </p>
+    
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <footer>
             <div class="nav_wrap">
                 <div class="work-nav">

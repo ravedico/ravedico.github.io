@@ -17,7 +17,7 @@ header {
 }
 @media (max-width: 576px) {
   header {
-    top: 0;
+    position: relative;
     border-radius: 0;
   }
 }
@@ -65,7 +65,7 @@ section .container {
   .hero {
     height: auto;
     min-height: auto;
-    padding: 15rem 0 5rem;
+    padding: 10rem 0 5rem;
   }
 }
 .hero .my-name {
@@ -105,6 +105,7 @@ section .container {
 .hero .sub-title {
   font-size: 2rem;
   font-weight: 300;
+  font-weight: 400;
 }
 @media (max-width: 576px) {
   .hero .sub-title {
@@ -115,7 +116,7 @@ section .container {
 }
 .hero .container {
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-columns: 1fr 20rem;
   width: -moz-fit-content;
   width: fit-content;
   max-width: 111rem;
@@ -136,66 +137,28 @@ section .container {
 @media (max-width: 576px) {
   .hero .text {
     margin: 0;
+    order: 2;
   }
 }
-.hero a.arrow-link {
-  position: absolute;
-  left: 50%;
-  bottom: 2rem;
-  transform: translate(-50%);
-  cursor: pointer;
-  width: 6rem;
-  height: 3rem;
-}
-@media (max-width: 768px) {
-  .hero a.arrow-link {
-    bottom: 1rem;
-    display: none;
-  }
-}
-.hero a.arrow-link .scroll-down-arrow {
-  position: relative;
-  height: 100%;
-  transition: 0.2s ease-in-out;
-}
-.hero a.arrow-link .scroll-down-arrow::before, .hero a.arrow-link .scroll-down-arrow::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 3rem;
-  height: 5px;
-  border-radius: 1rem;
-  background-color: hsl(200, 50%, 50%);
-  transition: 0.2s ease-in-out;
-}
-.hero a.arrow-link .scroll-down-arrow::before {
-  transform: rotate(-25deg);
-  right: 3px;
-}
-.hero a.arrow-link .scroll-down-arrow::after {
-  transform: rotate(25deg);
-  left: 3px;
-}
-.hero a.arrow-link:hover .scroll-down-arrow::before {
-  transform: rotate(-45deg);
-  right: 5px;
-}
-.hero a.arrow-link:hover .scroll-down-arrow::after {
-  transform: rotate(45deg);
-  left: 5px;
+.hero .button {
+  margin-top: 20px;
 }
 
 .my-image {
   overflow: hidden;
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   border-radius: 100%;
-  background: linear-gradient(45deg, #b6003d 20%, rgba(182, 0, 61, 0) 60%);
+  border-radius: 20px;
+  border: 2px solid hsl(221, 15%, 22%);
+  box-shadow: 4px 4px 0 0 hsl(221, 15%, 22%);
+  transform: rotate(5deg);
 }
 @media (max-width: 576px) {
   .my-image {
-    width: 10rem;
-    height: 10rem;
+    order: 1;
+    width: 13.3333333333rem;
+    height: 13.3333333333rem;
   }
 }
 .my-image img {
@@ -220,6 +183,9 @@ section .container {
     gap: 2rem;
     margin: 0;
   }
+}
+.work_sec button, .work_sec .button {
+  background-color: #B196FE;
 }
 
 .sec_title {
@@ -308,12 +274,13 @@ section .container {
   position: relative;
   aspect-ratio: 16/9;
   overflow: hidden;
-  box-shadow: 0 0 0 2px rgba(64, 149, 191, 0.4);
-  border-radius: 2rem;
+  border: 1px solid hsl(221, 15%, 22%);
+  box-shadow: 4px 4px 0 0 hsl(221, 15%, 22%);
+  border-radius: 12px;
   cursor: pointer;
 }
 .work_wrap_h .work-image:hover {
-  box-shadow: 0 0 0 2px rgba(64, 149, 191, 0.4), 0 20px 30px -10px rgba(48, 53, 65, 0.2);
+  box-shadow: 0 0 0 0 hsl(221, 15%, 22%);
 }
 @media (max-width: 576px) {
   .work_wrap_h .work-image {
@@ -337,7 +304,6 @@ section .container {
 }
 
 .about_sec {
-  box-shadow: inset 0px 30px 30px -30px rgba(48, 53, 65, 0.1);
   padding: 5rem 0;
 }
 @media (max-width: 1024px) {
@@ -353,6 +319,11 @@ section .container {
 }
 .about_sec .container {
   max-width: 90rem;
+  padding: 4rem;
+  background-color: #fff;
+  border-radius: 24px;
+  border: 1px solid hsl(221, 15%, 22%);
+  box-shadow: 2px 2px 0 0 hsl(221, 15%, 22%);
 }
 .about_sec .text {
   margin-bottom: 5rem;
@@ -370,9 +341,6 @@ section .container {
   color: #252932;
 }
 
-.sec_contact {
-  box-shadow: inset 0px 30px 30px -30px rgba(48, 53, 65, 0.1);
-}
 @media (max-width: 768px) {
   .sec_contact {
     min-height: auto;

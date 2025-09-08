@@ -137,7 +137,7 @@ header {
   padding: 2rem 0 4rem;
   backdrop-filter: blur(0.5rem);
   width: 100%;
-  border-bottom: 1px solid rgba(64, 149, 191, 0.2);
+  border-bottom: 1px solid rgba(138, 76, 225, 0.2);
 }
 @media (max-width: 768px) {
   .hero .page-title {
@@ -176,7 +176,7 @@ header {
   flex: 1;
 }
 .hero .project-info-item h5 {
-  color: #4095bf;
+  color: #8a4ce1;
   font-weight: 800;
 }
 .hero .project-info-item p {
@@ -205,7 +205,7 @@ header {
 .para_wrap {
   position: relative;
   margin-bottom: 8rem;
-  border-bottom: 1px solid rgba(64, 149, 191, 0.2);
+  border-bottom: 1px solid rgba(138, 76, 225, 0.2);
 }
 .para_wrap:last-child {
   margin: 0;
@@ -244,7 +244,7 @@ header {
   line-height: 1.2;
 }
 .para_wrap .title p {
-  color: #4095bf;
+  color: #8a4ce1;
   font-weight: 500;
   margin: 0;
 }
@@ -325,7 +325,8 @@ header {
   margin: 1rem 0;
 }
 .text p a, .text li a {
-  color: #ff1d69;
+  color: #303541;
+  text-decoration: underline;
 }
 .text p b, .text li b {
   font-weight: 600;
@@ -407,11 +408,12 @@ blockquote {
 
 footer {
   margin: 5rem auto;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #F6CB45;
   backdrop-filter: blur(10px);
   transition: 0.2s ease-out;
   border-radius: 3rem;
-  box-shadow: 0 0 20px 0 rgba(48, 53, 65, 0.2);
+  border: 1px solid #303541;
+  box-shadow: 2px 2px 0 0 #303541;
   width: fit-content;
   padding: 2rem 4rem;
 }
@@ -448,7 +450,7 @@ header .work-nav {
   align-items: center;
   font-size: 1.4rem;
   transition: 0.3s ease;
-  color: #4095bf;
+  color: #303541;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
@@ -463,6 +465,7 @@ header .work-nav {
   z-index: 1;
   width: 100%;
   height: 100%;
+  color: #303541;
 }
 @media (max-width: 768px) {
   .work-nav span:not(.nav-arrow) {
@@ -472,13 +475,13 @@ header .work-nav {
 
 .nav-prev:hover span,
 .nav-next:hover span {
-  color: #b6003d;
+  color: #303541;
   transition: 0.2s ease;
 }
 .nav-prev:hover span:before, .nav-prev:hover span:after,
 .nav-next:hover span:before,
 .nav-next:hover span:after {
-  background-color: #b6003d;
+  background-color: #303541;
   transition: 0.2s ease;
 }
 
@@ -490,7 +493,7 @@ header .work-nav {
   position: absolute;
   width: 0.2rem;
   height: 0.8rem;
-  background-color: #4095bf;
+  background-color: #303541;
   border-radius: 0.2rem;
 }
 @media (max-width: 576px) {
@@ -625,7 +628,7 @@ header .work-nav {
 }
 
 .num-indicator {
-  background-color: #4095bf;
+  background-color: #8a4ce1;
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
@@ -662,7 +665,7 @@ header .work-nav {
   width: 120%;
   height: 120%;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px #4095bf, 0 0 10px 0 rgba(48, 53, 65, 0.5);
+  box-shadow: 0 0 0 2px #8a4ce1, 0 0 10px 0 rgba(48, 53, 65, 0.5);
   animation: ripple 1s ease-in;
 }
 
@@ -684,14 +687,13 @@ header .work-nav {
   }
 }
 .section-frame {
-  border-top: 1px solid rgba(64, 149, 191, 0.2);
-  background: linear-gradient(180deg, rgba(64, 149, 191, 0.1), rgba(64, 149, 191, 0));
+  border-top: 1px solid rgba(138, 76, 225, 0.2);
 }
 .section-frame .container {
   width: 100%;
   max-width: 111rem;
   margin: 0 auto;
-  padding: 5rem 5rem 10rem;
+  padding: 5rem 5rem;
 }
 @media (max-width: 576px) {
   .section-frame .container {
@@ -700,7 +702,6 @@ header .work-nav {
 }
 .section-frame .container h1 {
   font-weight: 900;
-  color: #4095bf;
 }
 
 .work-page .nav-icon {
@@ -772,7 +773,7 @@ header .work-nav {
   content: "-";
   font-size: 5rem;
   font-weight: 100;
-  color: #4095bf;
+  color: #8a4ce1;
 }
 @media (max-width: 576px) {
   .sec-work .sec-title h3::before, .sec-work .sec-title h3::after {
@@ -806,7 +807,7 @@ header .work-nav {
 }
 .sec-work .text .title {
   margin-bottom: 2rem;
-  color: #4095bf;
+  color: #8a4ce1;
 }
 .sec-work .text .num-indicator {
   position: relative;
@@ -820,7 +821,7 @@ header .work-nav {
   border-radius: 1rem;
 }
 .sec-work.hero {
-  padding: 15rem 0;
+  padding: 10rem 0;
 }
 @media (max-width: 576px) {
   .sec-work.hero {
@@ -850,7 +851,7 @@ header .work-nav {
 .pre-title {
   font-size: 1.6rem;
   font-weight: 600;
-  color: #4095bf;
+  color: #8a4ce1;
   margin-left: 2.8rem;
 }
 @media (max-width: 576px) {
@@ -887,7 +888,7 @@ main blockquote {
   height: 100%;
   padding: 2rem 0;
   border-radius: 2rem;
-  box-shadow: 0 0 0 1px #4095bf, 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px #8a4ce1, 0 0 1rem 0 rgba(0, 0, 0, 0.1);
 }
 .sidebar .yr-logo {
   padding: 1rem 2rem;
@@ -896,7 +897,7 @@ main blockquote {
   margin-top: 2rem;
 }
 .sidebar .inner-link:hover {
-  background-color: rgba(64, 149, 191, 0.1);
+  background-color: rgba(138, 76, 225, 0.1);
 }
 .sidebar .inner-link a {
   display: block;
@@ -906,7 +907,7 @@ main blockquote {
   transition: all 0.3s ease;
 }
 .sidebar .inner-link.active a {
-  color: #4095bf;
+  color: #8a4ce1;
   font-weight: 900;
 }
 .sidebar header {
@@ -943,4 +944,14 @@ main blockquote {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.main-content {
+  max-width: 111rem;
+  margin: auto;
+  background-color: #fff;
+  border: 1px solid #303541;
+  box-shadow: 2px 2px 0 0 #303541;
+  border-radius: 24px;
+  padding-top: 24px;
 }

@@ -18,6 +18,7 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/pages.css" rel="stylesheet" type="text/css">
     <link href="css/components.css" rel="stylesheet" type="text/css">
+    <link href="css/neo.css" rel="stylesheet" type="text/css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
     <!-- <script src="js/pages.js"></script> -->
@@ -60,10 +61,10 @@
                         <a href="https://www.figma.com/deck/Yc6UkBtSLxJa8XA6ohNwdI/Yogev-Raved---Case-studies?node-id=1-452&t=i1mqvm27aFUcJdGS-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank">Case studies</a>
                     </div>
                     <div class="menu-item">
-                        <a href="#about">About me</a>
+                        <a href="index.html#about">About me</a>
                     </div>
                     <div class="menu-item">
-                        <a href="#contact">Contact</a>
+                        <a href="index.html#contact">Contact</a>
                     </div>
                     <div class="menu-item">
                         <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">CV</a>
@@ -86,7 +87,7 @@
             </div>
         </header>
 
-        <section class="sec-work hero" id="sec-goal">
+        <div class="sec-work hero" id="sec-goal">
             <div class="container">
                 <figure class="project-logo">
                     <img src="images/works/spot-logo.svg">
@@ -116,183 +117,185 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="main-content">
 
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Overview</h3>
-                </div>
-                <div class="content">
-                    <div class="text">
-                        <p>
-                            Spot by NetApp is a CloudOps company helping DevOps with cloud infrastructure automation and optimisation. Rolls are automated processes that realign the cluster's nodes to match the desired state.
-                            <br>The original Rolls page in the Kubernetes cluster management system lacked intuitive design and user-friendly interactions, potentially slowing down efficient cluster management and user productivity.
-                        </p>
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Overview</h3>
                     </div>
-                </div>
-            
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>The challenge</h3>
-                </div>
-                <div class="content row col-50">
-                    <div class="col">
+                    <div class="content">
                         <div class="text">
-                            <p>The existing Rolls page design did not effectively support users' needs for managing, troubleshooting, and monitoring cluster rolls, and it seemed to have been designed for super-users, so it required a significant amount of users to reach out to support for clarifications. </p>
+                            <p>
+                                Spot by NetApp is a CloudOps company helping DevOps with cloud infrastructure automation and optimisation. Rolls are automated processes that realign the cluster's nodes to match the desired state.
+                                <br>The original Rolls page in the Kubernetes cluster management system lacked intuitive design and user-friendly interactions, potentially slowing down efficient cluster management and user productivity.
+                            </p>
                         </div>
                     </div>
-                    
-                    <div class="image-text_wrap">
-                        <figure class="work-image">
-                            <img src="images/works/roll-original.jpg">
-                        </figure>
-                        <p class="captions">Original Rolls page</p>
+                
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>The challenge</h3>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Research Process</h3>
-                </div>
-                <div class="content">
-                    <div class="text">
-                        <p>
-                            By monitoring via Fullstory, we found that the usage of this feature is much lower in the UI vs the API compared to other features. 
-                        </p>
-                        <p>
-                            That led us to investigate and conduct several customer interviews.
-                        </p>
-                    </div>
-
-
-                    <div class="text">
-                        <h5>Customer interviews and user testing</h5>
-                        <p>            
-                            We conducted several interview sessions with some design-partners clients. We asked about their need for the Rolls feature and their comfort using it.<br>
-                            We also asked them to share their screens and describe their actions.
-                        </p>
-                    </div>
-
-                    
-                    <div class="image-text_wrap">
-                        <figure class="work-image">
-                            <img src="images/works/roll-ux-2.jpg">
-                        </figure>
-                        <p class="captions">Flow charts</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Key Research Findings</h3>
-                </div>
-                <div class="content row"> 
-                    <div class="text">
-                        <ul>
-                            <li><b>Information and Organization:</b> The layout lacks structure, making it difficult to quickly comprehend relevant roll data.</li>
-                            <li><b>Filtering and Sorting:</b> Users need more advanced options to find specific rolls based on status, time range, node details, etc.</li>
-                            <li><b>Troubleshooting and Diagnostics:</b> Detailed roll information and the ability to interact with rolls are limited, impacting users' ability to investigate and resolve problems.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Design solution </h3>
-                </div>
-                <div class="content">  
-                    <div class="text">
-                            <h4 class="title">Based on research findings, we prioritized:</h4>
-                            <ul>
-                                <li>Improving the visibility of Rolls in progress by providing visual annotations and animation on the Roll’s state</li>
-                                <li>Providing a clear division of the previous states and options of “Rolls in progress”, “History” and “Scheduled rolls”</li>
-                            </ul>
+                    <div class="content row col-50">
+                        <div class="col">
+                            <div class="text">
+                                <p>The existing Rolls page design did not effectively support users' needs for managing, troubleshooting, and monitoring cluster rolls, and it seemed to have been designed for super-users, so it required a significant amount of users to reach out to support for clarifications. </p>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h5>Design Process</h5>
-                            <ul>
-                                <li>Analyzed existing design system components</li>
-                                <li>Created a solution for showing the indication of a roll in progress and the division into its’ batches</li>
-                                            
-                            </ul>
-                        </div>
-                </div>
-                <div class="content">  
-                    <div class="work-image_wrap">
+                        
                         <div class="image-text_wrap">
                             <figure class="work-image">
-                                <img src="images/works/rolls-main.jpg">
+                                <img src="images/works/roll-original.jpg">
                             </figure>
-                            <p class="captions">Revamped Rolls page</p>
+                            <p class="captions">Original Rolls page</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Research Process</h3>
+                    </div>
+                    <div class="content">
+                        <div class="text">
+                            <p>
+                                By monitoring via Fullstory, we found that the usage of this feature is much lower in the UI vs the API compared to other features. 
+                            </p>
+                            <p>
+                                That led us to investigate and conduct several customer interviews.
+                            </p>
+                        </div>
+    
+    
+                        <div class="text">
+                            <h5>Customer interviews and user testing</h5>
+                            <p>            
+                                We conducted several interview sessions with some design-partners clients. We asked about their need for the Rolls feature and their comfort using it.<br>
+                                We also asked them to share their screens and describe their actions.
+                            </p>
+                        </div>
+    
+                        
                         <div class="image-text_wrap">
                             <figure class="work-image">
-                                <img src="images/works/roll-history.jpg">
+                                <img src="images/works/roll-ux-2.jpg">
                             </figure>
-                            <p class="captions">Completed Rolls list</p>
+                            <p class="captions">Flow charts</p>
                         </div>
                     </div>
-                    <div class="work-">
-                        <div class="image-text_wrap">
-                            <figure class="work-image roll-image">
-                                <img src="images/works/rolls-animation.gif">
-                            </figure>
-                            <p class="captions">Roll in progress batch indication</p>
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Key Research Findings</h3>
+                    </div>
+                    <div class="content row"> 
+                        <div class="text">
+                            <ul>
+                                <li><b>Information and Organization:</b> The layout lacks structure, making it difficult to quickly comprehend relevant roll data.</li>
+                                <li><b>Filtering and Sorting:</b> Users need more advanced options to find specific rolls based on status, time range, node details, etc.</li>
+                                <li><b>Troubleshooting and Diagnostics:</b> Detailed roll information and the ability to interact with rolls are limited, impacting users' ability to investigate and resolve problems.</li>
+                            </ul>
                         </div>
                     </div>
-
-                    <div class="text">
-                        <h5>User testing</h5>
-                        <p>Conducted user tests within internal teams and customers represents and iterated by feedback.
-                        </p>
+                </div>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Design solution </h3>
+                    </div>
+                    <div class="content">  
+                        <div class="text">
+                                <h4 class="title">Based on research findings, we prioritized:</h4>
+                                <ul>
+                                    <li>Improving the visibility of Rolls in progress by providing visual annotations and animation on the Roll’s state</li>
+                                    <li>Providing a clear division of the previous states and options of “Rolls in progress”, “History” and “Scheduled rolls”</li>
+                                </ul>
+                            </div>
+                            <div class="text">
+                                <h5>Design Process</h5>
+                                <ul>
+                                    <li>Analyzed existing design system components</li>
+                                    <li>Created a solution for showing the indication of a roll in progress and the division into its’ batches</li>
+                                                
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="content">  
+                        <div class="work-image_wrap">
+                            <div class="image-text_wrap">
+                                <figure class="work-image">
+                                    <img src="images/works/rolls-main.jpg">
+                                </figure>
+                                <p class="captions">Revamped Rolls page</p>
+                            </div>
+                            <div class="image-text_wrap">
+                                <figure class="work-image">
+                                    <img src="images/works/roll-history.jpg">
+                                </figure>
+                                <p class="captions">Completed Rolls list</p>
+                            </div>
+                        </div>
+                        <div class="work-">
+                            <div class="image-text_wrap">
+                                <figure class="work-image roll-image">
+                                    <img src="images/works/rolls-animation.gif">
+                                </figure>
+                                <p class="captions">Roll in progress batch indication</p>
+                            </div>
+                        </div>
+    
+                        <div class="text">
+                            <h5>User testing</h5>
+                            <p>Conducted user tests within internal teams and customers represents and iterated by feedback.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Impact</h3>
-                </div>
-                <div class="content">  
-                    <div class="text">
-                        <p>By implementing these improvements, the Rolls page became more intuitive, efficient, and valuable for Kubernetes cluster administrators, helping them better understand and manage the ongoing alignment of their cluster infrastructure.
-                        </p> 
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Impact</h3>
+                    </div>
+                    <div class="content">  
+                        <div class="text">
+                            <p>By implementing these improvements, the Rolls page became more intuitive, efficient, and valuable for Kubernetes cluster administrators, helping them better understand and manage the ongoing alignment of their cluster infrastructure.
+                            </p> 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Success measurement</h3>
-                </div>
-                <div class="content">  
-                    <div class="text">
-                        <p>By monitoring with Fullstory and BI reports we discovered:</p>
-                        <ul>
-                            <li>Reduced the transition between the UI and the API by <b>50%</b>, thus aiding in maintaining focus on crucial tasks</li>
-                            <li>Increased user satisfaction and reduced friction by eliminating their need for help from support</li>
-                        </ul>   
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Success measurement</h3>
+                    </div>
+                    <div class="content">  
+                        <div class="text">
+                            <p>By monitoring with Fullstory and BI reports we discovered:</p>
+                            <ul>
+                                <li>Reduced the transition between the UI and the API by <b>50%</b>, thus aiding in maintaining focus on crucial tasks</li>
+                                <li>Increased user satisfaction and reduced friction by eliminating their need for help from support</li>
+                            </ul>   
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <footer>
             <div class="nav_wrap">

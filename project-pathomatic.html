@@ -18,6 +18,7 @@
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/pages.css" rel="stylesheet" type="text/css">
     <link href="css/components.css" rel="stylesheet" type="text/css">
+    <link href="css/neo.css" rel="stylesheet" type="text/css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
     <!-- <script src="js/pages.js"></script> -->
@@ -60,10 +61,10 @@
                         <a href="https://www.figma.com/deck/Yc6UkBtSLxJa8XA6ohNwdI/Yogev-Raved---Case-studies?node-id=1-452&t=i1mqvm27aFUcJdGS-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank">Case studies</a>
                     </div>
                     <div class="menu-item">
-                        <a href="#about">About me</a>
+                        <a href="index.html#about">About me</a>
                     </div>
                     <div class="menu-item">
-                        <a href="#contact">Contact</a>
+                        <a href="index.html#contact">Contact</a>
                     </div>
                     <div class="menu-item">
                         <a href="images/Yogev-Raved-CV-25.pdf" target="_blank">CV</a>
@@ -86,7 +87,7 @@
             </div>
         </header>
 
-        <section class="sec-work hero" id="sec-goal">
+        <div class="sec-work hero" id="sec-goal">
             <div class="container">
                 <figure class="project-logo pathomatic-logo">
                     <img src="images/works/pathomatic-logo.svg">
@@ -113,161 +114,163 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Overview</h3>
-                </div>
-                <div class="content">
-                    <div class="text">
-                        <p>
-                            The laboratory at the Institute of Pathology at the Ichilov Hospital, Tel-Aviv, is scanning tissue samples around the clock. My role was to design an interface for the system that helps to identify out-of-focus scans.<br>
-As the Lead UX Designer for this project on behalf of Code for Israel, I handled this project end-to-end including the UX and UI design. That was a multi-team effort with collaboration between dedicated PMs, engineers, and the Ichilov medical personnel.
-
-                        </p>
+        <div class="main-content">
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Overview</h3>
                     </div>
-                </div>
-            
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>The challenge</h3>
-                </div>
-                <div class="content row col-50">
-                    <div class="col">
+                    <div class="content">
                         <div class="text">
-                            <ul>
-
-                                <li>The tissue scanners can handle thousands of slides each hour. The process is that laboratory personnel load the scan, and when it is done, they are sent to the physicians for Interpreting them.</li>
-
-                                <li>The issue is that about 10% of the scans are out-of-focus for all sorts of reasons, and the doctors need to send them back for scanning, which can cause a crucial delay in the result time for the patients by days.</li>
-
-                                <li>I was part of a team of volunteers who worked on a solution in the form of an algorithm that recognizes out-of-focus scans before they arrive at the doctors’ for interpretation.</li>
-
-                                <li>My part there was to design the interface of the system that shows scan status and alerts the laboratory personnel about out-of-focus scans so they can check the slides and re-scan them.<br>
-                                <a href="https://nocamels.com/2022/11/algorithm-beats-cancer-scan-delays/" target="_blank">Algorithm Beats Cancer Scan Delays</a>
-                                </li>
-                            </ul>                            
+                            <p>
+                                The laboratory at the Institute of Pathology at the Ichilov Hospital, Tel-Aviv, is scanning tissue samples around the clock. My role was to design an interface for the system that helps to identify out-of-focus scans.<br>
+    As the Lead UX Designer for this project on behalf of Code for Israel, I handled this project end-to-end including the UX and UI design. That was a multi-team effort with collaboration between dedicated PMs, engineers, and the Ichilov medical personnel.
+    
+                            </p>
                         </div>
                     </div>
-                    
-                    <div class="image-text_wrap">
-                        <figure class="work-image">
-                            <img src="images/works/pathomatic-scanner_img.jpg">
-                        </figure>
-                        <p class="captions">Philips slides scanner</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Research Process</h3>
-                </div>
-                <div class="content">
-                    <div class="text">
-                        <p>Our first action was to meet with the Ichilov team at the site for a tour of how this process was done. We talked with the doctors and the laboratory personnel who shared with us the frustration of the current process they have when the doctors discover out-of-focus scans.<br>
-                            We had weekly meetings where we discussed how to represent the algorithm within the scanner system.
-                            </p>
-                    </div>
-                    <div class="text">
-                        <h4 class="title">Key Research Findings</h4>
-                        <p>The laboratory personnel who operate the scans should be the gate-keepers for out-of-focus scans, and to find out if they need to rescan the slide or if the sample itself is faulty.
-                        </p>
-                    </div>
-                    <div class="text">
-                        <h4 class="title">Design solution</h4>
-                        <p>Creating an interface that will show the sync of the scans and the algorithm that recognizes out-of-focus scans. We called it: “Pathomatic”</p>
-                    </div>
-
-                    
-
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Design process </h3>
-                </div>
-                <div class="content">  
-                    <div class="text">
-                        <ul>
-    <li>I began with researching the UX of medical devices and discussed with the engineering team how the scanner API is exposed. I also spent time in the lab and view how the personnel perfom the scanning job and the tools they use.</li>
-
-                                <li>I came up with a solution of showing a representation of the physical slide rack on the screen.</li>
-                                
-                                <li>I designed a dashboard showing stats of past scans per slot, so they could be monitored to see if they are prone to errors.</li>
-
-                                <li>A summary of the percentage of out-of-focus scans and scan history.</li>
-
-                                <li>The main section contains the list of active scans per scanner and a graphical representation of the scanners' racks, where the user can identify the specific slide and rescan it. They can also report if they rescanned it or if there is a slide issue.</li>
-
-                                <li>The screens are on a constantly on display so errors can be seen from across the lab.</li>
-                            </ul>
-                </div>
                 
-            </div>
-
-            <div class="content ">
-                    <div class="image-text_wrap">
-                        <figure class="work-image">
-                            <img src="images/works/pathomatic-main.jpg">
-                        </figure>
-                        <p class="captions">Main page with active scans list</p>
-                    </div>
-                    <div class="image-text_wrap">
-                        <figure class="work-image">
-                            <img src="images/works/pathomatic-history.jpg">
-                        </figure>
-                        <p class="captions">View of past scans</p>
-                    </div>
-                    <div class="image-text_wrap">
-                        <figure class="work-image">
-                            <img src="images/works/pathomatic-popup.jpg">
-                        </figure>
-                        <p class="captions">View of the scan itself</p>
-                    </div>
-            </div>
-
-        </section>
-
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>Project impact</h3>
                 </div>
-                <div class="content">  
-                    <div class="text">
-                        <p>In the past year since the project was embedded, the delay of the result was significantly reduced thus patients get crucial and life-saving information much quicker.
-                        </p>
-                            
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>The challenge</h3>
+                    </div>
+                    <div class="content row col-50">
+                        <div class="col">
+                            <div class="text">
+                                <ul>
+    
+                                    <li>The tissue scanners can handle thousands of slides each hour. The process is that laboratory personnel load the scan, and when it is done, they are sent to the physicians for Interpreting them.</li>
+    
+                                    <li>The issue is that about 10% of the scans are out-of-focus for all sorts of reasons, and the doctors need to send them back for scanning, which can cause a crucial delay in the result time for the patients by days.</li>
+    
+                                    <li>I was part of a team of volunteers who worked on a solution in the form of an algorithm that recognizes out-of-focus scans before they arrive at the doctors’ for interpretation.</li>
+    
+                                    <li>My part there was to design the interface of the system that shows scan status and alerts the laboratory personnel about out-of-focus scans so they can check the slides and re-scan them.<br>
+                                    <a href="https://nocamels.com/2022/11/algorithm-beats-cancer-scan-delays/" target="_blank">Algorithm Beats Cancer Scan Delays</a>
+                                    </li>
+                                </ul>                            
+                            </div>
+                        </div>
+                        
+                        <div class="image-text_wrap">
+                            <figure class="work-image">
+                                <img src="images/works/pathomatic-scanner_img.jpg">
+                            </figure>
+                            <p class="captions">Philips slides scanner</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="sec-work">
-            <div class="container">
-                <div class="sec-title">
-                    <h3>What I Learned</h3>
-                </div>
-                <div class="content">  
-                    <div class="text">
-                        <p>Collaborating with the team of volunteers and personnel, I developed a deeper appreciation for effective communication and the importance of empathy in understanding users' challenges.<br> Watching the experience of people with my designs with my own eyes was thrilling. The thought that I contributed to this important issue is priceless. Looking forward to the next project with Code for Israel.
-                        </p>
-                            
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Research Process</h3>
+                    </div>
+                    <div class="content">
+                        <div class="text">
+                            <p>Our first action was to meet with the Ichilov team at the site for a tour of how this process was done. We talked with the doctors and the laboratory personnel who shared with us the frustration of the current process they have when the doctors discover out-of-focus scans.<br>
+                                We had weekly meetings where we discussed how to represent the algorithm within the scanner system.
+                                </p>
+                        </div>
+                        <div class="text">
+                            <h4 class="title">Key Research Findings</h4>
+                            <p>The laboratory personnel who operate the scans should be the gate-keepers for out-of-focus scans, and to find out if they need to rescan the slide or if the sample itself is faulty.
+                            </p>
+                        </div>
+                        <div class="text">
+                            <h4 class="title">Design solution</h4>
+                            <p>Creating an interface that will show the sync of the scans and the algorithm that recognizes out-of-focus scans. We called it: “Pathomatic”</p>
+                        </div>
+    
+                        
+    
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Design process </h3>
+                    </div>
+                    <div class="content">  
+                        <div class="text">
+                            <ul>
+        <li>I began with researching the UX of medical devices and discussed with the engineering team how the scanner API is exposed. I also spent time in the lab and view how the personnel perfom the scanning job and the tools they use.</li>
+    
+                                    <li>I came up with a solution of showing a representation of the physical slide rack on the screen.</li>
+                                    
+                                    <li>I designed a dashboard showing stats of past scans per slot, so they could be monitored to see if they are prone to errors.</li>
+    
+                                    <li>A summary of the percentage of out-of-focus scans and scan history.</li>
+    
+                                    <li>The main section contains the list of active scans per scanner and a graphical representation of the scanners' racks, where the user can identify the specific slide and rescan it. They can also report if they rescanned it or if there is a slide issue.</li>
+    
+                                    <li>The screens are on a constantly on display so errors can be seen from across the lab.</li>
+                                </ul>
+                    </div>
+                    
+                </div>
+    
+                <div class="content ">
+                        <div class="image-text_wrap">
+                            <figure class="work-image">
+                                <img src="images/works/pathomatic-main.jpg">
+                            </figure>
+                            <p class="captions">Main page with active scans list</p>
+                        </div>
+                        <div class="image-text_wrap">
+                            <figure class="work-image">
+                                <img src="images/works/pathomatic-history.jpg">
+                            </figure>
+                            <p class="captions">View of past scans</p>
+                        </div>
+                        <div class="image-text_wrap">
+                            <figure class="work-image">
+                                <img src="images/works/pathomatic-popup.jpg">
+                            </figure>
+                            <p class="captions">View of the scan itself</p>
+                        </div>
+                </div>
+    
+            </section>
+    
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>Project impact</h3>
+                    </div>
+                    <div class="content">  
+                        <div class="text">
+                            <p>In the past year since the project was embedded, the delay of the result was significantly reduced thus patients get crucial and life-saving information much quicker.
+                            </p>
+                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-work">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>What I Learned</h3>
+                    </div>
+                    <div class="content">  
+                        <div class="text">
+                            <p>Collaborating with the team of volunteers and personnel, I developed a deeper appreciation for effective communication and the importance of empathy in understanding users' challenges.<br> Watching the experience of people with my designs with my own eyes was thrilling. The thought that I contributed to this important issue is priceless. Looking forward to the next project with Code for Israel.
+                            </p>
+                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
         <footer>
             <div class="nav_wrap">
                 <div class="work-nav">
