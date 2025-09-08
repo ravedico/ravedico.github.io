@@ -35,13 +35,13 @@
 </head>
 
 <body class="webdesign">
-    <header>
+    <header class="fix-scroll">
 
         <div class="container">
           <div class="yr-logo home-link">
             Yogev Raved<span>_</span>
         </div>
-        <div class="nav-menu">
+        <div class="price-nav-menu">
           <div class="menu-item">
               <a href="#works">Works</a>
           </div>
@@ -55,10 +55,10 @@
     <div id="wrapper">
         <section class="work_sec" id="works">
             <div class="container">
-              <div class="title">
+              <div class="title fix-scroll">
                 <div class="container">
                   <h1 class="">Past work</h1>
-                  <div class="toolbar" role="toolbar" aria-label="Filters">
+                  <div class="toolbar " role="toolbar" aria-label="Filters">
                     <button class="btn active" data-filter="all">All</button>
                     <button class="btn" data-filter="websites">Websites</button>
                     <button class="btn" data-filter="landing">Landing pages</button>
@@ -339,37 +339,17 @@
       // Initial render
       renderGrid();
     </script>
-
     <script>
-        $('.nav-icon').click(function(){
-            $('.nav-menu').addClass('on');
+      window.addEventListener('scroll', function () {
+        document.querySelectorAll('.fix-scroll').forEach(el => {
+          if (window.scrollY > 50) {
+            el.classList.add('scrolled');
+          } else {
+            el.classList.remove('scrolled');
+          }
         });
-        $('.nav-menu').click(function(){
-            $(this).removeClass('on');
-        });
-        document.addEventListener('click', function (event) {
-        const navMenu = document.querySelector('.nav-menu');
-        const navIcon = document.querySelector('.nav-icon');
-
-        if (
-            navMenu.classList.contains('on') &&
-            !navMenu.contains(event.target) &&
-            !navIcon.contains(event.target)
-        ) {
-            navMenu.classList.remove('on');
-        }
-    });
-    </script>
-    <script>
-        window.addEventListener('scroll', function () {
-        const logo = document.querySelector('header');
-            if (window.scrollY > 200) {
-                logo.classList.add('scrolled');
-            } else {
-                logo.classList.remove('scrolled');
-            }
-        });
-    </script>
+      });
+  </script>
 
 
 
