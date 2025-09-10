@@ -278,7 +278,7 @@
         display: flex;
         padding: 0;
         gap: 28px;
-        @include small{
+        @include medium{
             flex-direction: column;
             padding: 20px;
         }
@@ -292,6 +292,7 @@
       overflow:hidden;
       flex: 1;
       padding: 20px;
+      min-width: 200px;
       h2{
         margin:0 0 6px;
         font-size: 18px;
@@ -348,7 +349,7 @@
         padding: 32px;
     }
     .price{
-        font-size: 32px;
+        font-size: 20px;
         font-weight: 800;
         text-align: center;
         color: #b358d3;
