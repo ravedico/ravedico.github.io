@@ -278,6 +278,10 @@
   padding: 24px;
 }
 
+section .container {
+  max-width: 124rem;
+}
+
 .pricing {
   /* Included / Exclusions section */
 }
@@ -391,11 +395,13 @@
   padding: 32px;
 }
 .pricing .price {
+  text-align: center;
+  margin: 20px auto;
+}
+.pricing .amount {
   font-size: 20px;
   font-weight: 800;
-  text-align: center;
   color: #b358d3;
-  margin: 20px auto;
 }
 
 .features li {

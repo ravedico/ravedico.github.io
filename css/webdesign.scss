@@ -270,7 +270,11 @@
     }
 }
 
-
+section{
+    .container{
+        max-width: 124rem;
+    }
+}
 
 
 .pricing{
@@ -349,11 +353,13 @@
         padding: 32px;
     }
     .price{
+        text-align: center;
+        margin: 20px auto;
+    }
+    .amount{
         font-size: 20px;
         font-weight: 800;
-        text-align: center;
         color: #b358d3;
-        margin: 20px auto;
     }
 
 }
